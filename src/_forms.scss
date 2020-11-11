@@ -1,0 +1,151 @@
+button,
+input,
+select,
+textarea {
+  @extend %font-form;
+  border-radius: 0.3 * $rem;
+  border: none;
+  border: 1px solid $gray;
+
+  + label,
+  + input[type="checkbox"],
+  + input[type="radio"] {
+    page-break-before: always;
+  }
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  legend {
+    margin: 1.2 * $rem 0;
+  }
+}
+
+option {
+  @extend %font;
+}
+
+textarea {
+  min-height: 6 * $rem;
+  min-width: 20 * $rem;
+  max-width: 38 * $rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .7 * $rem;
+  font-weight: 600;
+  font-size: 1.1 * $rem;
+  color: $dark;
+
+  + * {
+    page-break-before: always;
+  }
+
+  > input {
+    margin-bottom: 0;
+  }
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  background: $whiteDark;
+  color: $darkLight;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline;
+  margin-bottom: $rem;
+  margin-right: .7 * $rem;
+  padding: 0.6 * $rem;
+
+  &:hover {
+    background: darken($white, 15);
+    color: $dark;
+  }
+
+  &[disabled] {
+    background: darken($white, 10);
+    color: darken($gray, 10);
+    cursor: not-allowed;
+  }
+}
+
+input[type="submit"],
+button[type="submit"] {
+  background: $blue;
+  color: $white;
+
+  &:hover {
+    background: darken($blue, 11);
+    color: darken($white, 23);
+  }
+}
+
+input[type="button"],
+button[type="button"] {
+  background: $green;
+  color: $white;
+
+  &:hover {
+    background: darken($green, 11);
+    color: darken($white, 23);
+  }
+}
+
+
+input,
+select,
+label {
+  margin-right: 0.7 * $rem;
+}
+
+input,
+select,
+textarea {
+  margin-bottom: $rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="color"],
+input[type="time"],
+input[type="search"],
+input[type="range"],
+input[type="file"],
+input[type="datetime-local"],
+select,
+textarea {
+  border: 1px solid $gray;
+  padding: .6 * $rem .5 * $rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  flex-grow: 0;
+  height: 1.65 * $rem;
+  margin-left: 0;
+  margin-right: .7 * $rem;
+  vertical-align: middle;
+
+  + label {
+    page-break-before: avoid;
+  }
+}
+
+select[multiple] {
+  min-width: 16 * $rem;
+}

@@ -1,0 +1,30 @@
+// sizes
+$rem: 1rem;
+$body: 100%;
+
+// fonts safe
+$sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+// colors
+$dark: #303030;
+$darkLight: #353535;
+$blue: #5283CF;
+$green: #17B978;
+$gray: gray;
+$white: #fff;
+$whiteDark: #f1f1f1;
+// pattern
+%font {
+  font-size: $body;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1 * $rem;
+}
+
+%font-form {
+  font-size: $body;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1 * $rem;
+}

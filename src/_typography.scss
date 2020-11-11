@@ -1,0 +1,59 @@
+p,
+span {
+  width: 100%;
+  max-width: 70ch;
+  font-size: 1.1 * $rem;
+  line-height: 1.7 * $rem;
+  text-align: left;
+  color: $darkLight;
+  margin: 1.2 * $rem 0;
+}
+
+strong {
+  font-size: 1.1 * $rem;
+  font-weight: 800;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline $blue;
+  }
+}
+
+hr {
+  margin: 0.6 * $rem 0;
+  border-bottom: 1px solid $gray;
+}
+
+em,
+i {
+  font-size: 1.1 * $rem;
+  font-style: italic;
+}
+
+small,
+figcaption {
+  font-size: 0.9 * $rem;
+}
+
+del {
+  color: $gray;
+}
+
+sup,
+sub {
+  font-size: 78%;
+  position: relative;
+  vertical-align: baseline; 
+}
+
+sup {
+  top: -0.4 * $rem;
+}
+
+sub {
+  bottom: -0.4 * $rem;
+}

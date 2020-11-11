@@ -1,0 +1,343 @@
+option, html,
+body {
+  font-size: 100%;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  border: none;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #303030;
+}
+
+h1 {
+  font-size: 2.7rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 3.5rem 0;
+}
+h1 + h1 {
+  page-break-before: always;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  margin: 3.2rem 0;
+}
+
+h3 {
+  font-size: 1.9rem;
+  line-height: 1.7rem;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
+h4 {
+  font-size: 1.7rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin: 3.2rem 0;
+}
+
+h5 {
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  margin: 3.3rem 0;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.1rem;
+  line-height: 1rem;
+  margin: 3.4rem 0;
+  font-weight: 500;
+}
+
+p,
+span {
+  width: 100%;
+  max-width: 70ch;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  text-align: left;
+  color: #353535;
+  margin: 1.2rem 0;
+}
+
+strong {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+a {
+  color: #5283CF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline #5283CF;
+}
+
+hr {
+  margin: 0.6rem 0;
+  border-bottom: 1px solid gray;
+}
+
+em,
+i {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+small,
+figcaption {
+  font-size: 0.9rem;
+}
+
+del {
+  color: gray;
+}
+
+sup,
+sub {
+  font-size: 78%;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.4rem;
+}
+
+sub {
+  bottom: -0.4rem;
+}
+
+button,
+input,
+select,
+textarea {
+  border-radius: 0.3rem;
+  border: none;
+  border: 1px solid gray;
+}
+button + label,
+button + input[type=checkbox],
+button + input[type=radio],
+input + label,
+input + input[type=checkbox],
+input + input[type=radio],
+select + label,
+select + input[type=checkbox],
+select + input[type=radio],
+textarea + label,
+textarea + input[type=checkbox],
+textarea + input[type=radio] {
+  page-break-before: always;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+fieldset legend {
+  margin: 1.2rem 0;
+}
+
+textarea {
+  min-height: 6rem;
+  min-width: 20rem;
+  max-width: 38rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #303030;
+}
+label + * {
+  page-break-before: always;
+}
+label > input {
+  margin-bottom: 0;
+}
+
+input[type=submit],
+input[type=reset],
+button {
+  background: #f1f1f1;
+  color: #353535;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline;
+  margin-bottom: 1rem;
+  margin-right: 0.7rem;
+  padding: 0.6rem;
+}
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover {
+  background: #d9d9d9;
+  color: #303030;
+}
+input[type=submit][disabled],
+input[type=reset][disabled],
+button[disabled] {
+  background: #e6e6e6;
+  color: #676767;
+  cursor: not-allowed;
+}
+
+input[type=submit],
+button[type=submit] {
+  background: #5283CF;
+  color: #fff;
+}
+input[type=submit]:hover,
+button[type=submit]:hover {
+  background: #3366b6;
+  color: #c4c4c4;
+}
+
+input[type=button],
+button[type=button] {
+  background: #17B978;
+  color: #fff;
+}
+input[type=button]:hover,
+button[type=button]:hover {
+  background: #118758;
+  color: #c4c4c4;
+}
+
+input,
+select,
+label {
+  margin-right: 0.7rem;
+}
+
+input,
+select,
+textarea {
+  margin-bottom: 1rem;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=phone],
+input[type=tel],
+input[type=number],
+input[type=datetime],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=color],
+input[type=time],
+input[type=search],
+input[type=range],
+input[type=file],
+input[type=datetime-local],
+select,
+textarea {
+  border: 1px solid gray;
+  padding: 0.6rem 0.5rem;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  flex-grow: 0;
+  height: 1.65rem;
+  margin-left: 0;
+  margin-right: 0.7rem;
+  vertical-align: middle;
+}
+input[type=checkbox] + label,
+input[type=radio] + label {
+  page-break-before: avoid;
+}
+
+select[multiple] {
+  min-width: 16rem;
+}
+
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements in all browsers (opinionated).
+ */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+[aria-disabled=true],
+[disabled] {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+[aria-hidden=false][hidden] {
+  display: initial;
+}
+
+[aria-hidden=false][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/*# sourceMappingURL=main.css.map */
