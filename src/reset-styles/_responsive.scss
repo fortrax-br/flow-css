@@ -13,9 +13,11 @@
 
   input,
   textarea,
-  select {
+  select,
+  p,
+  table {
     width: 100%;
-    max-width: 100%;
+    max-width: 24 * $rem;
     min-width: 0;
   }
 

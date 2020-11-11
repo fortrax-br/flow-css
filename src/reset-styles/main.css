@@ -401,6 +401,73 @@ dd + dt {
   padding-top: 0.5rem;
 }
 
+table,
+th,
+td,
+tr {
+  border: 1px solid #303030;
+  border-collapse: collapse;
+}
+
+table {
+  display: table;
+  width: 100%;
+}
+
+th {
+  font-weight: 600;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 0.8rem;
+}
+
+caption {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+pre,
+code,
+kbd,
+samp,
+var,
+output {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+code,
+kbd {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background: #f1f1f1;
+  color: #17B978;
+  display: inline-block;
+}
+
+kbd {
+  background: #17B978;
+  color: #fff;
+  border: 1px solid #17B978;
+}
+
+pre {
+  border-left: 0.1rem solid #707070;
+  line-height: 0.8rem;
+  overflow: auto;
+  padding-left: 0;
+}
+pre code {
+  background: none;
+  border: 0;
+  line-height: 1.65rem;
+  padding: 0;
+}
+
 @media (max-width: 45rem) {
   header,
 footer {
@@ -416,9 +483,11 @@ article {
 
   input,
 textarea,
-select {
+select,
+p,
+table {
     width: 100%;
-    max-width: 100%;
+    max-width: 24rem;
     min-width: 0;
   }
 
