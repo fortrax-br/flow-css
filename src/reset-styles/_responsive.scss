@@ -1,0 +1,27 @@
+@media (max-width: $responsive_mobile) {
+  header,
+  footer {
+    padding: 0.8 * $rem 0;
+  }
+
+  main,
+  section,
+  article {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  canvas {
+    height: 9 * $rem;
+    width: 18 * $rem;
+  }
+}
+

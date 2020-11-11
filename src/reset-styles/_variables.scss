@@ -1,6 +1,7 @@
 // sizes
 $rem: 1rem;
 $body: 100%;
+$responsive_mobile: 45 * $rem;
 
 // fonts safe
 $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -14,6 +15,7 @@ $green: #17B978;
 $gray: gray;
 $white: #fff;
 $whiteDark: #f1f1f1;
+
 // pattern
 %font {
   font-size: $body;

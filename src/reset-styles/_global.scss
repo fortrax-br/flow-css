@@ -22,3 +22,18 @@ img {
   height: auto;
   margin: 0 auto;
 }
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+hr,
+pre,
+table,
+form,
+fieldset,
+figure,
+address {
+  margin-bottom: 1.5 * $rem;
+}
