@@ -56,13 +56,23 @@ address {
   margin-bottom: 1.5rem;
 }
 
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #303030;
+  color: #313131;
 }
 
 h1 {
@@ -117,7 +127,7 @@ span {
   font-size: 1.1rem;
   line-height: 1.7rem;
   text-align: left;
-  color: #353535;
+  color: #464646;
   margin: 1.2rem 0;
 }
 
@@ -127,11 +137,11 @@ strong {
 }
 
 a {
-  color: #5283CF;
+  color: #1a82e5;
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline #5283CF;
+  text-decoration: underline #1a82e5;
 }
 
 hr {
@@ -212,7 +222,7 @@ label {
   margin-bottom: 0.7rem;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #303030;
+  color: #313131;
 }
 label + * {
   page-break-before: always;
@@ -225,7 +235,7 @@ input[type=submit],
 input[type=reset],
 button {
   background: #f1f1f1;
-  color: #353535;
+  color: #464646;
   text-align: center;
   font-weight: 500;
   cursor: pointer;
@@ -237,37 +247,37 @@ button {
 input[type=submit]:hover,
 input[type=reset]:hover,
 button:hover {
-  background: #d9d9d9;
-  color: #303030;
+  background: #cecece;
+  color: #313131;
 }
 input[type=submit][disabled],
 input[type=reset][disabled],
 button[disabled] {
-  background: #e6e6e6;
+  background: #dbdbdb;
   color: #676767;
   cursor: not-allowed;
 }
 
 input[type=submit],
 button[type=submit] {
-  background: #5283CF;
-  color: #fff;
+  background: #1a82e5;
+  color: #f4f4f4;
 }
 input[type=submit]:hover,
 button[type=submit]:hover {
-  background: #3366b6;
-  color: #c4c4c4;
+  background: #1465b3;
+  color: #b9b9b9;
 }
 
 input[type=button],
 button[type=button] {
-  background: #17B978;
-  color: #fff;
+  background: #24be6d;
+  color: #f4f4f4;
 }
 input[type=button]:hover,
 button[type=button]:hover {
-  background: #118758;
-  color: #c4c4c4;
+  background: #1b8f52;
+  color: #b9b9b9;
 }
 
 input,
@@ -405,7 +415,7 @@ table,
 th,
 td,
 tr {
-  border: 1px solid #303030;
+  border: 1px solid #313131;
   border-collapse: collapse;
 }
 
@@ -445,18 +455,18 @@ kbd {
   padding: 0.5rem;
   border-radius: 0.3rem;
   background: #f1f1f1;
-  color: #17B978;
+  color: #24be6d;
   display: inline-block;
 }
 
 kbd {
-  background: #17B978;
-  color: #fff;
-  border: 1px solid #17B978;
+  background: #24be6d;
+  color: #f4f4f4;
+  border: 1px solid #24be6d;
 }
 
 pre {
-  border-left: 0.1rem solid #707070;
+  border-left: 0.1rem solid #717171;
   line-height: 0.8rem;
   overflow: auto;
   padding-left: 0;
@@ -496,37 +506,11 @@ table {
     width: 18rem;
   }
 }
-[aria-busy=true] {
-  cursor: progress;
+.btn {
+  padding: 0.8rem 0.438rem;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-/*
- * Change the cursor on control elements in all browsers (opinionated).
- */
-[aria-controls] {
-  cursor: pointer;
-}
-
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements in all browsers (opinionated).
- */
-[aria-disabled=true],
-[disabled] {
-  cursor: not-allowed;
-}
-
-/*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
- */
-[aria-hidden=false][hidden] {
-  display: initial;
-}
-
-[aria-hidden=false][hidden]:not(:focus) {
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=flexcss.css.map */
