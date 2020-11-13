@@ -4,7 +4,7 @@ $body_font_size: 100%;
 
 $blue: #1a82e5 !default;
 $green: #24be6d !default;
-$yellow: #d6da4d !default;
+$yellow: #D0D44A !default;
 $red: #e73b4a !default;
 $pink: #d85598 !default;
 $violet: #911eC7 !default;
@@ -14,10 +14,87 @@ $cyan: #24CFF5 !default;
 $dark: #313131 !default;
 $darkLight: #464646 !default;
 $white: #f4f4f4 !default;
-$whiteDark: #f1f1f1;
-$gray: gray;
+$whiteDark: #aaa !default;
+$gray: gray !default;
 
+$body_base_color: #f4f4f4 !default;
 $responsive_mobile: 45 * $rem;
+
+$colors: (
+  "blue": $blue,
+  "green": $green,
+  "red": $red,
+  "yellow": $yellow,
+  "pink": $pink,
+  "violet": $violet,
+  "indigo": $indigo,
+  "cyan": $cyan,
+  "orange": $orange,
+);
+
+$blue-200: tint($blue, 60%) !default;
+$blue-300: tint($blue, 40%) !default;
+$blue-400: tint($blue, 20%) !default;
+$blue-500: $blue;
+$blue-600: shade($blue, 10%) !default;
+$blue-700: shade($blue, 40%) !default;
+$blue-800: shade($blue, 60%) !default;
+
+$green-200: tint($green, 60%) !default;
+$green-300: tint($green, 40%) !default;
+$green-400: tint($green, 20%) !default;
+$green-500: $green;
+$green-600: shade($green, 20%) !default;
+$green-700: shade($green, 40%) !default;
+$green-800: shade($green, 60%) !default;
+
+$red-200: tint($red, 60%) !default;
+$red-300: tint($red, 40%) !default;
+$red-400: tint($red, 20%) !default;
+$red-500: $red;
+$red-600: shade($red, 20%) !default;
+$red-700: shade($red, 40%) !default;
+$red-800: shade($red, 60%) !default;
+
+$violet-200: tint($violet, 60%) !default;
+$violet-300: tint($violet, 40%) !default;
+$violet-400: tint($violet, 20%) !default;
+$violet-500: $violet;
+$violet-600: shade($violet, 20%) !default;
+$violet-700: shade($violet, 40%) !default;
+$violet-800: shade($violet, 60%) !default;
+
+$orange-200: tint($orange, 60%) !default;
+$orange-300: tint($orange, 40%) !default;
+$orange-400: tint($orange, 20%) !default;
+$orange-500: $orange;
+$orange-600: shade($orange, 20%) !default;
+$orange-700: shade($orange, 40%) !default;
+$orange-800: shade($orange, 60%) !default;
+
+$indigo-200: tint($indigo, 60%) !default;
+$indigo-300: tint($indigo, 40%) !default;
+$indigo-400: tint($indigo, 20%) !default;
+$indigo-500: $indigo;
+$indigo-600: shade($indigo, 20%) !default;
+$indigo-700: shade($indigo, 40%) !default;
+$indigo-800: shade($indigo, 60%) !default;
+
+$cyan-200: tint($cyan, 60%) !default;
+$cyan-300: tint($cyan, 40%) !default;
+$cyan-400: tint($cyan, 20%) !default;
+$cyan-500: $cyan;
+$cyan-600: shade($cyan, 20%) !default;
+$cyan-700: shade($cyan, 40%) !default;
+$cyan-800: shade($cyan, 60%) !default;
+
+$yellow-200: tint($yellow, 60%) !default;
+$yellow-300: tint($yellow, 40%) !default;
+$yellow-400: tint($yellow, 20%) !default;
+$yellow-500: $yellow;
+$yellow-600: shade($yellow, 20%) !default;
+$yellow-700: shade($yellow, 40%) !default;
+$yellow-800: shade($yellow, 60%) !default;
 
 // fonts safe
 $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;

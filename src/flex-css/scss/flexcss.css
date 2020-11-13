@@ -29,6 +29,7 @@ html,
 body {
   width: 100vw;
   height: 100vh;
+  background-color: #f4f4f4;
 }
 
 section {
@@ -234,7 +235,7 @@ label > input {
 input[type=submit],
 input[type=reset],
 button {
-  background: #f1f1f1;
+  background: #aaa;
   color: #464646;
   text-align: center;
   font-weight: 500;
@@ -454,7 +455,7 @@ code,
 kbd {
   padding: 0.5rem;
   border-radius: 0.3rem;
-  background: #f1f1f1;
+  background: #aaa;
   color: #24be6d;
   display: inline-block;
 }
@@ -511,6 +512,78 @@ table {
   border: 1px solid transparent;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.btn-blue {
+  background: #1a82e5;
+  color: #f4f4f4;
+}
+.btn-blue:hover {
+  background: #1775ce;
+}
+
+.btn-green {
+  background: #24be6d;
+  color: #f4f4f4;
+}
+.btn-green:hover {
+  background: #1775ce;
+}
+
+.btn-red {
+  background: #e73b4a;
+  color: #f4f4f4;
+}
+.btn-red:hover {
+  background: #1775ce;
+}
+
+.btn-yellow {
+  background: #D0D44A;
+  color: #f4f4f4;
+}
+.btn-yellow:hover {
+  background: #1775ce;
+}
+
+.btn-pink {
+  background: #d85598;
+  color: #f4f4f4;
+}
+.btn-pink:hover {
+  background: #1775ce;
+}
+
+.btn-violet {
+  background: #911eC7;
+  color: #f4f4f4;
+}
+.btn-violet:hover {
+  background: #1775ce;
+}
+
+.btn-indigo {
+  background: #6B11FF;
+  color: #f4f4f4;
+}
+.btn-indigo:hover {
+  background: #1775ce;
+}
+
+.btn-cyan {
+  background: #24CFF5;
+  color: #f4f4f4;
+}
+.btn-cyan:hover {
+  background: #1775ce;
+}
+
+.btn-orange {
+  background: #EE9238;
+  color: #f4f4f4;
+}
+.btn-orange:hover {
+  background: #1775ce;
 }
 
 /*# sourceMappingURL=flexcss.css.map */

@@ -12,6 +12,7 @@ body {
   @extend %font;
   width: 100vw;
   height: 100vh;
+  background-color: $body_base_color;
 }
 section {
   padding: 4 * $rem 0;
