@@ -4,13 +4,13 @@ $body_font_size: 100%;
 
 $blue: #1a82e5 !default;
 $green: #24be6d !default;
-$yellow: #D0D44A !default;
+$yellow: #D8D456 !default;
 $red: #e73b4a !default;
 $pink: #d85598 !default;
 $violet: #911eC7 !default;
 $indigo: #6B11FF !default;
 $orange: #EE9238 !default;
-$cyan: #24CFF5 !default;
+$cyan: #10C1C9 !default;
 $dark: #313131 !default;
 $darkLight: #464646 !default;
 $white: #f4f4f4 !default;
@@ -30,6 +30,8 @@ $colors: (
   "indigo": $indigo,
   "cyan": $cyan,
   "orange": $orange,
+  "white": $white,
+  "dark": $dark,
 );
 
 $blue-200: tint($blue, 60%) !default;
@@ -100,7 +102,7 @@ $yellow-800: shade($yellow, 60%) !default;
 $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
-// pattern
+// fonts setup patterns
 %font {
   font-size: $body_font_size;
   font-weight: 500;
@@ -115,11 +117,26 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
   letter-spacing: 0.1 * $rem;
 }
 
-// definition of sizes variables
+// setup to medias query sizes
 
-$btn-padding: .80rem .438rem;
-$btn-font-size: 1rem;
-$btn-font-weight: 600;
-$btn-line-height: 1.4;
-$btn-border-width: 1px;
+$media_min_sm: 27.5 * $rem; // max width 440px
+$media_sm: 27.5 * $rem; // min width 440px
+$media_md: 46.25 * $rem; // min width 740px
+$media_lg: 61.25 * $rem; // min width 980px
+$media_ex: 73.75 * $rem; // min width 1200px; 
 
+$media_min_sm_width: 23.75 * $rem; // max width 380px
+$media_sm_width: 35 * $rem; // max width 560px
+$media_md_width: 45 * $rem; // max width 720px
+$media_lg_width: 58.75 * $rem; // max width 940px
+$media_ex_width: 70 * $rem; // max width 1120px
+
+// configuration of standard component styles
+
+$btn_padding: .80rem .70rem;
+$btn_font_size: 1.125 * $rem;
+$btn_font_weight: 600;
+$btn_line_height: 1.4;
+$btn_border_width: 2px;
+$btn_transition_duration: .2s;
+$btn_border_radius: 1.375 * $rem;

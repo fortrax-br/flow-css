@@ -1,5 +1,9 @@
+// setup of styles 
 @import 'functions';
 @import 'variables';
+@import './mixins/buttons.scss';
+
+// import styles of elements
 @import 'reset';
 @import 'buttons';
 @import 'spacings';

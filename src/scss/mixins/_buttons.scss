@@ -1,0 +1,15 @@
+@mixin button_style {
+  padding: $btn_padding;
+  border: $btn_border_width solid transparent;
+  font-size: $btn_font_size;
+  font-weight: $btn_font_weight;
+  transition: background $btn_transition_duration linear;
+}
+
+@mixin validate_background_button($key, $color) {
+  @if $key == 'white' {
+    color: $dark;
+  } @else {
+    color: $color;
+  }
+}
