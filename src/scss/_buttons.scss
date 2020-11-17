@@ -2,6 +2,10 @@
   @include button_style;
 }
 
+.btn-link {
+  @include button_link_style;
+}
+
 .btn-radius {
   border-radius: $btn_border_radius;
 }
@@ -56,4 +60,8 @@
       }
     }
   }
+}
+
+@media (min-width: $media_min_sm) {
+  
 }

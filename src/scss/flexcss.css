@@ -185,7 +185,7 @@ button,
 input,
 select,
 textarea {
-  border-radius: 0.3rem;
+  border-radius: 0.3125rem;
   border: none;
   border: 1px solid gray;
 }
@@ -513,7 +513,28 @@ table {
   border: 2px solid transparent;
   font-size: 1.125rem;
   font-weight: 600;
+  border-radius: 0.3125rem;
+  background: gray;
+  color: #f4f4f4;
   transition: background 0.2s linear;
+}
+
+.btn-link {
+  padding: 0.8rem 0.7rem;
+  border: 2px solid transparent;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 0.3125rem;
+  background: gray;
+  color: #f4f4f4;
+  transition: background 0.2s linear;
+  cursor: pointer;
+  display: inline-block;
+  max-width: auto;
+  margin: 0.3125rem;
+}
+.btn-link:hover {
+  text-decoration: none;
 }
 
 .btn-radius {

@@ -3,7 +3,22 @@
   border: $btn_border_width solid transparent;
   font-size: $btn_font_size;
   font-weight: $btn_font_weight;
+  border-radius: $btn_border_radius_default;
+  background: $gray;
+  color: $white;
   transition: background $btn_transition_duration linear;
+}
+
+@mixin button_link_style {
+  @include button_style;
+  cursor: pointer;
+  display: inline-block;
+  max-width: auto;
+  margin: 0.3125 * $rem;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 @mixin validate_background_button($key, $color) {
