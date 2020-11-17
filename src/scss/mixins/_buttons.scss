@@ -1,7 +1,7 @@
 @mixin button_style {
-  padding: $btn_padding;
+  padding: $btn_mobile_padding;
   border: $btn_border_width solid transparent;
-  font-size: $btn_font_size;
+  font-size: $btn_mobile_font_size;
   font-weight: $btn_font_weight;
   border-radius: $btn_border_radius_default;
   background: $gray;

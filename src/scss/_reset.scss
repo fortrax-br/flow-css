@@ -16,7 +16,6 @@ body {
 }
 section {
   padding: 4 * $rem 0;
-  background: #000;
 }
 
 img {
@@ -349,7 +348,7 @@ section,
 main,
 article {
   margin: 0 auto;
-  max-width: 60 * $rem;
+  width: 100%;
 }
 
 nav {

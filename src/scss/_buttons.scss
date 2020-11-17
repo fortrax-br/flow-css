@@ -10,6 +10,26 @@
   border-radius: $btn_border_radius;
 }
 
+.btn-small {
+  padding: $btn_mobile_padding;
+  font-size: $btn_mobile_font_size;
+}
+
+.btn-medium {
+  padding: $btn_medium_padding;
+  font-size: $btn_medium_font_size;
+}
+
+.btn-large {
+  padding: $btn_large_padding;
+  font-size: $btn_large_font_size;
+} 
+
+.btn-ex-large {
+  padding: $btn_ex_large_padding;
+  font-size: $btn_ex_font_size;
+}
+
 @each $key, $color in $colors {
   .flat-btn-#{$key} {
     background: $color;
@@ -62,6 +82,10 @@
   }
 }
 
-@media (min-width: $media_min_sm) {
-  
+@media (min-width: $media_md) {
+  .btn,
+  .btn-link {
+    padding: $btn_medium_padding;
+    font-size: $btn_medium_font_size;
+  }
 }
