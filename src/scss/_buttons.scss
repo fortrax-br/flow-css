@@ -6,28 +6,33 @@
   @include button_link_style;
 }
 
+.btn-block {
+  display: block !important;
+  width: 100%;
+}
+
 .btn-radius {
   border-radius: $btn_border_radius;
 }
 
-.btn-small {
-  padding: $btn_mobile_padding;
-  font-size: $btn_mobile_font_size;
+.btn-sm {
+  padding: $btn_mobile_padding !important;
+  font-size: $btn_mobile_font_size !important;
 }
 
-.btn-medium {
-  padding: $btn_medium_padding;
-  font-size: $btn_medium_font_size;
+.btn-md {
+  padding: $btn_medium_padding !important;
+  font-size: $btn_medium_font_size !important;
 }
 
-.btn-large {
-  padding: $btn_large_padding;
-  font-size: $btn_large_font_size;
+.btn-lg {
+  padding: $btn_large_padding !important;
+  font-size: $btn_large_font_size !important;
 } 
 
-.btn-ex-large {
-  padding: $btn_ex_large_padding;
-  font-size: $btn_ex_font_size;
+.btn-ex-lg {
+  padding: $btn_ex_large_padding !important;
+  font-size: $btn_ex_font_size !important;
 }
 
 @each $key, $color in $colors {
