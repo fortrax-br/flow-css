@@ -1,0 +1,23 @@
+$btn_font_weight: 600;
+$btn_line_height: 1.4;
+$btn_border_width: 0.125 * $rem;
+$btn_transition_duration: .2s;
+$btn_border_radius_default: 0.3125 * $rem;
+$btn_border_radius: 1.375 * $rem;
+
+// small button and mobile pattern button
+$btn_mobile_padding: 0.4375 * $rem;
+$btn_mobile_font_size: $rem;
+
+// medium button 
+$btn_medium_padding: 0.75 * $rem;
+$btn_medium_font_size: $rem;
+
+// large button 
+$btn_large_padding: 1.0625 * $rem;
+$btn_large_font_size: $rem;
+
+// extra large button 
+$btn_ex_large_padding: 1.3125 * $rem;
+$btn_ex_font_size: 1.125 * $rem;
+
