@@ -13,8 +13,9 @@
   @include button_style;
   cursor: pointer;
   display: inline-block;
-  max-width: auto;
+  text-align: center;
   margin: 0.3125 * $rem;
+  font-family: $sans-serif;
 
   &:hover {
     text-decoration: none;

@@ -1,0 +1,12 @@
+@mixin headings_styles {
+  color: $dark;
+  font-family: $sans-serif;
+  margin-bottom:  0.625 * $rem; 
+  line-height: 1;
+  font-weight: 600;
+}
+
+@mixin expand_styles {
+  font-weight: 300;
+  margin-bottom: 1.875 * $rem;
+}
