@@ -1,0 +1,111 @@
+.ma-all {
+  margin: $rem;
+}
+
+.ma-l {
+  margin-left: $rem;
+}
+
+.ma-r {
+  margin-right: $rem;
+}
+
+.ma-b {
+  margin-bottom: $rem;
+}
+
+.ma-t {
+  margin-top: $rem;
+}
+
+// margin multiple directions
+.ma-tb {
+  margin: $rem 0;
+}
+.ma-lt {
+  margin: $rem 0 0 $rem;
+}
+
+.ma-lr {
+  margin: 0 $rem; 
+}
+
+.ma-lb {
+  margin: 0 $rem $rem 0;
+}
+
+.ma-rt {
+  margin: $rem $rem 0 0;
+}
+
+.ma-rb {
+  margin: 0 $rem $rem 0;
+}
+
+// margin for three directins
+.ma-ltb {
+  margin: $rem 0 $rem $rem;
+}
+
+.ma-ltr {
+  margin: $rem $rem 0 $rem;
+}
+
+.ma-lbr {
+  margin: 0 $rem $rem $rem;
+}
+
+// paddings 
+.pd-all {
+  padding: $rem;
+}
+
+.pd-l {
+  padding-left: $rem;
+}
+
+.pd-r {
+  padding-right: $rem;
+}
+
+.pd-t {
+  padding-top: $rem;
+}
+
+.pd-b {
+  padding: $rem;
+}
+
+// paddings multiple directions 
+.pd-lt {
+  padding: $rem 0 0 $rem;
+}
+
+.pd-lb {
+  padding: 0 0 $rem $rem;
+}
+
+.pd-lr {
+  padding: 0 $rem;
+}
+
+.pd-rt {
+  padding: $rem $rem 0 0;
+}
+
+.pd-rb {
+  padding-bottom: $rem;
+}
+
+// padding for three directins
+.pd-ltb {
+  padding: $rem 0 $rem $rem;
+}
+
+.pd-ltr {
+  padding: $rem $rem 0 $rem;
+}
+
+.pd-lbr {
+  padding: 0 $rem $rem $rem;
+}

@@ -1,0 +1,98 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include headings_styles;
+}
+
+h1 {
+  font-size: 2.5 * $rem;
+  font-weight: 700;
+
+  + h1 {
+    page-break-before: always;
+  }
+}
+
+h2 {
+  font-size: 2.1875 * $rem;
+}
+
+h3 {
+  font-size: 1.875 * $rem;
+}
+
+h4 {
+  font-size: 1.6875 * $rem;
+}
+
+h5 {
+  font-size: 1.5 * $rem;
+}
+
+h6 {
+  font-size: 1.25 * $rem;
+}
+
+// aligns text
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text {
+  font-size: 1.125 * $rem;
+  font-weight: 300;
+  font-family: $sans-serif;
+  color: $darkLight;
+  line-height: 1.5;
+  display: block;
+  max-width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+// classes generated 
+@for $index from 1 through 6 {
+  .h#{$index} {
+    @extend h#{$index};
+  }
+}
+
+@each $key, $size in $expand_sizes {
+  .expand-#{$key} {
+    @include expand_styles;
+    font-size: $size;
+  }
+}
+
+@each $key, $color in $colors {
+  .color-#{$key} {
+    color: $color;
+  }
+}
+
+@each $key, $bold in $bold_weights {
+  .bold-#{$key} {
+    font-weight: $bold !important;
+  }
+}

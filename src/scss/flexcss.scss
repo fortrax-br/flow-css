@@ -2,10 +2,10 @@
 @import 'functions';
 @import 'variables';
 @import './mixins/buttons';
-@import './mixins/headings';
+@import './mixins/typography';
 
 // import styles of elements
 @import 'reset';
-@import 'headings';
+@import 'typography';
 @import 'buttons';
 @import 'spacings';

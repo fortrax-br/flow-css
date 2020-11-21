@@ -74,7 +74,7 @@ span {
   font-size: 1.1rem;
   line-height: 1.7rem;
   text-align: left;
-  color: #464646;
+  color: #585858;
   margin: 1.2rem 0;
 }
 
@@ -182,7 +182,7 @@ input[type=submit],
 input[type=reset],
 button {
   background: #aaa;
-  color: #464646;
+  color: #585858;
   text-align: center;
   font-weight: 500;
   cursor: pointer;
@@ -499,6 +499,40 @@ h6, .h6 {
   font-size: 1.25rem;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #585858;
+  line-height: 1.5;
+  display: block;
+  max-width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
 .expand-1 {
   font-weight: 300;
   margin-bottom: 1.875rem;
@@ -801,6 +835,34 @@ h6, .h6 {
 
 .color-dark-7 {
   color: #393939;
+}
+
+.bold-300 {
+  font-weight: 300 !important;
+}
+
+.bold-400 {
+  font-weight: 400 !important;
+}
+
+.bold-500 {
+  font-weight: 500 !important;
+}
+
+.bold-600 {
+  font-weight: 600 !important;
+}
+
+.bold-700 {
+  font-weight: 700 !important;
+}
+
+.bold-800 {
+  font-weight: 800 !important;
+}
+
+.bold-900 {
+  font-weight: 900 !important;
 }
 
 .btn {
@@ -2945,6 +3007,113 @@ h6, .h6 {
     padding: 0.75rem;
     font-size: 1rem;
   }
+}
+.ma-all {
+  margin: 1rem;
+}
+
+.ma-l {
+  margin-left: 1rem;
+}
+
+.ma-r {
+  margin-right: 1rem;
+}
+
+.ma-b {
+  margin-bottom: 1rem;
+}
+
+.ma-t {
+  margin-top: 1rem;
+}
+
+.ma-tb {
+  margin: 1rem 0;
+}
+
+.ma-lt {
+  margin: 1rem 0 0 1rem;
+}
+
+.ma-lr {
+  margin: 0 1rem;
+}
+
+.ma-lb {
+  margin: 0 1rem 1rem 0;
+}
+
+.ma-rt {
+  margin: 1rem 1rem 0 0;
+}
+
+.ma-rb {
+  margin: 0 1rem 1rem 0;
+}
+
+.ma-ltb {
+  margin: 1rem 0 1rem 1rem;
+}
+
+.ma-ltr {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.ma-lbr {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.pd-all {
+  padding: 1rem;
+}
+
+.pd-l {
+  padding-left: 1rem;
+}
+
+.pd-r {
+  padding-right: 1rem;
+}
+
+.pd-t {
+  padding-top: 1rem;
+}
+
+.pd-b {
+  padding: 1rem;
+}
+
+.pd-lt {
+  padding: 1rem 0 0 1rem;
+}
+
+.pd-lb {
+  padding: 0 0 1rem 1rem;
+}
+
+.pd-lr {
+  padding: 0 1rem;
+}
+
+.pd-rt {
+  padding: 1rem 1rem 0 0;
+}
+
+.pd-rb {
+  padding-bottom: 1rem;
+}
+
+.pd-ltb {
+  padding: 1rem 0 1rem 1rem;
+}
+
+.pd-ltr {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.pd-lbr {
+  padding: 0 1rem 1rem 1rem;
 }
 
 /*# sourceMappingURL=flexcss.css.map */
