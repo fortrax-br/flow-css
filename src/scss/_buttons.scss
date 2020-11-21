@@ -41,25 +41,15 @@
     outline: none;
     transition: box-shadow $btn_transition_duration linear;
    
-    @if $key == 'white' {
-      color: $dark;
-    } @else {
-      color: $white;
-    }
-
     &:hover {
       background: shade($color, 12%);
-
-      @if $key == 'white' {
-        color: $dark;
-      } @else {
-        color: $white;
-      }
+      color: $white;
     }
 
     &:focus {
       box-shadow: 0 0 4px 5px tint($color, 10%);
       background: shade($color, 12%);
+      color: $white;
     }
   }
 
@@ -68,21 +58,16 @@
     outline: none;
     transition: background-color $btn_transition_duration linear;
     border: 3px solid #{$color};
-    @include validate_background_button($key, $color);
+    color: $color;
 
     &:hover {
       background: $color;
-      @include validate_background_button($key, $white);
+      color: $white;
     }
 
     &:focus {
       background: $color;
-      
-      @if $key == 'white' {
-        color: $dark;
-      } @else {
-        color: $white;
-      }
+      color: $white;
     }
   }
 }
