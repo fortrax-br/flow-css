@@ -6,6 +6,7 @@ No projeto estamos utlizando o pré-processador css Sass e o Postcss para
 minimizar e prefixar o código css gerado na build.
 
 [Sass](https://sass-lang.com/)
+
 [Postcss](https://postcss.org/)
 
 ## Testar as implementações localmente
@@ -22,7 +23,7 @@ git clone https://notabug.org/Altos-Codigos/flow-css.git
 # git pull
 ```
 
-* Após isso, acesse a pasta criada, (o exemplo é usandos comandos linux, em seu cmd pode ser diferente caso o sistema não seja linux).
+* Após isso, acesse a pasta criada, (o exemplo é usando comandos linux, em seu cmd pode ser diferente caso o sistema não seja linux).
 
 ```sh
 cd flex-css
