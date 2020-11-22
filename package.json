@@ -8,7 +8,8 @@
   "license": "GLP v3",
   "private": true,
   "scripts": {
-    "css": "postcss --use autoprefixer cssnano -o dist/css/flex.min.css src/scss/*.css"
+    "css-autocompile": "npx sass --watch src/scss/flexcss.scss:src/scss/flexcss.css",
+    "css-build": "postcss --use autoprefixer cssnano -o dist/css/flex.min.css src/scss/*.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.2",

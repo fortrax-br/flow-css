@@ -1,5 +1,13 @@
 # FlexCss
 
+## Dependências do projeto atualmente
+
+No projeto estamos utlizando o pré-processador css Sass e o Postcss para
+minimizar e prefixar o código css gerado na build.
+
+[Sass](https://sass-lang.com/)
+[Postcss](https://postcss.org/)
+
 ## Testar as implementações localmente
 
 Para você poder conferir as features atuais do framework, atualmente, é necessário seguir os passos abaixo
@@ -36,3 +44,36 @@ node server.js
 ```
 
 * Agora basta acessar o endereço ``http://localhost:3003`` em seu navegador.
+
+## Trabalhando no projeto
+
+Toda vez que você finalizar algo no projeto, é necessário compilar os arquivos css criados ou modificados
+para garantir que o arquivo de build final esteja sempre atualizado, para isso nosso arquivo de configuração,
+package.json contém um comando para fazer este processo, simplismente execute:
+
+```sh
+yarn run css-build
+```
+
+ou com npm:
+
+```sh
+npm run css-build
+```
+
+Enquanto tiver testando as funcionalidades, não é necessário fazer este processo, basta apenas 
+executar o comando para o sass fazer a compilação automatica a cada nova modifcação que você fizer em algum arquivo .scss,
+esse auto compile, vai facilitar no processo de modificação antes de fazer o build em si, para isos apenas diite o comando.
+
+```sh
+yarn run css-autocompile
+```
+
+ou com npm:
+
+```sh
+npm run css-autocompile
+```
+
+Feito isso, o sass vai ficar automaticamente recompilando os arquivos a cada nova modificação, sem necessidade 
+de se fazer este processo manualmente.
