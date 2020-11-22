@@ -10,6 +10,7 @@ Para você poder conferir as features atuais do framework, atualmente, é necess
 ```sh
 git clone https://notabug.org/Altos-Codigos/flow-css.git
 # ou caso já tenha clonado:
+# cd flex-css
 # git pull
 ```
 
