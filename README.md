@@ -9,6 +9,8 @@ Para você poder conferir as features atuais do framework, atualmente, é necess
 
 ```sh
 git clone https://notabug.org/Altos-Codigos/flow-css.git
+# ou caso já tenha clonado:
+# git pull
 ```
 
 * Após isso, acesse a pasta criada, (o exemplo é usandos comandos linux, em seu cmd pode ser diferente caso o sistema não seja linux).
