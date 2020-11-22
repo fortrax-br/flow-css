@@ -80,3 +80,13 @@ npm run css-autocompile
 
 Feito isso, o sass vai ficar automaticamente recompilando os arquivos a cada nova modificação, sem necessidade 
 de se fazer este processo manualmente.
+
+## Em produção
+
+O projeto final apenas necessita de um arquivo, atualmente, sendo ele o arquivo presente na pasta raiz do projeto
+na pasta dist, onde fica o arquivo css final, que deve ser importado no arquivo html, que se deseja
+utilizar o framework. Todos os outros arquivos são a respeito de desenvolvimento e teste.
+
+```sh
+cd dist/css/flex.min.css
+```
