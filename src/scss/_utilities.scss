@@ -1,0 +1,165 @@
+// displays
+.d-block {
+  display: block; 
+}
+.d-none {
+  display: none;
+}
+.d-table {
+  display: table;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+
+@media (max-width: $media_min_sm) {
+  .d-m-sm-block {
+    display: block !important;
+  }
+  .d-m-sm-none {
+    display: none !important;
+  }
+  .d-m-sm-table {
+    display: table !important;
+  }
+  .d-m-sm-inline {
+    display: inline !important;
+  }
+  .d-m-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $media_sm) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-table {
+    display: table !important;
+  }
+  .d-sm-inline {
+    display: inline !important;
+  }
+  .d-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $media_md) {
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-none {
+    display: none !important;
+  }
+  .d-md-table {
+    display: table !important;
+  }
+  .d-md-inline {
+    display: inline !important;
+  }
+  .d-md-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $media_lg) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-table {
+    display: table !important;
+  }
+  .d-lg-inline {
+    display: inline !important;
+  }
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $media_ex) {
+  .d-ex-block {
+    display: block !important;
+  }
+  .d-ex-none {
+    display: none !important;
+  }
+  .d-ex-table {
+    display: table !important;
+  }
+  .d-ex-inline {
+    display: inline !important;
+  }
+  .d-ex-inline-block {
+    display: inline-block !important;
+  }
+}
+
+// background and colors  
+
+@each $key, $color in $colors {
+  .bg-#{$key} {
+    background: $color;
+  }
+
+  .text-#{$key} {
+    color: $color;
+  }
+
+  .color-#{$key} {
+    color: $color;
+  }
+}
+
+.bg-white {
+  background: $white;
+}
+.bg-white-dark {
+  background: $whiteDark;
+}
+.color-white,
+.text-white {
+  color: $white;
+}
+.color-white-dark,
+.text-white-dark {
+  color: $whiteDark;
+}
+
+// aligns text
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+.italic {
+  font-style: italic;
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+// font weight bolds
+@each $key, $bold in $bold_weights {
+  .bold-#{$key} {
+    font-weight: $bold !important;
+  }
+}
