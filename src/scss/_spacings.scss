@@ -1,111 +1,72 @@
-.ma-all {
-  margin: $rem;
-}
+@each $key, $measure in $spacings_measures {
+  $tmp: $measure * $rem;
+  // margin
+  .ml-#{$key} {
+    margin-left: $tmp;
+  }
+  .mr-#{$key} {
+    margin-right: $tmp;
+  }
+  .mt-#{$key} {
+    margin-top: $tmp;
+  }
+  .mb-#{$key} {
+    margin-bottom: $tmp;
+  }
+  .mlr-#{$key} {
+    margin: 0 $tmp;
+  }
+  .mtb-#{$key} {
+    margin: $tmp 0;
+  }
+  .mltb-#{$key} {
+    margin: $tmp 0 $tmp $tmp;
+  }
+  .mltr-#{$key} {
+    margin: $tmp $tmp 0 $tmp;
+  }
+  .mlbr-#{$key} {
+    margin: 0 $tmp $tmp $tmp;
+  }
+  .mrtb-#{$key} {
+    margin: $tmp $tmp $tmp 0;
+  }
+  .m-all-#{$key} {
+    margin: $tmp;
+  }
 
-.ma-l {
-  margin-left: $rem;
-}
-
-.ma-r {
-  margin-right: $rem;
-}
-
-.ma-b {
-  margin-bottom: $rem;
-}
-
-.ma-t {
-  margin-top: $rem;
-}
-
-// margin multiple directions
-.ma-tb {
-  margin: $rem 0;
-}
-.ma-lt {
-  margin: $rem 0 0 $rem;
-}
-
-.ma-lr {
-  margin: 0 $rem; 
-}
-
-.ma-lb {
-  margin: 0 $rem $rem 0;
-}
-
-.ma-rt {
-  margin: $rem $rem 0 0;
-}
-
-.ma-rb {
-  margin: 0 $rem $rem 0;
-}
-
-// margin for three directins
-.ma-ltb {
-  margin: $rem 0 $rem $rem;
-}
-
-.ma-ltr {
-  margin: $rem $rem 0 $rem;
-}
-
-.ma-lbr {
-  margin: 0 $rem $rem $rem;
-}
-
-// paddings 
-.pd-all {
-  padding: $rem;
-}
-
-.pd-l {
-  padding-left: $rem;
-}
-
-.pd-r {
-  padding-right: $rem;
-}
-
-.pd-t {
-  padding-top: $rem;
-}
-
-.pd-b {
-  padding: $rem;
-}
-
-// paddings multiple directions 
-.pd-lt {
-  padding: $rem 0 0 $rem;
-}
-
-.pd-lb {
-  padding: 0 0 $rem $rem;
-}
-
-.pd-lr {
-  padding: 0 $rem;
-}
-
-.pd-rt {
-  padding: $rem $rem 0 0;
-}
-
-.pd-rb {
-  padding-bottom: $rem;
-}
-
-// padding for three directins
-.pd-ltb {
-  padding: $rem 0 $rem $rem;
-}
-
-.pd-ltr {
-  padding: $rem $rem 0 $rem;
-}
-
-.pd-lbr {
-  padding: 0 $rem $rem $rem;
+  // padding
+  .pl-#{$key} {
+    padding-left: $tmp;
+  }
+  .pr-#{$key} {
+    padding-right: $tmp;
+  }
+  .pt-#{$key} {
+    padding-top: $tmp;
+  }
+  .pb-#{$key} {
+    padding-bottom: $tmp;
+  }
+  .plr-#{$key} {
+    padding: 0 $tmp;
+  }
+  .ptb-#{$key} {
+    padding: $tmp 0;
+  }
+  .pltb-#{$key} {
+    padding: $tmp 0 $tmp $tmp;
+  }
+  .pltr-#{$key} {
+    padding: $tmp $tmp 0 $tmp;
+  }
+  .plbr-#{$key} {
+    padding: 0 $tmp $tmp $tmp;
+  }
+  .prtb-#{$key} {
+    padding: $tmp $tmp $tmp 0;
+  }
+  .p-all-#{$key} {
+    padding: $tmp;
+  }
 }
