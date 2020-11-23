@@ -6,6 +6,11 @@
   @include button_link_style;
 }
 
+.btn:hover,
+.btn-link:hover {
+  background: shade($gray, 10%);
+}
+
 .btn-block {
   display: block !important;
   width: 100%;
@@ -42,13 +47,14 @@
     transition: box-shadow $btn_transition_duration linear;
    
     &:hover {
-      background: shade($color, 12%);
+      background: tint($color, 9%);
+      box-shadow: inset 0 0 4px 4px shade($color, 10%);
       color: $white;
     }
 
     &:focus {
-      box-shadow: 0 0 4px 5px tint($color, 10%);
-      background: shade($color, 12%);
+      box-shadow: 0 0 4px 5px tint($color, 9%);
+      background: shade($color, 13%);
       color: $white;
     }
   }
