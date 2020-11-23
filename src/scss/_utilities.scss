@@ -87,20 +87,20 @@
   }
 }
 
-@media (min-width: $media_ex) {
-  .d-ex-block {
+@media (min-width: $media_xl) {
+  .d-xl-block {
     display: block !important;
   }
-  .d-ex-none {
+  .d-xl-none {
     display: none !important;
   }
-  .d-ex-table {
+  .d-xl-table {
     display: table !important;
   }
-  .d-ex-inline {
+  .d-xl-inline {
     display: inline !important;
   }
-  .d-ex-inline-block {
+  .d-xl-inline-block {
     display: inline-block !important;
   }
 }
@@ -134,32 +134,4 @@
 .color-white-dark,
 .text-white-dark {
   color: $whiteDark;
-}
-
-// aligns text
-.text-center {
-  text-align: center !important;
-}
-.text-left {
-  text-align: left !important;
-}
-.text-right {
-  text-align: right !important;
-}
-.text-justify {
-  text-align: justify !important;
-}
-
-.italic {
-  font-style: italic;
-}
-.text-underline {
-  text-decoration: underline;
-}
-
-// font weight bolds
-@each $key, $bold in $bold_weights {
-  .bold-#{$key} {
-    font-weight: $bold !important;
-  }
 }

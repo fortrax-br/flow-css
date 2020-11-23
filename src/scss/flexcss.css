@@ -545,6 +545,58 @@ h6, .h6 {
   font-size: 3.4375rem;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.bold-300 {
+  font-weight: 300 !important;
+}
+
+.bold-400 {
+  font-weight: 400 !important;
+}
+
+.bold-500 {
+  font-weight: 500 !important;
+}
+
+.bold-600 {
+  font-weight: 600 !important;
+}
+
+.bold-700 {
+  font-weight: 700 !important;
+}
+
+.bold-800 {
+  font-weight: 800 !important;
+}
+
+.bold-900 {
+  font-weight: 900 !important;
+}
+
 .btn {
   padding: 0.4375rem;
   border: 0.125rem solid transparent;
@@ -601,7 +653,7 @@ h6, .h6 {
   font-size: 1rem !important;
 }
 
-.btn-ex-lg {
+.btn-xl {
   padding: 1.3125rem !important;
   font-size: 1.125rem !important;
 }
@@ -4182,23 +4234,23 @@ h6, .h6 {
   }
 }
 @media (min-width: 73.75rem) {
-  .d-ex-block {
+  .d-xl-block {
     display: block !important;
   }
 
-  .d-ex-none {
+  .d-xl-none {
     display: none !important;
   }
 
-  .d-ex-table {
+  .d-xl-table {
     display: table !important;
   }
 
-  .d-ex-inline {
+  .d-xl-inline {
     display: inline !important;
   }
 
-  .d-ex-inline-block {
+  .d-xl-inline-block {
     display: inline-block !important;
   }
 }
@@ -5022,58 +5074,6 @@ h6, .h6 {
 .color-white-dark,
 .text-white-dark {
   color: #aaa;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-left {
-  text-align: left !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
-.text-justify {
-  text-align: justify !important;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.text-underline {
-  text-decoration: underline;
-}
-
-.bold-300 {
-  font-weight: 300 !important;
-}
-
-.bold-400 {
-  font-weight: 400 !important;
-}
-
-.bold-500 {
-  font-weight: 500 !important;
-}
-
-.bold-600 {
-  font-weight: 600 !important;
-}
-
-.bold-700 {
-  font-weight: 700 !important;
-}
-
-.bold-800 {
-  font-weight: 800 !important;
-}
-
-.bold-900 {
-  font-weight: 900 !important;
 }
 
 /*# sourceMappingURL=flexcss.css.map */
