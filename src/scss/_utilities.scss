@@ -112,10 +112,6 @@
     background: $color;
   }
 
-  .text-#{$key} {
-    color: $color;
-  }
-
   .color-#{$key} {
     color: $color;
   }
@@ -127,11 +123,69 @@
 .bg-white-dark {
   background: $whiteDark;
 }
-.color-white,
-.text-white {
+.color-white {
   color: $white;
 }
-.color-white-dark,
-.text-white-dark {
+.color-white-dark {
   color: $whiteDark;
+}
+
+// border radius 
+
+@each $key, $radius in $border_radius {
+  .radius-#{$key} {
+    @if ($key == '50' or $key == '100') {
+      border-radius: $radius !important;
+    } @else {
+      border-radius: $radius * $rem !important;
+    }
+  }
+}
+
+// borders 
+
+@mixin border_type_style($size, $color) {
+  border-width: $size * $rem !important;
+  border-color: $color;
+}
+
+@each $key, $size in $border_sizes {
+  .br-solid-#{$key} {
+    border-style: solid !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-dotted-#{$key} {
+    border-style: dotted !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-dashed-#{$key} {
+    border-style: dashed !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-double-#{$key} {
+    border-style: double !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-groove-#{$key} {
+    border-style: groove !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-ridge-#{$key} {
+    border-style: ridge !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-inset-#{$key} {
+    border-style: inset !important;
+    @include border_type_style($size, $gray);
+  }
+  .br-outset-#{$key} {
+    border-style: outset !important;
+    @include border_type_style($size, $gray);
+  }
+}
+
+@each $key, $color in $colors {
+  .br-color-#{$key} {
+    border-color: $color !important;
+  }
 }
