@@ -23,6 +23,15 @@ $blue-5: #2e8aee !default;
 $blue-6: #3d92f7 !default;
 $blue-7: #499aff !default;
 
+// brown 
+$brown-1: #50342c;
+$brown-2: #54382f;
+$brown-3: #593c33;
+$brown-4: #5d4037;
+$brown-5: #61443b;
+$brown-6: #66483f;
+$brown-7: #6a4c43;
+
 // green
 $green-1: #009d4f !default;
 $green-2: #00a859 !default;
@@ -181,4 +190,11 @@ $colors: (
   'dark-5': $dark-5,
   'dark-6': $dark-6,
   'dark-7': $dark-7,
+  'brown-1': $brown-1,
+  'brown-2': $brown-2,
+  'brown-3': $brown-3,
+  'brown-4': $brown-4,
+  'brown-5': $brown-5,
+  'brown-6': $brown-6,
+  'brown-7': $brown-7,
 );
