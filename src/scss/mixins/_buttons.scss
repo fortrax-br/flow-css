@@ -1,12 +1,15 @@
 @mixin button_style {
   padding: $btn_mobile_padding;
-  border: $btn_border_width solid transparent;
   font-size: $btn_mobile_font_size;
   font-weight: $btn_font_weight;
+  border: none;
+  outline: none;
   border-radius: $btn_border_radius_default;
   background: $gray;
   color: $white;
   transition: background $btn_transition_duration linear;
+  margin-bottom: 0.3125 * $rem;
+  margin-right: 0;
 }
 
 @mixin button_link_style {
@@ -14,7 +17,6 @@
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  margin: 0.3125 * $rem;
   font-family: $sans-serif;
 
   &:hover {
@@ -22,10 +24,18 @@
   }
 }
 
-@mixin validate_background_button($key, $color) {
-  @if $key == 'white' {
-    color: $dark;
-  } @else {
+@mixin flat_btn_hover($shade_and_tint_color, $color) {   
+  &:hover {
+    background: tint($shade_and_tint_color, 9%);
+    box-shadow: inset 0 0 3px 4px shade($shade_and_tint_color, 15%);
+    color: $color;
+  }
+}
+
+@mixin flat_btn_focus($shade_and_tint_color, $color) {  
+  &:focus {
+    box-shadow: 0 0 3px 4px shade($shade_and_tint_color, 9%);
+    background: tint($shade_and_tint_color, 9%);
     color: $color;
   }
 }
