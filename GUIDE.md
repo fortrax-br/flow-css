@@ -46,9 +46,18 @@ Classes      | Função
 .d-inline-block | Aplica um ``display: inline-block;`` no elemento que a utiliza.
 .d-none | Aplica um ``display: none;`` ao elemento que a utiliza.
 .d-table | Esta classe aplica um ``display: table;`` ao elemento.
-.text-* | Esta classe utilitaria serve para aplicar cor em elementos textuais, onde o (* asterisco) representa uma cor da nossa paleta padrão.
-.color-* | Esta classe serve para aplicar cor em elementos distintos, a diferenciação entre .text-* e .color-* é necessaria para meios de organização e nomeclatura de classe.
-.bg-* | Esta classe alica background-color em elementos distintos, onde o (* asterisco) representa uma cor da nossa paleta de cores padrão.
+.color-* | Esta classe serve para aplicar cor em elementos textuais, onde o (* asterisco) representa uma cor da nossa paleta.
+.bg-* | Esta classe aplica background-color em elementos distintos, onde o (* asterisco) representa uma cor da nossa paleta de cores padrão.
+.radius-* | Esta classe aplica um border-radius ao elememento que a utilize, o (* asterisco) representa uma medida que varia de 1 até 10, tendo tambem os valores 50 e 100 onde 50 representa 50% e 100 representa 100%.
+.br-color-* | Esta classe define a cor da bordar do elemento caso ele tenha borda, o (* asterisco) representa uma cor da nossa paleta padrão.
+.br-dotted-* | Define uma borda pontilhada, o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-dashed-* | Define uma borda tracejada  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-solid-* | Define uma borda sólida  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-double-* | Define uma borda dupla  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-groove-* | Define uma borda com sulcos 3D. O efeito depende do valor da cor da borda, o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-ridge-* | Define uma borda 3D estriada. O efeito depende do valor da cor da borda, o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-inset-* | Define uma borda de inserção 3D. O efeito depende do valor da cor da borda,  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
+.br-outset-* | Define uma borda de início 3D. O efeito depende do valor da cor da borda,  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
 
 ### Utilitários responsivos
 
