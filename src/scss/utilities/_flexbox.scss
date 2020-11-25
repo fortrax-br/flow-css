@@ -1,0 +1,462 @@
+.container-flex {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.flex {
+  display: flex !important;
+  width: 100%;
+  
+  div {
+    width: calc(33.333% - 20px);
+  }
+}
+
+.height-test {
+  height: 140px;
+}
+
+// flex direction
+
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+// flex wrap
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+// flex flow 
+.flex-flow-row-wrap {
+  flex-flow: row wrap !important;
+}
+.flex-flow-row-nowrap {
+  flex-flow: row nowrap !important;
+}
+.flex-flow-column {
+  flex-flow: column nowrap;
+}
+
+// justify content
+.justify-ct-start {
+  justify-content: flex-start !important;
+}
+.justify-ct-end {
+  justify-content: flex-end !important;
+}
+.justify-ct-center {
+  justify-content: center !important;
+}
+.justify-ct-around {
+  justify-content: space-around !important;
+}
+.justify-ct-between {
+  justify-content: space-between !important;
+}
+.justify-ct-evenly {
+  justify-content: space-evenly !important;
+}
+
+// align content 
+.align-ct-start {
+  align-content: flex-start !important;
+}
+.align-ct-end {
+  align-content: flex-end !important;
+}
+.align-ct-center {
+  align-content: center !important;
+}
+.align-ct-around {
+  align-content: space-around !important;
+}
+.align-ct-between {
+  align-content: space-between !important;
+}
+
+// align items
+.align-its-start {
+  align-items: flex-start !important;
+}
+.align-its-end {
+  align-items: flex-end !important;
+}
+.align-its-stretch {
+  align-items: stretch !important;
+}
+.align-its-center {
+  align-items: center !important;
+}
+.align-its-baseline {
+  align-items: baseline !important;
+}
+
+// align self
+.align-sf-start {
+  align-self: flex-start !important;
+}
+.align-sf-end {
+  align-self: flex-end !important;
+}
+.align-sf-stretch {
+  align-self: stretch !important;
+}
+.align-sf-center {
+  align-self: center !important;
+}
+.align-sf-baseline {
+  align-self: baseline !important;
+}
+
+@for $index from 1 through 12 {
+  .flex-grow-#{$index} {
+    flex-grow: $index;
+  }
+
+  .flex-shrink-#{$index} {
+    flex-shrink: $index;
+  }
+
+  .order-#{$index} {
+    order: $index;
+  }
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+@media (max-width: $media_min_sm) {
+  .container-flex {
+    max-width: $media_min_sm_width;
+  }
+}
+
+@media (min-width: $media_sm) {
+  .container-flex {
+    max-width: $media_sm_width;
+  }
+  .justify-ct-sm-start {
+    justify-content: flex-start !important;
+  }
+  .justify-ct-sm-end {
+    justify-content: flex-end !important;
+  }
+  .justify-ct-sm-center {
+    justify-content: center !important;
+  }
+  .justify-ct-sm-around {
+    justify-content: space-around !important;
+  }
+  .justify-ct-sm-between {
+    justify-content: space-between !important;
+  }
+  .justify-ct-sm-evenly {
+    justify-content: space-evenly !important;
+  }
+  .align-ct-sm-start {
+    align-content: flex-start !important;
+  }
+  .align-ct-sm-end {
+    align-content: flex-end !important;
+  }
+  .align-ct-sm-center {
+    align-content: center !important;
+  }
+  .align-ct-sm-around {
+    align-content: space-around !important;
+  }
+  .align-ct-sm-between {
+      align-content: space-between !important;
+  }
+  .align-its-sm-start {
+    align-items: flex-start !important;
+  }
+  .align-its-sm-end {
+    align-items: flex-end !important;
+  }
+  .align-its-sm-stretch {
+    align-items: stretch !important;
+  }
+  .align-its-sm-center {
+    align-items: center !important;
+  }
+  .align-its-sm-baseline {
+    align-items: baseline !important;
+  }
+  .align-sf-sm-start {
+    align-items: flex-start !important;
+  }
+  .align-sf-sm-end {
+    align-items: flex-end !important;
+  }
+  .align-sf-sm-stretch {
+    align-items: stretch !important;
+  }
+  .align-sf-sm-center {
+    align-items: center !important;
+  }
+  .align-sf-sm-baseline {
+    align-items: baseline !important;
+  }
+  .flex-flow-sm-row-wrap {
+    flex-flow: row wrap !important;
+  }
+  .flex-flow-sm-row-nowrap {
+    flex-flow: row nowrap !important;
+  }
+  .flex-flow-sm-column {
+    flex-flow: column nowrap;
+  }
+}
+
+@media (min-width: $media_md) {
+  .container-flex {
+    max-width: $media_md_width;
+  }
+  .justify-ct-md-start {
+    justify-content: flex-start !important;
+  }
+  .justify-ct-md-end {
+    justify-content: flex-end !important;
+  }
+  .justify-ct-md-center {
+    justify-content: center !important;
+  }
+  .justify-ct-md-around {
+    justify-content: space-around !important;
+  }
+  .justify-ct-md-between {
+    justify-content: space-between !important;
+  }
+  .justify-ct-md-evenly {
+    justify-content: space-evenly !important;
+  }
+  .align-ct-md-start {
+    align-content: flex-start !important;
+  }
+  .align-ct-md-end {
+    align-content: flex-end !important;
+  }
+  .align-ct-md-center {
+    align-content: center !important;
+  }
+  .align-ct-md-around {
+    align-content: space-around !important;
+  }
+  .align-ct-md-between {
+    align-content: space-between !important;
+  }
+  .align-its-md-start {
+    align-items: flex-start !important;
+  }
+  .align-its-md-end {
+    align-items: flex-end !important;
+  }
+  .align-its-md-stretch {
+    align-items: stretch !important;
+  }
+  .align-its-md-center {
+    align-items: center !important;
+  }
+  .align-its-md-baseline {
+    align-items: baseline !important;
+  }
+  .align-sf-md-start {
+    align-items: flex-start !important;
+  }
+  .align-sf-md-end {
+    align-items: flex-end !important;
+  }
+  .align-sf-md-stretch {
+    align-items: stretch !important;
+  }
+  .align-sf-md-center {
+    align-items: center !important;
+  }
+  .align-sf-md-baseline {
+    align-items: baseline !important;
+  }
+  .flex-flow-md-row-wrap {
+    flex-flow: row wrap !important;
+  }
+  .flex-flow-md-row-nowrap {
+    flex-flow: row nowrap !important;
+  }
+  .flex-flow-md-column {
+    flex-flow: column nowrap;
+  }
+}
+
+@media (min-width: $media_lg) {
+  .container-flex {
+    max-width: $media_lg_width;
+  }
+  .justify-ct-lg-start {
+    justify-content: flex-start !important;
+  }
+  .justify-ct-lg-end {
+    justify-content: flex-end !important;
+  }
+  .justify-ct-lg-center {
+    justify-content: center !important;
+  }
+  .justify-ct-lg-around {
+    justify-content: space-around !important;
+  }
+  .justify-ct-lg-between {
+    justify-content: space-between !important;
+  }
+  .justify-ct-lg-evenly {
+    justify-content: space-evenly !important;
+  }
+  .align-ct-lg-start {
+    align-content: flex-start !important;
+  }
+  .align-ct-lg-end {
+    align-content: flex-end !important;
+  }
+  .align-ct-lg-center {
+  align-content: center !important;
+  }
+  .align-ct-lg-around {
+    align-content: space-around !important;
+  }
+  .align-ct-lg-between {
+    align-content: space-between !important;
+  }
+  .align-its-lg-start {
+    align-items: flex-start !important;
+  }
+  .align-its-lg-end {
+    align-items: flex-end !important;
+  }
+  .align-its-lg-stretch {
+    align-items: stretch !important;
+  }
+  .align-its-lg-center {
+    align-items: center !important;
+  }
+  .align-its-lg-baseline {
+    align-items: baseline !important;
+  }
+  .align-sf-lg-start {
+    align-items: flex-start !important;
+  }
+  .align-sf-lg-end {
+    align-items: flex-end !important;
+  }
+  .align-sf-lg-stretch {
+    align-items: stretch !important;
+  }
+  .align-sf-lg-center {
+    align-items: center !important;
+  }
+  .align-sf-lg-baseline {
+    align-items: baseline !important;
+  }
+  .flex-flow-lg-row-wrap {
+    flex-flow: row wrap !important;
+  }
+  .flex-flow-lg-row-nowrap {
+    flex-flow: row nowrap !important;
+  }
+  .flex-flow-lg-column {
+    flex-flow: column nowrap;
+  }
+}
+
+@media (min-width: $media_xl) {
+  .container-flex {
+    max-width: $media_xl_width;
+  }
+  .justify-ct-xl-start {
+    justify-content: flex-start !important;
+  }
+  .justify-ct-xl-end {
+    justify-content: flex-end !important;
+  }
+  .justify-ct-xl-center {
+    justify-content: center !important;
+  }
+  .justify-ct-xl-around {
+    justify-content: space-around !important;
+  }
+  .justify-ct-xl-between {
+    justify-content: space-between !important;
+  }
+  .justify-ct-xl-evenly {
+    justify-content: space-evenly !important;
+  }
+  .align-ct-xl-start {
+    align-content: flex-start !important;
+  }
+  .align-ct-xl-end {
+    align-content: flex-end !important;
+  }
+  .align-ct-xl-center {
+    align-content: center !important;
+  }
+  .align-ct-xl-around {
+    align-content: space-around !important;
+  }
+  .align-ct-xl-between {
+    align-content: space-between !important;
+  }
+  .align-its-xl-start {
+    align-items: flex-start !important;
+  }
+  .align-its-xl-end {
+    align-items: flex-end !important;
+  }
+  .align-its-xl-stretch {
+    align-items: stretch !important;
+  }
+  .align-its-xl-center {
+    align-items: center !important;
+  }
+  .align-its-xl-baseline {
+    align-items: baseline !important;
+  }
+  .align-sf-xl-start {
+    align-items: flex-start !important;
+  }
+  .align-sf-xl-end {
+    align-items: flex-end !important;
+  }
+  .align-sf-xl-stretch {
+    align-items: stretch !important;
+  }
+  .align-sf-xl-center {
+    align-items: center !important;
+  }
+  .align-sf-xl-baseline {
+    align-items: baseline !important;
+  }
+  .flex-flow-xl-row-wrap {
+    flex-flow: row wrap !important;
+  }
+  .flex-flow-xl-row-nowrap {
+    flex-flow: row nowrap !important;
+  }
+  .flex-flow-xl-column {
+    flex-flow: column nowrap;
+  }
+}
