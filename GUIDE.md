@@ -59,6 +59,36 @@ Classes      | Função
 .br-inset-* | Define uma borda de inserção 3D. O efeito depende do valor da cor da borda,  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
 .br-outset-* | Define uma borda de início 3D. O efeito depende do valor da cor da borda,  o (* asterisco) representa um valor entre 1 e 10, para indicar a largura da borda.
 
+### Utilitários flexbox 
+
+Classes       | Função
+--------------|------------
+.flex   | Esta classe define ao elemento que a utiliza um display flex, ( todas as classes abaixo, só funcionaram se o elemento que forem utilizalas tiverem a classe flex, ou serem filhos de um elemento com a classe flex).
+.flex-row | Esta classe definie que os filhos do elementos flex que a utilize, devem ficar alinhados em uma unica linha, este é o valor padrão~do display flex.
+.flex-row-reverse | Define que os filhos de um elemento flex, deve ficar em uma unica linha, pórem na posição reversa.
+.flex-column | Esta classe define que os filhos de um elemento flex, deve ficar alinhados em colunas.
+.flex-column-reverse | Funciona como a classe acima, poŕem os items ficam na posição reversa.
+.flex-wrap | Define que os filhos de um elemento flex, deve quebrar de linha caso fiquem maior que o container do elemento flex.
+.flex-wrap-reverse | Funciona como a classe acima, pórem os items que quebram de linham ficam acima dos outros elementos, que não quebraram de linha.
+.flex-nowrap | Define que em hipotese alguma os filhos de um elemento flex, devem quebrar de linha, este é o valor padrão do display flex.
+.flex-flow-row-wrap | Coloca os filhos do elemento flex, em linha e não permite a quebra de linha.
+.flex-flow-row-nowrap | Coloca os filhos do elemento flex, em linha e permite a quebra de linha.
+.flex-flow-column | Coloca os filhos do elemento flex, em coluna e não permite a quebra de linha.
+.justify-ct-start | Alinha os itens ao início do container.
+.justify-ct-end | Alinha os itens ao final do container.
+.justify-ct-between | Cria um espaçamento igual entre os elementos. ou seja cada um no seu quadrado.
+.justify-ct-around | Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final.
+.justify-ct-center | Alinha os itens ao centro do container.
+.justify-ct-evenly | Cria um espaçamento entre os elementos, o espaço é igual tanto entre os elementos, quanto no final e no inicio do container.
+
+__OBS__ A expressão _elemento flex_ é conhecida também como _container flex_, que nada mais é que 
+uma div por exemplo, que tem seu display como flex, ``display: flex``, que no nosso framework, seria utlizando a classe
+``.flex``.
+
+__OBS__ as classes justify-ct-*, que no css seriam ``justify-content: *;``, 
+alinha os itens flex no container de acordo com a a direção especificada. A propriedade só funciona se os itens atuais não ocuparem todo o elemento flex ou seja
+não ocupar todo o elemento pai, que contém a classe ``.flex``.
+
 ### Utilitários responsivos
 
 Classes       | Função
