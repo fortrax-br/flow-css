@@ -1,4 +1,3 @@
-// border radius 
 @each $key, $radius in $border_radius {
   .radius-#{$key} {
     @if ($key == '50' or $key == '100') {
@@ -9,7 +8,6 @@
   }
 }
 
-// borders 
 @mixin border_type_style($size, $color) {
   border-width: $size * $rem !important;
   border-color: $color;
