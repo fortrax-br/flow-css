@@ -15,6 +15,31 @@ $border_radius: (
   '100': 100%,
 );
 
+$border_styles: (
+  'solid': solid,
+  'dotted': dotted,
+  'dashed': dashed,
+  'double': double,
+  'groove': groove,
+  'ridge': ridge,
+  'inset': inset,
+  'outset': outset,
+);
+
+$border_directions: (
+  'lf': border-left,
+  'rt': border-right,
+  'bm': border-bottom,
+  'tp': border-top,
+);
+
+$border_radius_directions: (
+  'tp-lf': border-top-left-radius,
+  'tp-rt': border-top-right-radius,
+  'bm-lf': border-top-left-radius,
+  'bm-rt': border-top-right-radius,
+);
+
 $border_sizes: (
   '1': 1 / $rem_global,
   '2': 2 / $rem_global,

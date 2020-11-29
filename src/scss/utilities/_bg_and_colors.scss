@@ -2,7 +2,6 @@
   .bg-#{$key} {
     background: $color;
   }
-
   .color-#{$key} {
     color: $color;
   }
@@ -20,4 +19,3 @@
 .color-white-dark {
   color: $whiteDark;
 }
-

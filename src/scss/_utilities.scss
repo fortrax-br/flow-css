@@ -1,5 +1,44 @@
-@import './utilities/display';
-@import './utilities/bg_and_colors';
-@import './utilities/borders';
-@import './utilities/flexbox';
+// mixins
+/*
+//@import './utilities/display';
+//@import './utilities/flexbox';
+*/
 
+//@import './utilities/borders';
+//@import './utilities/bg_and_colors';
+
+// o mapa utilities, deve armazenar todas as classes utilitarias, com suas devidas configurações.
+/
+$utilities: ();
+$utilities: map-merge(
+  (
+    "background-color": (
+      class: "bg",
+      using_key: true,
+      property: background-color,
+      values: map-merge($colors, ("white": $white)),
+    ),
+    "color": (
+      class: "color",
+      using_key: true,
+      property: color,
+      values: map-merge($colors, ("white": $white)),
+    ),
+  ), $utilities
+);
+
+// gerar as classes utilitarias sem o prefixo de breakpoint.
+@each $utility_key, $utility in $utilities {
+  @include generate_utilities($utility_key, $utility);
+}
+
+// percorrer o map de breakpoints, e passar os valores dos breakpoints para o mixin generate_breakpoints_up
+// para gerar as classes utilitarias responsivas com os prefixos de breakpoints.
+
+@each $breakpoint_key, $breakpoint_value in $media_breakpoints {
+  @include generate_breakpoints_up($breakpoint_value) {
+    @each $utility_key, $utility in $utilities {
+      @include generate_utilities($utility_key, $utility, true, $breakpoint_key);
+    }
+  }
+}
