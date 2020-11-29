@@ -1,0 +1,46 @@
+// gerador de estilos para as classes utilitarias padrão
+@mixin generate_utility_styles($properties, $value, $property-class, $property-class-modifier, $infix: '') {
+  .#{$property-class+$infix+$property-class-modifier} {
+    @if type-of($properties) == "string" {
+      #{$properties}: $value;
+    } @else {
+      @each $property in $properties {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+// gerador de classes utilitarias.
+// @param {String} $utility_key só por preucação, sua passagem não é obrigatoria.
+// @param {Map} $utility deve ser uma map contendo as propriedades e configurações da classe utilitaria. 
+// @param {Boolean} $is_responsive o padrão é false, ela indica se o mixin deve gerar classes utilitarias com prefixos de breakpoints. 
+// @param {String} $infix se trata do prefixo dos breakpoints.
+
+@mixin generate_utilities($utility_key: '', $utility, $is_responsive: false, $infix: '') {
+  $values: map-get($utility, values);
+  $infix: if($infix != '', '-#{$infix}', '');
+
+  @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
+    $values: zip($values, $values);
+  }
+
+  @each $key, $value in $values {
+    $properties: map-get($utility, property);
+    $property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
+    $property-class: if($property-class == null, "", $property-class);
+    $property-class-modifier: if(map-get($utility, class) == null or map-get($utility, using_key), if($property-class == "", "", "-") + $key, "");
+    $responsive-utility: if(map-has-key($utility, responsive), map-get($utility, responsive), false);
+
+    // se o mixin não foi utilizado dentro de um gerador de media queries, a variavel $is_responsive deve ser setada como false
+    // caso contrario o mixin ira gerar classes com prefixos de breakpoints.
+   
+    @if $is_responsive == false {
+      @include generate_utility_styles($properties, $value, $property-class, $property-class-modifier);
+    } @else {
+      @if $responsive-utility {
+        @include generate_utility_styles($properties, $value, $property-class, $property-class-modifier, $infix);
+      }
+    }
+  }
+}

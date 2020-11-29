@@ -1,0 +1,6 @@
+// gerar breakpoints, sendo min-width como propriedade padrão
+@mixin generate_breakpoints_up($breakpoint_value) {
+  @media (min-width: $breakpoint_value) {
+    @content;
+  }
+}
