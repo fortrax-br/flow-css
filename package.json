@@ -8,8 +8,10 @@
   "license": "GLP v3",
   "private": true,
   "scripts": {
-    "css-autocompile": "npx sass --watch src/scss/flexcss.scss:src/scss/flexcss.css",
-    "css-build": "postcss --use autoprefixer cssnano -o dist/css/flex.min.css src/scss/*.css"
+    "css-autocompile": "npx sass --watch src/scss/flowcss.scss:src/scss/flowcss.css",
+    "css-build": "npm-run-all --parallel css-build-*",
+    "css-build-minimized": "postcss --use autoprefixer cssnano -o dist/css/flow.min.css src/scss/*.css",
+    "css-build-not-minimized": "postcss --use autoprefixer -o dist/css/flow.css src/scss/*.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.2",
