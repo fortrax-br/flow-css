@@ -1,14 +1,7 @@
-// mixins
-/*
-//@import './utilities/display';
-//@import './utilities/flexbox';
-*/
-
-//@import './utilities/borders';
-//@import './utilities/bg_and_colors';
+@import './utilities/borders';
 
 // o mapa utilities, deve armazenar todas as classes utilitarias, com suas devidas configurações.
-/
+
 $utilities: ();
 $utilities: map-merge(
   (
@@ -23,6 +16,128 @@ $utilities: map-merge(
       using_key: true,
       property: color,
       values: map-merge($colors, ("white": $white)),
+    ),
+    "display": (
+      class: "d",
+      using_key: true,
+      property: display,
+      responsive: true,
+      values: block inline-block none grid flex table initial inherit, 
+    ),
+    "flex": (
+      class: "flex",
+      property: display,
+      values: flex,
+    ),
+    "justify-content": (
+      class: "justify-ct",
+      using_key: true,
+      responsive: true,
+      property: justify-content,
+      values: (
+        end: flex-end,
+        start: flex-start,
+        between: space-between,
+        center: center,
+        around: space-around,
+        evenly: evenly,
+      ),
+    ),
+    "align-content": (
+      class: "align-ct",
+      using_key: true,
+      responsive: true,
+      property: align-content,
+      values: (
+        end: flex-end,
+        start: flex-start,
+        between: space-between,
+        center: center,
+        around: space-around,
+        stretch: stretch,
+      ),
+    ),
+    "align-items": (
+      class: "align-its",
+      using_key: true,
+      responsive: true,
+      property: align-items,
+      values: (
+        end: flex-end,
+        start: flex-start,
+        center: center,
+        stretch: stretch,
+        baseline: baseline,
+      ),
+    ),
+    "align-self": (
+      class: "align-sf",
+      using_key: true,
+      responsive: true,
+      property: align-self,
+      values: (
+        auto: auto,
+        end: flex-end,
+        start: flex-start,
+        baseline: baseline,
+        center: center,
+        stretch: stretch,
+      ),
+    ),
+    "flex-direction": (
+      class: "flex",
+      using_key: true,
+      responsive: true,
+      property: flex-direction,
+      values: (
+        row: row,
+        row-reverse: row-reverse,
+        column: column,
+        column-reverse: column-reverse,
+      )
+    ),
+    "flex-wrap": (
+      class: "flex",
+      using_key: true,
+      responsive: true,
+      property: flex-wrap,
+      values: (
+        wrap: wrap,
+        nowrap: nowrap,
+        wrap-reverse: wrap-reverse,
+      ),
+    ),
+    "flex-flow": (
+      class: "flex-flow",
+      using_key: true,
+      responsive: true,
+      property: flex-flow,
+      values: (
+        row-wrap: row wrap,
+        row-nowrap: row nowrap,
+        column: column nowrap,
+      ),
+    ),
+    "flew-grow": (
+      class: "flex-grow",
+      using_key: true,
+      responsive: true,
+      property: flex-grow,
+      values: 1 2 3 4 5 6 7 8 9 10 11 12,
+    ),
+    "flew-shrink": (
+      class: "flex-shrink",
+      using_key: true,
+      responsive: true,
+      property: flex-shrink,
+      values: 0 1 2 3 4 5 6 7 8 9 10 11 12,
+    ),
+    "order": (
+      class: "order",
+      using_key: true,
+      responsive: true,
+      property: order,
+      values: 1 2 3 4 5 6 7 8 9 10 11 12,
     ),
   ), $utilities
 );

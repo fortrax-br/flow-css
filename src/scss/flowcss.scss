@@ -7,10 +7,15 @@
 @import './mixins/utilities';
 
 // import styles of elements
-//@import 'reset';
-//@import 'typography';
-//@import 'buttons';
-//@import 'spacings';
+@import 'reset';
+@import 'typography';
+@import 'buttons';
+@import 'spacings';
 
 // utilities 
 @import 'utilities';
+
+// tests 
+.flex div {
+  width: calc(33.333% - 20px);
+}
