@@ -1,4 +1,4 @@
-# FlexCss
+# Flow Css
 
 ## Dependências do projeto atualmente
 
@@ -19,14 +19,14 @@ Para você poder conferir as features atuais do framework, atualmente, é necess
 ```sh
 git clone https://notabug.org/Altos-Codigos/flow-css.git
 # ou caso já tenha clonado:
-# cd flex-css
+# cd flow-css
 # git pull
 ```
 
 * Após isso, acesse a pasta criada, (o exemplo é usando comandos linux, em seu cmd pode ser diferente caso o sistema não seja linux).
 
 ```sh
-cd flex-css
+cd flow-css
 ```
 
 * Agora é necessário instalar as depêndencias do projeto, para isso faça o seguinte, ( é necessário ter o nodejs instalado em sua máquina).
@@ -89,5 +89,5 @@ na pasta dist, onde fica o arquivo css final, que deve ser importado no arquivo 
 utilizar o framework. Todos os outros arquivos são a respeito de desenvolvimento e teste.
 
 ```sh
-cd dist/css/flex.min.css
+cd dist/css/flow.min.css
 ```
