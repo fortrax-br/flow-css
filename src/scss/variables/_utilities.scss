@@ -1,16 +1,44 @@
 $rem_global: 16;
 
+$spacings_measures: (
+  '10': (10 / $rem_global) * $rem,
+  '15': (15 / $rem_global) * $rem,
+  '20': (20 / $rem_global) * $rem,
+  '25': (25 / $rem_global) * $rem,
+  '30': (30 / $rem_global) * $rem,
+  '35': (35 / $rem_global) * $rem,
+  '40': (40 / $rem_global) * $rem,
+  '45': (45 / $rem_global) * $rem,
+  '50': (50 / $rem_global) * $rem,
+  '55': (55 / $rem_global) * $rem,
+  '60': (60 / $rem_global) * $rem,
+  '65': (65 / $rem_global) * $rem,
+  '70': (70 / $rem_global) * $rem,
+  '75': (75 / $rem_global) * $rem,
+  '80': (80 / $rem_global) * $rem,
+);
+
+$widths: (
+  '40': (40 / $rem_global) * $rem,
+  '60': (60 / $rem_global) * $rem,
+  '80': (80 / $rem_global) * $rem,
+  '100': (100 / $rem_global) * $rem,
+  '120': (120 / $rem_global) * $rem,
+  '140': (140 / $rem_global) * $rem,
+  '160': (160 / $rem_global) * $rem,
+);
+
 $border_radius: (
-  '1': 5 / $rem_global,
-  '2': 10 / $rem_global,
-  '3': 15 / $rem_global,
-  '4': 20 / $rem_global,
-  '5': 25 / $rem_global,
-  '6': 30 / $rem_global,
-  '7': 35 / $rem_global,
-  '8': 40 / $rem_global,
-  '9': 45 / $rem_global,
-  '10': 50 / $rem_global,
+  '1': (5 / $rem_global) * $rem,
+  '2': (10 / $rem_global) * $rem,
+  '3': (15 / $rem_global) * $rem,
+  '4': (20 / $rem_global) * $rem,
+  '5': (25 / $rem_global) * $rem,
+  '6': (30 / $rem_global) * $rem,
+  '7': (35 / $rem_global) * $rem,
+  '8': (40 / $rem_global) * $rem,
+  '9': (45 / $rem_global) * $rem,
+  '10': (50 / $rem_global) * $rem,
   '50': 50%,
   '100': 100%,
 );
@@ -41,14 +69,14 @@ $border_radius_directions: (
 );
 
 $border_sizes: (
-  '1': 1 / $rem_global,
-  '2': 2 / $rem_global,
-  '3': 3 / $rem_global,
-  '4': 4 / $rem_global,
-  '5': 5 / $rem_global,
-  '6': 6 / $rem_global,
-  '7': 7 / $rem_global,
-  '8': 8 / $rem_global,
-  '9': 9 / $rem_global,
-  '10': 10 / $rem_global,
+  '1': (1 / $rem_global) * $rem,
+  '2': (2 / $rem_global) * $rem,
+  '3': (3 / $rem_global) * $rem,
+  '4': (4 / $rem_global) * $rem,
+  '5': (5 / $rem_global) * $rem,
+  '6': (6 / $rem_global) * $rem,
+  '7': (7 / $rem_global) * $rem,
+  '8': (8 / $rem_global) * $rem,
+  '9': (9 / $rem_global) * $rem,
+  '10': (10 / $rem_global) * $rem,
 );

@@ -1,17 +1,29 @@
 @each $direction_key, $direction in $border_directions {
+  // gerar classes para estilos de bordas
   @each $class, $style in $border_styles {
     .br-#{$direction_key}-#{$class} {
       #{$direction}-style: $style;
     }
+    .br-style-#{$class} {
+      border-style: $style;
+    }
   }
+  // gerar classes para larguras de bordas
   @each $size_key, $size in $border_sizes {
     .br-#{$direction_key}-width-#{$size_key} {
       #{$direction}-width: $size;
     }
+    .br-width-#{$size_key} {
+      border-width: $size;
+    }
   }
+  // gerar classes para aplicar cores as bordas
   @each $color_key, $color in $colors {
     .br-#{$direction_key}-color-#{$color_key} {
       #{$direction}-color: $color;
+    }
+    .br-color-#{$color_key} {
+      border-color: $color;
     }
   }
 }
@@ -20,6 +32,10 @@
   @each $radius_key, $radius in $border_radius {
     .br-radius-#{$radius_direction_key}-#{$radius_key} {
       #{$radius_direction}: $radius;
+    }
+
+    .br-radius-#{$radius_key} {
+      border-radius: $radius;
     }
   }
 }
