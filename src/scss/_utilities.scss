@@ -1,4 +1,4 @@
-//@import './utilities/borders';
+@import './utilities/borders';
 
 // o mapa utilities, deve armazenar todas as classes utilitarias, com suas devidas configurações.
 
@@ -10,6 +10,24 @@ $utilities: map-merge(
       using_key: true,
       property: background-color,
       values: map-merge($colors, ("white": $white)),
+    ),
+    "text-align": (
+      class: "text",
+      using_key: true,
+      property: text-align,
+      values: center left right justify,
+    ),
+    "font-style": (
+      class: "fs-style",
+      using_key: true,
+      property: font-style,
+      values: italic oblique normal initial inherit,
+    ),
+    "font-weight": (
+      class: "bold",
+      using_key: true,
+      property: font-weight,
+      values: $bold_weights,
     ),
     "color": (
       class: "color",

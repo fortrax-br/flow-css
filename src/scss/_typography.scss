@@ -47,106 +47,15 @@ h6 {
   }
 }
 
-.font-size-1 {
-  font-size: (12 / $rem_global) * $rem;
-  line-height: 1.5;
-} 
-
-.font-size-2 {
-  font-size: $rem;
-  line-height: 1.2;
+@each $font_size_key, $font_size in $font_sizes {
+  .font-size-#{$font_size_key} {
+    font-size: $font_size;
+    line-height: 1.4;
+  }
 }
-.font-size-3 {
-  font-size: (18 / $rem_global) * $rem;
-  line-height: 1.2;
-}
-.font-size-4 {
-  font-size: (20 / $rem_global) * $rem;
-  line-height: 1.5;
-}
-.font-size-5 {
-  font-size: (24 / $rem_global) * $rem;
-  line-height: 1.4;
-}
-.font-size-6 {
-  font-size: (32 / $rem_global) * $rem;
-  line-height: 1.4;
-}
-.font-size-7 {
-  font-size: (36 / $rem_global) * $rem;
-  line-height: 1.4;
-}
-.font-size-8 {
-  font-size: (42 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-9 {
-  font-size: (50 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-10 {
-  font-size: (55 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-11 {
-  font-size: (60 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-12 {
-  font-size: (68 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-13 {
-  font-size: (75 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-14 {
-  font-size: (80 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-15 {
-  font-size: (90 / $rem_global) * $rem;
-  line-height: 1;
-}
-.font-size-16 {
-  font-size: (100 / $rem_global) * $rem;
-  line-height: 1;
-} 
-.font-size-17 {
-  font-size: (110 / $rem_global) * $rem;
-  line-height: 1;
-} 
-
 @each $key, $size in $expand_sizes {
   .expand-#{$key} {
     @include expand_styles;
     font-size: $size;
-  }
-}
-
-// aligns text
-.text-center {
-  text-align: center !important;
-}
-.text-left {
-  text-align: left !important;
-}
-.text-right {
-  text-align: right !important;
-}
-.text-justify {
-  text-align: justify !important;
-}
-.italic {
-  font-style: italic;
-}
-.text-underline {
-  text-decoration: underline;
-}
-
-// font weight bolds
-@each $key, $bold in $bold_weights {
-  .bold-#{$key} {
-    font-weight: $bold !important;
   }
 }
