@@ -1,4 +1,4 @@
-@import './utilities/borders';
+//@import './utilities/borders';
 
 // o mapa utilities, deve armazenar todas as classes utilitarias, com suas devidas configurações.
 
@@ -24,13 +24,7 @@ $utilities: map-merge(
       responsive: true,
       values: block inline-block none grid flex table initial inherit, 
     ),
-    "width": (
-      class: "w",
-      using_key: true,
-      responsive: true,
-      property: width,
-      values: $widths,
-    ),
+    // spacings utilities classes
     "padding": (
       class: "p",
       using_key: true,
@@ -115,6 +109,7 @@ $utilities: map-merge(
       property: margin-left,
       values: $spacings_measures,
     ),
+    // flex box utilities classes
     "flex": (
       class: "flex",
       property: display,
@@ -229,6 +224,62 @@ $utilities: map-merge(
       responsive: true,
       property: order,
       values: 1 2 3 4 5 6 7 8 9 10 11 12,
+    ),
+     "float": (
+      responsive: true,
+      property: float,
+      values: left right none
+    ),
+    "overflow": (
+      property: overflow,
+      values: auto hidden visible scroll,
+    ),
+    "position": (
+      property: position,
+      values: static relative absolute fixed sticky
+    ),
+    // sizings utilities classes
+    "width": (
+      using_key: true,
+      property: width,
+      class: "w",
+      values: $sizings,
+    ),
+    "max-width": (
+      property: max-width,
+      class: "mw",
+      values: (100: 100%)
+    ),
+    "viewport-width": (
+      property: width,
+      class: "vw",
+      values: (100: 100vw)
+    ),
+    "min-viewport-width": (
+      property: min-width,
+      class: "min-vw",
+      values: (100: 100vw)
+    ),
+    "height": (
+      using_key: true,
+      property: height,
+      class: "h",
+      values: $sizings,
+    ),
+    "max-height": (
+      property: max-height,
+      class: "mh",
+      values: (100: 100%)
+    ),
+    "viewport-height": (
+      property: height,
+      class: "vh",
+      values: (100: 100vh)
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: "min-vh",
+      values: (100: 100vh)
     ),
   ), $utilities
 );

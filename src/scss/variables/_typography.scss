@@ -16,3 +16,59 @@ $bold_weights: (
   '800': 800,
   '900': 900,
 );
+
+$font_size_base: $rem !default; // default is 16px
+$font_weight_lighter: lighter !default;
+$font_weight_light: 300 !default;
+$font_weight_normal: 400 !default;
+$font_weight_reular: 500 !default;
+$font_weight_bold: 700 !default;
+$font_weight_bolder: bolder !default;
+
+$line_height_base: 1.5 !default;
+$line_height_sm: 1.25 !default;
+$line_height_lg: 2 !default;
+
+$text_font_size: $font_size_base * 1.125 !default;
+$h1_font_size: $font_size_base * 2.5 !default;
+$h2_font_size: $font_size_base * 2 !default;
+$h3_font_size: $font_size_base * 1.75 !default;
+$h4_font_size: $font_size_base * 1.5 !default;
+$h5_font_size: $font_size_base * 1.25 !default;
+$h6_font_size: $font_size_base !default;
+
+$font_sizes: (
+  1: (13 / $rem_global) * $rem,
+  2: (18 / $rem_global) * $rem,
+  3: (23 / $rem_global) * $rem,
+  4: (28 / $rem_global) * $rem,
+  5: (33 / $rem_global) * $rem,
+  6: (38 / $rem_global) * $rem,
+  7: (43 / $rem_global) * $rem,
+  8: (48 / $rem_global) * $rem,
+  9: (53 / $rem_global) * $rem,
+  10: (58 / $rem_global) * $rem,
+  11: (63 / $rem_global) * $rem,
+  12: (68 / $rem_global) * $rem,
+  13: (73 / $rem_global) * $rem,
+  14: (78 / $rem_global) * $rem,
+  15: (83 / $rem_global) * $rem,
+) !default;
+
+$lines_height: (
+  1: 0.8,
+  2: (1.5 / $rem_global) * $rem,
+  3: (1.5 / $rem_global) * $rem,
+  4: (1.5 / $rem_global) * $rem,
+  5: (30 / $rem_global) * $rem,
+  6: (35 / $rem_global) * $rem,
+  7: (40 / $rem_global) * $rem,
+  8: (45 / $rem_global) * $rem,
+  9: (50 / $rem_global) * $rem,
+  10: (55 / $rem_global) * $rem,
+  11: (50 / $rem_global) * $rem,
+  12: (55 / $rem_global) * $rem,
+  13: (10 / $rem_global) * $rem,
+  14: (10 / $rem_global) * $rem,
+  15: (75 / $rem_global) * $rem,
+);

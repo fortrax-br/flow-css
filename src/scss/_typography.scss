@@ -8,40 +8,35 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5 * $rem;
+  font-size: $h1_font_size;
   font-weight: 700;
 
   + h1 {
     page-break-before: always;
   }
 }
-
 h2 {
-  font-size: 2.1875 * $rem;
+  font-size: $h2_font_size;
 }
-
 h3 {
-  font-size: 1.875 * $rem;
+  font-size: $h3_font_size;
 }
-
 h4 {
-  font-size: 1.6875 * $rem;
+  font-size: $h4_font_size;
 }
-
 h5 {
-  font-size: 1.5 * $rem;
+  font-size: $h5_font_size;
 }
-
 h6 {
-  font-size: 1.25 * $rem;
+  font-size: $h6_font_size;
 }
 
 .text {
-  font-size: 1.125 * $rem;
+  font-size: $text_font_size;
   font-weight: 300;
   font-family: $sans-serif;
   color: $darkLight;
-  line-height: 1.5;
+  line-height: $line_height_base;
   display: block;
   max-width: 100%;
 }
@@ -51,6 +46,76 @@ h6 {
     @extend h#{$index};
   }
 }
+
+.font-size-1 {
+  font-size: (12 / $rem_global) * $rem;
+  line-height: 1.5;
+} 
+
+.font-size-2 {
+  font-size: $rem;
+  line-height: 1.2;
+}
+.font-size-3 {
+  font-size: (18 / $rem_global) * $rem;
+  line-height: 1.2;
+}
+.font-size-4 {
+  font-size: (20 / $rem_global) * $rem;
+  line-height: 1.5;
+}
+.font-size-5 {
+  font-size: (24 / $rem_global) * $rem;
+  line-height: 1.4;
+}
+.font-size-6 {
+  font-size: (32 / $rem_global) * $rem;
+  line-height: 1.4;
+}
+.font-size-7 {
+  font-size: (36 / $rem_global) * $rem;
+  line-height: 1.4;
+}
+.font-size-8 {
+  font-size: (42 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-9 {
+  font-size: (50 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-10 {
+  font-size: (55 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-11 {
+  font-size: (60 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-12 {
+  font-size: (68 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-13 {
+  font-size: (75 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-14 {
+  font-size: (80 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-15 {
+  font-size: (90 / $rem_global) * $rem;
+  line-height: 1;
+}
+.font-size-16 {
+  font-size: (100 / $rem_global) * $rem;
+  line-height: 1;
+} 
+.font-size-17 {
+  font-size: (110 / $rem_global) * $rem;
+  line-height: 1;
+} 
 
 @each $key, $size in $expand_sizes {
   .expand-#{$key} {
@@ -72,11 +137,9 @@ h6 {
 .text-justify {
   text-align: justify !important;
 }
-
 .italic {
   font-style: italic;
 }
-
 .text-underline {
   text-decoration: underline;
 }

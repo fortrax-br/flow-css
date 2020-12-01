@@ -1,5 +1,3 @@
-$rem_global: 16;
-
 $spacings_measures: (
   '10': (10 / $rem_global) * $rem,
   '15': (15 / $rem_global) * $rem,
@@ -18,14 +16,23 @@ $spacings_measures: (
   '80': (80 / $rem_global) * $rem,
 );
 
-$widths: (
-  '40': (40 / $rem_global) * $rem,
-  '60': (60 / $rem_global) * $rem,
-  '80': (80 / $rem_global) * $rem,
-  '100': (100 / $rem_global) * $rem,
-  '120': (120 / $rem_global) * $rem,
-  '140': (140 / $rem_global) * $rem,
-  '160': (160 / $rem_global) * $rem,
+$sizings: (
+  25: 20%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  45: 45%,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+  100: 100%,
 );
 
 $border_radius: (
