@@ -12,14 +12,9 @@
 }
 
 // gerador de classes utilitarias.
-// @param {String} $utility_key só por preucação, sua passagem não é obrigatoria.
-// @param {Map} $utility deve ser uma map contendo as propriedades e configurações da classe utilitaria. 
-// @param {Boolean} $is_responsive o padrão é false, ela indica se o mixin deve gerar classes utilitarias com prefixos de breakpoints. 
-// @param {String} $infix se trata do prefixo dos breakpoints.
-
 @mixin generate_utilities($utility_key: '', $utility, $is_responsive: false, $infix: '') {
   $values: map-get($utility, values);
-  $infix: if($infix != '', '-#{$infix}', '');
+  $infix: generate_breakpoint_infix($infix, $media_breakpoints);
 
   @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
     $values: zip($values, $values);

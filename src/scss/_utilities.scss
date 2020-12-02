@@ -302,6 +302,20 @@ $utilities: map-merge(
   ), $utilities
 );
 
+/*
+$utilities: map-merge(
+  (
+    "margin": (
+      class: "m",
+      using_key: true,
+      responsive: true,
+      property: margin,
+      values: $spacings_measures,
+    ),
+  ), $utilities
+);
+*/
+
 // gerar as classes utilitarias sem o prefixo de breakpoint.
 @each $utility_key, $utility in $utilities {
   @include generate_utilities($utility_key, $utility);
@@ -311,7 +325,7 @@ $utilities: map-merge(
 // para gerar as classes utilitarias responsivas com os prefixos de breakpoints.
 
 @each $breakpoint_key, $breakpoint_value in $media_breakpoints {
-  @include generate_breakpoints_up($breakpoint_value) {
+  @include generate_breakpoints_up($breakpoint_key, $media_breakpoints) {
     @each $utility_key, $utility in $utilities {
       @include generate_utilities($utility_key, $utility, true, $breakpoint_key);
     }

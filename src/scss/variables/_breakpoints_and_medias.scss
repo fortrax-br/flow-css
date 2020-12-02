@@ -1,0 +1,29 @@
+// setup to medias query sizes
+
+$breakpoint_min_sm: 0; // max width 440px
+$breakpoint_sm: 440px; // min width 440px
+$breakpoint_md: 740px; // min width 740px
+$breakpoint_lg: 980px; // min width 980px
+$breakpoint_xl: 1200px; // min width 1200px; 
+
+$container_min_sm_width: 380px; // max width 380px
+$container_sm_width: 560px; // max width 560px
+$container_md_width: 720px; // max width 720px
+$container_lg_width: 940px; // max width 940px
+$container_xl_width: 1120px; // max width 1120px
+
+$media-breakpoints: (
+  "xs": $breakpoint_min_sm,
+  "sm": $breakpoint_sm,
+  "md": $breakpoint_md,
+  "lg": $breakpoint_lg,
+  "xl": $breakpoint_xl,
+);
+
+$container-widths: (
+  "xs": $container_min_sm_width,
+  "sm": $container_sm_width,
+  "md": $container_md_width,
+  "lg": $container_lg_width,
+  "xl": $container_xl_width,
+);
