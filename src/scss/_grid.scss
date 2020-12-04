@@ -2,6 +2,8 @@
   @include generate_row($grid_gutter);
 
   > * {
-    @include generate_col_ready($grid_gutter);
+    @include generate_col_pattern($grid_gutter);
   }
 }
+
+@include generate_grid_columns();

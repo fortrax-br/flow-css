@@ -1,3 +1,8 @@
+// prefixo padrão para todas as variaveis css do framework.
+$variable_prefix: flowcss !default;
+
+$rem_global: 16;
+
 @import './variables/colors';
 @import './variables/fonts';
 @import './variables/breakpoints_and_medias';

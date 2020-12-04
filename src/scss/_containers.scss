@@ -1,8 +1,13 @@
 // Define as classes de containers com suas propriedades padrão
-
 .container,
 .container-fluid {
   @include generate_container();
+}
+
+.grid-gap {
+  > .row + .row {
+    margin-top: var(--#{$variable_prefix}-gutter-x);
+  }
 }
 
 // percorrer o map de max-widths dos containers para gerar os breakpoints
@@ -18,9 +23,18 @@
 
     // aplicando os prefixos para containers controlados por breakpoints e gerando os media query
     // para controlar tanto a classe container quanto as classes container com prefixo de breakpoint. 
-    .container,
-    .container#{generate_breakpoint_infix($container_breakpoint, $media_breakpoints)} {
-      @extend %responsive-container-#{$container_breakpoint};
+    $validate: true;
+
+    @each $breakpoint_infix, $breakpoint_width in $media_breakpoints {
+      @if $validate {
+        .container#{generate_breakpoint_infix($breakpoint_infix, $media_breakpoints)} {
+          @extend %responsive-container-#{$container_breakpoint};
+        }
+
+        @if $container_breakpoint == $breakpoint_infix {
+          $validate: false;
+        }
+      }
     }
   }
 }

@@ -50,13 +50,13 @@ $utilities: map-merge(
       values: $spacings_measures,
     ),
     "padding-x": (
-      class: "p-x",
+      class: "px",
       using_key: true,
       property: padding-left padding-right,
       values: $spacings_measures,
     ),
     "padding-y": (
-      class: "p-y",
+      class: "py",
       using_key: true,
       property: padding-top padding-bottom,
       values: $spacings_measures,
@@ -92,13 +92,13 @@ $utilities: map-merge(
       values: $spacings_measures,
     ),
     "margin-x": (
-      class: "m-x",
+      class: "mx",
       using_key: true,
       property: margin-left margin-right,
       values: $spacings_measures,
     ),
     "margin-y": (
-      class: "m-y",
+      class: "my",
       using_key: true,
       property: margin-top margin-bottom,
       values: $spacings_measures,

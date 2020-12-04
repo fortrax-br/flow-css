@@ -1,25 +1,94 @@
 @mixin generate_row($gutter: $grid_gutter) {
-  width: 100%;
+  // variaveis para configurar os gutters do grid
+  --#{$variable_prefix}-gutter-x: #{$gutter};
+  --#{$variable_prefix}-gutter-y: 0;
+
   display: flex;
   flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -20px;
+  margin-right: calc(var(--#{$variable_prefix}-gutter-x) / -2); 
+  margin-left: calc(var(--#{$variable_prefix}-gutter-x) / -2);
 }
 
-@mixin generate_col_ready($gutter: $grid_gutter) {
+@mixin generate_col_pattern($gutter: $grid_gutter) {
   max-width: 100%;
   flex-shrink: 0;
-  padding-left: (($gutter / 2) / $rem_global) * $rem;
-  padding-right: (($gutter / 2) / $rem_global) * $rem;
+  box-sizing: border-box;
+  padding-left: calc(var(--#{$variable_prefix}-gutter-x) / 2);
+  padding-right: calc(var(--#{$variable_prefix}-gutter-x) / 2);
 }
 
-@mixin generate_col($width, $columns: $grid_columns) {
+@mixin settings_col($width, $columns: $grid_columns) {
   flex: 0 0 auto;
   width: percentage($width / $columns);
 }
 
-@for $index from 1 through $grid_columns {
-  .col-#{$index} {
-    @include generate_col($index, $grid_columns);
+@mixin settings_col_auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin settings_rows_columns($count_columns) {
+  > * {
+    flex: 0 0 auto;
+    width: 100% / $count_columns;
+  }
+}
+
+@mixin settings_column_offset($width, $columns: $grid_columns) {
+  $spacing: $width / $columns;
+  margin-left: if($spacing == 0, 0, percentage($spacing));
+}
+
+@mixin generate_grid_columns($columns: $grid_columns, $gutter: $grid_gutter, $breakpoints: $media_breakpoints) {
+  @each $breakpoint_infix in map-keys($breakpoints) {
+    $infix: generate_breakpoint_infix($breakpoint_infix, $breakpoints);
+
+    @include generate_breakpoints_up($breakpoint_infix, $breakpoints) {
+      .col#{$infix} {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      .col#{$infix}-auto {
+        @include settings_col_auto();
+      }
+
+      .row-cols#{$infix}-auto > * {
+        @include settings_col_auto();
+      }
+
+      @if $grid_rows_columns > 0 {
+        @for $index from 1 through $grid_rows_columns {
+          .row-cols#{$infix}-#{$index} {
+            @include settings_rows_columns($index);
+          }
+        }
+      }
+
+      // gerando as colunas
+      @if $columns > 0 {
+        @for $index from 1 through $columns {
+          .col#{$infix}-#{$index} {
+              @include settings_col($index, $columns);
+          }
+        }
+      }
+
+      // gerando as classes de offset, apartir da coluna 1 até a penúltima coluna
+      // deve ser assim já que não se pode aplicar um offset em todas as colunas de uma vez.
+      @for $index from 1 through ($columns - 1) {
+        .offset#{$infix}-#{$index} {
+          @include settings_column_offset($index, $columns);
+        }
+      }
+
+      // gerando as classes para mudar o gutter do grid, o padrão é 20px sendo 10px para 
+      // cada lado, na horizontal.
+      @each $gutter_key, $gutter_value in $grid_gutters {
+        .g#{$infix},
+        .gx#{$infix}-#{$gutter_key} {
+          --#{$variable_prefix}-gutter-x: #{$gutter_value};
+        }
+      }
+    }
   }
 }

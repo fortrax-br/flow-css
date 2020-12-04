@@ -4,8 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  vertical-align: baseline;
-  border: none;
 }
 
 html,
@@ -14,9 +12,6 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: $body_base_color;
-}
-section {
-  padding: 4 * $rem 0;
 }
 
 img {
@@ -266,7 +261,7 @@ select[multiple] {
 
 // setup of containers
 
-address,
+/*address,
 article,
 aside,
 blockquote,
@@ -278,7 +273,7 @@ div,
 figure {
   display: block;
   width: 100%;
-}
+}*/
 
 canvas {
   height: 10 * $rem;
