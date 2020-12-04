@@ -1,7 +1,7 @@
 // funções baseadas nas funções de breakpoints do Bootstrap 4.
 // https://github.com/twbs/bootstrap/blob/main/scss/mixins/_breakpoints.scss
 
-@function verify_if_max_breakpoint($breakpoint_key, $breakpoints: $media-breakpoints) {
+@function verify_if_max_breakpoint($breakpoint_key, $breakpoints: $media_breakpoints) {
   $max: map-get($breakpoints, $breakpoint_key);
 
   @return if($max and $max > 0, $max - .02, null);

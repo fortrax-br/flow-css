@@ -84,7 +84,7 @@
   }
 }
 
-@media (min-width: $media_md) {
+@media (min-width: $breakpoint_md) {
   .btn,
   .btn-link {
     padding: $btn_medium_padding;

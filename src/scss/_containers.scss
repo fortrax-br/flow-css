@@ -1,0 +1,26 @@
+// Define as classes de containers com suas propriedades padrão
+
+.container,
+.container-fluid {
+  @include generate_container();
+}
+
+// percorrer o map de max-widths dos containers para gerar os breakpoints
+@each $container_breakpoint, $container_max_width in $container_widths {
+  .container-#{$container_breakpoint} {
+    @extend .container-fluid;
+  }
+
+  @include generate_breakpoints_up($container_breakpoint, $media_breakpoints) {
+    %responsive-container-#{$container_breakpoint} {
+      max-width: $container_max_width;
+    }
+
+    // aplicando os prefixos para containers controlados por breakpoints e gerando os media query
+    // para controlar tanto a classe container quanto as classes container com prefixo de breakpoint. 
+    .container,
+    .container#{generate_breakpoint_infix($container_breakpoint, $media_breakpoints)} {
+      @extend %responsive-container-#{$container_breakpoint};
+    }
+  }
+}

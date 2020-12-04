@@ -1,18 +1,18 @@
 // setup of styles 
 @import 'functions';
 @import 'variables';
-@import './mixins/buttons';
-@import './mixins/typography';
-@import './mixins/breakpoints';
-@import './mixins/utilities';
+@import 'mixins';
 
 // import styles of elements
-//@import 'reset';
-//@import 'typography';
-//@import 'buttons';
+@import 'reset';
+@import 'typography';
+@import 'buttons';
 
 // utilities 
 @import 'utilities';
+
+// grid system
+@import './flowcss_grid';
 
 // tests 
 .flex div {
