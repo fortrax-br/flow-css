@@ -1,3 +1,6 @@
+$custom_colors: false !default;
+$enable_gradient: true !default;
+
 $blue: #1a82e5 !default;
 $green: #24be6d !default;
 $yellow: #D8D456 !default;
@@ -22,6 +25,16 @@ $blue-4: #1a82e5 !default;
 $blue-5: #2e8aee !default;
 $blue-6: #3d92f7 !default;
 $blue-7: #499aff !default;
+
+// gray 
+
+$gray-1: #3f3f3f !default;
+$gray-2: #434343 !default;
+$gray-3: #484848 !default;
+$gray-4: #4c4c4c !default;
+$gray-5: #505050 !default;
+$gray-6: #555555 !default;
+$gray-7: #595959 !default;
 
 // brown 
 $brown-1: #50342c;
@@ -122,7 +135,9 @@ $white-5: #f5f5f5;
 $white-6: #f6f6f6;
 $white-7: #f7f7f7;
 
-$colors: (
+$colors: ();
+
+$pattern_colors: (
   'blue-1': $blue-1,
   'blue-2': $blue-2,
   'blue-3': $blue-3,
@@ -197,4 +212,17 @@ $colors: (
   'brown-5': $brown-5,
   'brown-6': $brown-6,
   'brown-7': $brown-7,
+  'gray-1': $gray-1,
+  'gray-2': $gray-2,
+  'gray-3': $gray-3,
+  'gray-4': $gray-4,
+  'gray-5': $gray-5,
+  'gray-6': $gray-6,
+  'gray-7': $gray-7,
 );
+
+@if $custom_colors == false {
+  $colors: $pattern_colors;
+}
+
+
