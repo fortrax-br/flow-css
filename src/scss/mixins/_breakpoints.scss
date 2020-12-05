@@ -1,4 +1,4 @@
-// gerar breakpoints, sendo min-width como propriedade padrão
+// gerar breakpoints, sendo min-width a forma de validação
 @mixin generate_breakpoints_up($breakpoint_key, $breakpoint_value, $breakpoints: $media_breakpoints) {
   $min_breakpoint: verify_if_min_breakpoint($breakpoint_key, $breakpoints);
   
@@ -11,6 +11,7 @@
   }
 }
 
+// gerador de breakpoints, sendo max-width a forma de validação
 @mixin generate_breakpoints_down($breakpoint_key, $breakpoints: $media_breakpoints) {
   $max_breakpoint: verify_if_max_breakpoint($breakpoint_key, $breakpoints);
   

@@ -1,0 +1,28 @@
+@mixin linear_gradient_right($color_one: $blue-1, $color_two: $blue-7, $start_percent: 0%, $end_percent: 100%) {
+  background-image: linear-gradient(to right, $color_one $start_percent, $color_two $end_percent);
+}
+
+@mixin linear_gradient_left($color_one: $red-1, $color_two: $red-7, $start_percent: 0%, $end_percent: 100%) {
+  background-image: linear-gradient(to left, $color_one $start_percent, $color_two $end_percent);
+}
+
+@mixin linear_gradient_y($color_one: $green-1, $color_two: $green-7, $start_percent: 0%, $end_percent: 100%) {
+  background-image: linear-gradient(to bottom, $color_one $start_percent, $color_two $end_percent);
+}
+
+@mixin linear_gradient_diagonally($color_one: $red-1, $color_two: $blue-7, $start_percent: 0%, $end_percent: 100%) {
+  background-image: linear-gradient(to bottom right, $color_one $start_percent, $color_two $end_percent);
+}
+
+@mixin linear_gradient_directional($color_one: $violet-1, $color_two: $pink-7, $deg: 180deg) {
+  background-image: linear-gradient($deg, $color_one, $color_two);
+}
+
+@mixin linear_gradient_left_three_colors($start_color: $blue-2, $mid_color: $green-4, $end_color: $red-5, $color_stop: 50%) {
+  background-image: linear-gradient(to left, $start_color, $mid_color $color_stop, $end_color);
+}
+
+@mixin linear_gradient_right_three_colors($start_color: $blue-2, $mid_color: $green-4, $end_color: $red-5, $color_stop: 50%) {
+  background-image: linear-gradient(to right, $start_color, $mid_color $color_stop, $end_color);
+}
+
