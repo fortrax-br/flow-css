@@ -3,6 +3,35 @@
 @import 'variables';
 @import 'mixins';
 
+@if $enable_gradient {
+  .bg-gradient-right {
+    @include linear_gradient_right();
+  }
+
+  .bg-gradient-left {
+    @include linear_gradient_left();
+  }
+
+  .bg-gradient-y {
+    @include linear_gradient_y();
+  }
+
+  .bg-gradient-diagonally {
+    @include linear_gradient_diagonally();
+  }
+
+  .bg-gradient-left-three {
+    @include linear_gradient_left_three_colors();
+  }
+
+  .bg-gradient-right-three {
+    @include linear_gradient_right_three_colors();
+  }
+
+  .bg-gradient-deg {
+    @include linear_gradient_directional();
+  }
+}
 // import styles of elements
 @import 'reset';
 @import 'typography';
@@ -12,9 +41,10 @@
 @import 'utilities';
 
 // grid system
-@import './flowcss_grid';
+@import './containers';
+@import './grid';
 
 // tests 
-/*.flex div {
+.flex div {
   width: calc(33.333% - 20px);
-}*/
+}
