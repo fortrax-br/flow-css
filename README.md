@@ -70,13 +70,13 @@ executar o comando para o sass fazer a compilação automatica a cada nova modif
 esse auto compile, vai facilitar no processo de modificação antes de fazer o build em si, para isos apenas diite o comando.
 
 ```sh
-yarn run css-autocompile
+yarn run css-compile
 ```
 
 ou com npm:
 
 ```sh
-npm run css-autocompile
+npm run css-compile
 ```
 
 Feito isso, o sass vai ficar automaticamente recompilando os arquivos a cada nova modificação, sem necessidade 
@@ -89,5 +89,5 @@ na pasta dist, onde fica o arquivo css final, que deve ser importado no arquivo 
 utilizar o framework. Todos os outros arquivos são a respeito de desenvolvimento e teste.
 
 ```sh
-cd dist/css/flow.min.css
+cd dist/css/flowcss.min.css
 ```

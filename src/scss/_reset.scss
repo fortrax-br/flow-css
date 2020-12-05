@@ -259,22 +259,6 @@ select[multiple] {
   min-width: 16 * $rem;
 }
 
-// setup of containers
-
-/*address,
-article,
-aside,
-blockquote,
-canvas,
-main,
-nav,
-section,
-div,
-figure {
-  display: block;
-  width: 100%;
-}*/
-
 canvas {
   height: 10 * $rem;
   width: 20 * $rem;

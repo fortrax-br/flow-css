@@ -93,29 +93,10 @@ não ocupar todo o elemento pai, que contém a classe ``.flex``.
 
 Classes       | Função
 --------------|------------
-.d-m-sm-block | O elemento que utiliza esta classe, passa a ter um ``display: block;``, sempre que a largura da tela do usúario tiver no máximo 440px de largura.
-.d-m-sm-inline | O elemento que utiliza esta classe, passa a ter um ``display: inline;``, sempre que a largura da tela do usúario tiver no máximo 440px de largura.
-.d-m-sm-inline-block | O elemento que utiliza esta classe, passa a ter um ``display: inline-block;``, sempre que a largura da tela do usúario tiver no máximo 440px de largura.
-.d-m-sm-table | O elemento que utiliza esta classe, passa a ter um ``display: table;``, sempre que a largura da tela do usúario tiver no máximo 440px de largura.
-.d-m-sm-none | O elemento que utiliza esta classe, passa a ter um ``display: none;``, sempre que a largura da tela do usúario tiver no máximo 440px de largura.
-.d-sm-block | O elemento que utiliza esta classe, passa a ter um ``display: block;``, sempre que a largura da tela do usúario tiver no minimo 440px de largura.
-.d-sm-inline | O elemento que utiliza esta classe, passa a ter um ``display: inline;``, sempre que a largura da tela do usúario tiver no minimo 440px de largura.
-.d-sm-inline-block | O elemento que utiliza esta classe, passa a ter um ``display: inline-block;``, sempre que a largura da tela do usúario tiver no minimo 440px de largura.
-.d-sm-table | O elemento que utiliza esta classe, passa a ter um ``display: table;``, sempre que a largura da tela do usúario tiver no minimo 440px de largura.
-.d-sm-none | O elemento que utiliza esta classe, passa a ter um ``display: none;``, sempre que a largura da tela do usúario tiver no minimo 440px de largura.
-.d-md-block | O elemento que utiliza esta classe, passa a ter um ``display: block;``, sempre que a largura da tela do usúario tiver no minimo 740px de largura.
-.d-md-inline | O elemento que utiliza esta classe, passa a ter um ``display: inline;``, sempre que a largura da tela do usúario tiver no minimo 740px de largura.
-.d-md-inline-block | O elemento que utiliza esta classe, passa a ter um ``display: inline-block;``, sempre que a largura da tela do usúario tiver no minimo 740px de largura.
-.d-md-table | O elemento que utiliza esta classe, passa a ter um ``display: table;``, sempre que a largura da tela do usúario tiver no minimo 740px de largura.
-.d-md-none | O elemento que utiliza esta classe, passa a ter um ``display: none;``, sempre que a largura da tela do usúario tiver no minimo 740px de largura.
-.d-lg-block | O elemento que utiliza esta classe, passa a ter um ``display: block;``, sempre que a largura da tela do usúario tiver no minimo 980px de largura.
-.d-lg-inline | O elemento que utiliza esta classe, passa a ter um ``display: inline;``, sempre que a largura da tela do usúario tiver no minimo 980px de largura.
-.d-lg-inline-block | O elemento que utiliza esta classe, passa a ter um ``display: inline-block;``, sempre que a largura da tela do usúario tiver no minimo 980px de largura.
-.d-lg-table | O elemento que utiliza esta classe, passa a ter um ``display: table;``, sempre que a largura da tela do usúario tiver no minimo 980px de largura.
-.d-lg-none | O elemento que utiliza esta classe, passa a ter um ``display: none;``, sempre que a largura da tela do usúario tiver no minimo 980px de largura.
-.d-xl-block | O elemento que utiliza esta classe, passa a ter um ``display: block;``, sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
-.d-xl-inline | O elemento que utiliza esta classe, passa a ter um ``display: inline;``, sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
-.d-xl-inline-block | O elemento que utiliza esta classe, passa a ter um ``display: inline-block;``, sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
-.d-xl-table | O elemento que utiliza esta classe, passa a ter um ``display: table;``, sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
-.d-xl-none  | O elemento que utiliza esta classe, passa a ter um ``display: none;``, sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
+.d-sm-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 440px de largura.
+.d-md-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 740px de largura.
+.d-lg-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 980px de largura.
+.d-xl-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
+.d-xxl-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 1400px de largura.
+.justify-ctsm-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 440px de largura.
 
