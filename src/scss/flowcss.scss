@@ -4,6 +4,7 @@
 @import 'mixins';
 
 // import styles of elements
+@import 'root';
 @import 'reset';
 @import 'typography';
 @import 'buttons';
@@ -12,9 +13,13 @@
 @import 'utilities';
 
 // grid system
-@import './flowcss_grid';
+@import 'containers';
+@import 'grid';
+
+// components 
+@import 'cards';
 
 // tests 
-/*.flex div {
+.flex div {
   width: calc(33.333% - 20px);
-}*/
+}

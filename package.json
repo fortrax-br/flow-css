@@ -8,20 +8,25 @@
   "license": "GLP v3",
   "private": true,
   "scripts": {
-    "css-autocompile": "npx sass --watch src/scss/flowcss.scss:src/scss/flowcss.css",
+    "css-compile": "nodemon --watch src/scss --ext scss --exec \"npm-run-all --parallel css-compile-*\"",
+    "css-compile-main": "npx sass src/scss/flowcss.scss:dist/css/flowcss.css",
+    "css-compile-grid": "npx sass src/scss/flowcss-grid.scss:dist/css/flowcss-grid.css",
+    "css-compile-utilities": "npx sass src/scss/flowcss-utilities.scss:dist/css/flowcss-utilities.css",
     "css-build": "npm-run-all --parallel css-build-*",
-    "css-build-minimized": "postcss --use autoprefixer cssnano -o dist/css/flow.min.css src/scss/*.css",
-    "css-build-not-minimized": "postcss --use autoprefixer -o dist/css/flow.css src/scss/*.css"
+    "css-build-main": "postcss --use autoprefixer cssnano -o dist/css/flowcss.min.css dist/css/flowcss.css",
+    "css-build-grid": "postcss --use autoprefixer cssnano -o dist/css/flowcss-grid.min.css dist/css/flowcss-grid.css",
+    "css-build-utilities": "postcss --use autoprefixer cssnano -o dist/css/flowcss-utilities.min.css dist/css/flowcss-utilities.css"
   },
   "devDependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
   },
   "dependencies": {
-    "postcss-cli": "^8.2.0",
-    "postcss": "^8.1.7",
-    "npm-run-all": "^4.1.5",
-    "cssnano": "^4.1.10",
     "autoprefixer": "^10.0.2",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.2.0",
     "sass": "^1.29.0"
   }
 }

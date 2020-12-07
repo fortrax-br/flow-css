@@ -126,7 +126,7 @@ $utilities: map-merge(
       using_key: true,
       property: margin-left,
       values: $spacings_measures,
-    ),
+      ),
     // flex box utilities classes
     "flex": (
       class: "flex",
@@ -298,36 +298,8 @@ $utilities: map-merge(
       property: min-height,
       class: "min-vh",
       values: (100: 100vh)
-    ),
+    )
   ), $utilities
 );
 
-/*
-$utilities: map-merge(
-  (
-    "margin": (
-      class: "m",
-      using_key: true,
-      responsive: true,
-      property: margin,
-      values: $spacings_measures,
-    ),
-  ), $utilities
-);
-*/
-
-// gerar as classes utilitarias sem o prefixo de breakpoint.
-@each $utility_key, $utility in $utilities {
-  @include generate_utilities($utility_key, $utility);
-}
-
-// percorrer o map de breakpoints, e passar os valores dos breakpoints para o mixin generate_breakpoints_up
-// para gerar as classes utilitarias responsivas com os prefixos de breakpoints.
-
-@each $breakpoint_key, $breakpoint_value in $media_breakpoints {
-  @include generate_breakpoints_up($breakpoint_key, $media_breakpoints) {
-    @each $utility_key, $utility in $utilities {
-      @include generate_utilities($utility_key, $utility, true, $breakpoint_key);
-    }
-  }
-}
+@include include_utilitities();

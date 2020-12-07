@@ -1,6 +1,9 @@
+$custom_colors: false !default;
+$enable_gradient: true !default;
+
 $blue: #1a82e5 !default;
-$green: #24be6d !default;
-$yellow: #D8D456 !default;
+$green: #009d4f !default;
+$yellow: #ffc107 !default;
 $red: #e73b4a !default;
 $pink: #d85598 !default;
 $violet: #911eC7 !default;
@@ -9,100 +12,108 @@ $orange: #EE9238 !default;
 $cyan: #10C1C9 !default;
 $dark: #313131 !default;
 $darkLight: #585858 !default;
-$white: #f4f4f4 !default;
+$white: #fff !default;
 $whiteDark: #aaa !default;
-$gray: gray !default;
+$gray: #3f3f3f !default;
 $body_base_color: #f4f4f4 !default;
 
-// blue
-$blue-1: #006bca !default;
-$blue-2: #0072d3 !default;
-$blue-3: #007adc !default;
-$blue-4: #1a82e5 !default;
-$blue-5: #2e8aee !default;
-$blue-6: #3d92f7 !default;
-$blue-7: #499aff !default;
+$primary: $blue !default;
+$secondary: $darkLight!default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $white !default;
 
-// brown 
-$brown-1: #50342c;
-$brown-2: #54382f;
-$brown-3: #593c33;
-$brown-4: #5d4037;
-$brown-5: #61443b;
-$brown-6: #66483f;
-$brown-7: #6a4c43;
+// blue
+$blue-1: tint($blue, 70%) !default;
+$blue-2: tint($blue, 50%) !default;
+$blue-3: tint($blue, 30%) !default;
+$blue-4: tint($blue, 20%) !default;
+$blue-5: $blue !default;
+$blue-6: shade($blue, 20%) !default;
+$blue-7: shade($blue, 30%) !default;
+
+// gray 
+$gray-1: tint($gray, 70%) !default;
+$gray-2: tint($gray, 50%) !default;
+$gray-3: tint($gray, 30%) !default;
+$gray-4: tint($gray, 20%) !default;
+$gray-5: $gray !default;
+$gray-6: shade($gray, 20%) !default;
+$gray-7: shade($gray, 30%) !default;
 
 // green
-$green-1: #009d4f !default;
-$green-2: #00a859 !default;
-$green-3: #07b363 !default;
-$green-4: #24be6d !default;
-$green-5: #36c977 !default;
-$green-6: #45d581 !default;
-$green-7: #52e08c !default;
+$green-1: tint($green, 70%) !default;
+$green-2: tint($green, 50%) !default;
+$green-3: tint($green, 30%) !default;
+$green-4: tint($green, 20%) !default;
+$green-5: $green;
+$green-6: shade($green, 20%) !default;
+$green-7: shade($green, 30%) !default;
 
 // yellow 
-$yellow-1: #aeac2d !default;
-$yellow-2: #bcb93b !default;
-$yellow-3: #cac749 !default;
-$yellow-4: #d8d456 !default;
-$yellow-5: #e6e263 !default;
-$yellow-6: #f5ef70 !default;
-$yellow-7: #fffd7d !default;
+$yellow-1: tint($yellow, 70%) !default;
+$yellow-2: tint($yellow, 50%) !default;
+$yellow-3: tint($yellow, 30%) !default;
+$yellow-4: tint($yellow, 20%) !default;
+$yellow-5: $yellow !default;
+$yellow-6: shade($yellow, 20%) !default;
+$yellow-7: shade($yellow, 30%) !default;
 
 // red
-$red-1: #ca1735 !default;
-$red-2: #d3253c !default;
-$red-3: #dd3143 !default;
-$red-4: #e73b4a !default;
-$red-5: #f14551 !default;
-$red-6: #fb4e58 !default;
-$red-7: #ff5860 !default;
+$red-1: tint($red, 70%) !default;
+$red-2: tint($red, 50%) !default;
+$red-3: tint($red, 30%) !default;
+$red-4: tint($red, 20%) !default;
+$red-5: $red !default;
+$red-6: shade($red, 20%) !default;
+$red-7: shade($red, 30%) !default;
 
 // pink
-$pink-1: #bb397f;
-$pink-2: #c54387;
-$pink-3: #ce4c90;
-$pink-4: #d85598;
-$pink-5: #e25ea1;
-$pink-6: #eb67a9;
-$pink-7: #f570b2;
+$pink-1: tint($pink, 70%);
+$pink-2: tint($pink, 50%);
+$pink-3: tint($pink, 30%);
+$pink-4: tint($pink, 20%);
+$pink-5: $pink;
+$pink-6: shade($pink, 20%);
+$pink-7: shade($pink, 30%);
 
 // violet
-$violet-1: #7d00b4;
-$violet-2: #8405ba;
-$violet-3: #8a14c0;
-$violet-4: #911ec7;
-$violet-5: #9827ce;
-$violet-6: #9e2fd4;
-$violet-7: #a536db;
+$violet-1: tint($violet, 70%);
+$violet-2: tint($violet, 50%);
+$violet-3: tint($violet, 30%);
+$violet-4: tint($violet, 20%);
+$violet-5: $violet;
+$violet-6: shade($violet, 20%);
+$violet-7: shade($violet, 30%);
 
 // indigo
-$indigo-1: #5200eb;
-$indigo-2: #5a00f1;
-$indigo-3: #6301f8;
-$indigo-4: #6b11ff;
-$indigo-5: #731cff;
-$indigo-6: #7b25ff;
-$indigo-7: #822dff;
+$indigo-1: tint($indigo, 70%);
+$indigo-2: tint($indigo, 50%);
+$indigo-3: tint($indigo, 30%);
+$indigo-4: tint($indigo, 20%);
+$indigo-5: $indigo;
+$indigo-6: shade($indigo, 20%);
+$indigo-7: shade($indigo, 30%);
 
 // orange
-$orange-1: #c97315;
-$orange-2: #d57d22;
-$orange-3: #e2872d;
-$orange-4: #ee9238;
-$orange-5: #fb9d43;
-$orange-6: #ffa74d;
-$orange-7: #ffb258;
+$orange-1: tint($orange, 70%);
+$orange-2: tint($orange, 50%);
+$orange-3: tint($orange, 30%);
+$orange-4: tint($orange, 20%);
+$orange-5: $orange;
+$orange-6: shade($orange, 20%);
+$orange-7: shade($orange, 30%);
 
 // cyan 
-$cyan-1: #009fa7;
-$cyan-2: #00aab2;
-$cyan-3: #00b5be;
-$cyan-4: #10c1c9;
-$cyan-5: #2dcdd5;
-$cyan-6: #40d8e0;
-$cyan-7: #51e4ec;
+$cyan-1: tint($cyan, 70%);
+$cyan-2: tint($cyan, 50%);
+$cyan-3: tint($cyan, 30%);
+$cyan-4: tint($cyan, 20%);
+$cyan-5: $cyan;
+$cyan-6: shade($cyan, 20%);
+$cyan-7: shade($cyan, 30%);
 
 // dark
 $dark-1: #292929;
@@ -122,7 +133,9 @@ $white-5: #f5f5f5;
 $white-6: #f6f6f6;
 $white-7: #f7f7f7;
 
-$colors: (
+$colors: ();
+
+$pattern_colors: (
   'blue-1': $blue-1,
   'blue-2': $blue-2,
   'blue-3': $blue-3,
@@ -183,6 +196,9 @@ $colors: (
   'yellow-2': $yellow-2,
   'yellow-3': $yellow-3,
   'yellow-4': $yellow-4,
+  'yellow-5': $yellow-5,
+  'yellow-6': $yellow-6,
+  'yellow-7': $yellow-7,
   'dark-1': $dark-1,
   'dark-2': $dark-2,
   'dark-3': $dark-3,
@@ -190,11 +206,26 @@ $colors: (
   'dark-5': $dark-5,
   'dark-6': $dark-6,
   'dark-7': $dark-7,
-  'brown-1': $brown-1,
-  'brown-2': $brown-2,
-  'brown-3': $brown-3,
-  'brown-4': $brown-4,
-  'brown-5': $brown-5,
-  'brown-6': $brown-6,
-  'brown-7': $brown-7,
+  'gray-1': $gray-1,
+  'gray-2': $gray-2,
+  'gray-3': $gray-3,
+  'gray-4': $gray-4,
+  'gray-5': $gray-5,
+  'gray-6': $gray-6,
+  'gray-7': $gray-7,
 );
+
+$theme_colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'danger': $danger,
+  'warning': $warning,
+  'success': $success,
+  'light': $light,
+  'dark': $dark,
+  'info': $cyan,
+);
+
+@if $custom_colors == false {
+  $colors: map-merge($theme_colors, $pattern_colors);
+} 

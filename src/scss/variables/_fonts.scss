@@ -3,7 +3,7 @@ $body_font_size: 100%;
 $responsive_mobile: 45 * $rem;
 
 // fonts safe
-$sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 // fonts setup patterns
@@ -20,4 +20,3 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
   line-height: 1.5;
   letter-spacing: 0.1 * $rem;
 }
-

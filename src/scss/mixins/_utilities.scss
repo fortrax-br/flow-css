@@ -2,10 +2,10 @@
 @mixin generate_utility_styles($properties, $value, $property-class, $property-class-modifier, $infix: '') {
   .#{$property-class+$infix+$property-class-modifier} {
     @if type-of($properties) == "string" {
-      #{$properties}: $value;
+      #{$properties}: $value !important;
     } @else {
       @each $property in $properties {
-        #{$property}: $value;
+        #{$property}: $value !important;
       }
     }
   }
@@ -39,3 +39,22 @@
     }
   }
 }
+
+@mixin include_utilitities() {
+  // gerar as classes utilitarias sem o prefixo de breakpoint.
+  @each $utility_key, $utility in $utilities {
+    @include generate_utilities($utility_key, $utility);
+  }
+
+  // percorrer o map de breakpoints, e passar os valores dos breakpoints para o mixin generate_breakpoints_up
+  // para gerar as classes utilitarias responsivas com os prefixos de breakpoints.
+  @each $breakpoint_key, $breakpoint_value in $media_breakpoints {
+    @include generate_breakpoints_up($breakpoint_key, $media_breakpoints) {
+      @each $utility_key, $utility in $utilities {
+        @include generate_utilities($utility_key, $utility, true, $breakpoint_key);
+      }
+    }
+  }
+}
+
+

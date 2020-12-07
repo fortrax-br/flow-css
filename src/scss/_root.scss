@@ -1,0 +1,8 @@
+:root {
+  @each $color_key, $color_value in $colors {
+    --#{$variable_prefix}#{$color_key}: #{$color_value};    
+  }
+
+  --#{$variable_prefix}font-sans-serif: #{inspect($sans-serif)};
+  --#{$variable_prefix}font-monospace: #{inspect($monospace)};
+}
