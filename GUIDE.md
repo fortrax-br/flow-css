@@ -98,5 +98,9 @@ Classes       | Função
 .d-lg-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 980px de largura.
 .d-xl-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 1200px de largura.
 .d-xxl-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 1400px de largura.
-.justify-ctsm-* | O elemento que utiliza esta classe, aplica um tipo de display sempre que a largura da tela do usúario tiver no minimo 440px de largura.
+.justify-ct-sm-* | O elemento que utiliza esta classe, aplica um tipo de justify-content sempre que a largura da tela do usúario tiver no minimo 440px de largura.
+.justify-ct-sm-* | O elemento que utiliza esta classe, aplica um tipo de justify-content sempre que a largura da tela do usúario tiver no minimo 440px de largura.
+.justify-ct-sm-* | O elemento que utiliza esta classe, aplica um tipo de justify-content sempre que a largura da tela do usúario tiver no minimo 440px de largura.
+.justify-ct-sm-* | O elemento que utiliza esta classe, aplica um tipo de justify-content sempre que a largura da tela do usúario tiver no minimo 440px de largura.
+.justify-ct-sm-* | O elemento que utiliza esta classe, aplica um tipo de justify-content sempre que a largura da tela do usúario tiver no minimo 440px de largura.
 
