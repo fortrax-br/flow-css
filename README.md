@@ -6,7 +6,7 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=f1f1f1&labelColor=16DD8E">
 </p>
 
-![Flow Csss](https://tlgur.com/d/GEzw9Rpg)
+![Flow Csss](https://github.com/fortrax-br/flow-css/blob/master/flow.png)
 
 ## Dependências do projeto atualmente
 
