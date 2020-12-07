@@ -1,0 +1,44 @@
+.card {
+  width: 380px;
+  background: $white;
+  border-radius: 0.8rem;
+  text-align: left;
+}
+
+.card-body {
+  padding-left: $card_body_padding; 
+  padding-right: $card_body_padding; 
+  padding-bottom: $card_body_padding; 
+  padding-top: $card_body_padding; 
+}
+
+.card-p {
+  padding-left: $card_body_padding; 
+  padding-right: $card_body_padding; 
+  padding-bottom: $card_body_padding; 
+  padding-top: $card_body_padding; 
+
+  > .card-body {
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 240px;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+.card-title {
+  font-size: $card_title_font_size;
+  font-weight: $card_title_font_weight;
+  margin-bottom: $card_title_margin_bottom;
+}
