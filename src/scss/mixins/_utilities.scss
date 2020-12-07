@@ -2,10 +2,10 @@
 @mixin generate_utility_styles($properties, $value, $property-class, $property-class-modifier, $infix: '') {
   .#{$property-class+$infix+$property-class-modifier} {
     @if type-of($properties) == "string" {
-      #{$properties}: $value;
+      #{$properties}: $value !important;
     } @else {
       @each $property in $properties {
-        #{$property}: $value;
+        #{$property}: $value !important;
       }
     }
   }
