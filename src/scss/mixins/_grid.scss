@@ -1,20 +1,20 @@
 @mixin generate_row($gutter: $grid_gutter) {
   // variaveis para configurar os gutters do grid
-  --#{$variable_prefix}-gutter-x: #{$gutter};
-  --#{$variable_prefix}-gutter-y: 0;
+  --#{$variable_prefix}gutter-x: #{$gutter};
+  --#{$variable_prefix}gutter-y: 0;
 
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(var(--#{$variable_prefix}-gutter-x) / -2); 
-  margin-left: calc(var(--#{$variable_prefix}-gutter-x) / -2);
+  margin-right: calc(var(--#{$variable_prefix}gutter-x) / -2); 
+  margin-left: calc(var(--#{$variable_prefix}gutter-x) / -2);
 }
 
 @mixin generate_col_pattern($gutter: $grid_gutter) {
   max-width: 100%;
   flex-shrink: 0;
   box-sizing: border-box;
-  padding-left: calc(var(--#{$variable_prefix}-gutter-x) / 2);
-  padding-right: calc(var(--#{$variable_prefix}-gutter-x) / 2);
+  padding-left: calc(var(--#{$variable_prefix}gutter-x) / 2);
+  padding-right: calc(var(--#{$variable_prefix}gutter-x) / 2);
 }
 
 @mixin settings_col($width, $columns: $grid_columns) {
@@ -86,7 +86,7 @@
       @each $gutter_key, $gutter_value in $grid_gutters {
         .g#{$infix},
         .gx#{$infix}-#{$gutter_key} {
-          --#{$variable_prefix}-gutter-x: #{$gutter_value};
+          --#{$variable_prefix}gutter-x: #{$gutter_value};
         }
       }
     }
