@@ -1,5 +1,5 @@
 // prefixo padrão para todas as variaveis css do framework.
-$variable_prefix: flowcss !default;
+$variable_prefix: flowcss- !default;
 
 $rem_global: 16;
 
@@ -10,3 +10,4 @@ $rem_global: 16;
 @import './variables/typography';
 @import './variables/buttons';
 @import './variables/grid';
+@import './variables/cards';
