@@ -20,21 +20,6 @@ img {
   margin: 0 auto;
 }
 
-p,
-ul,
-ol,
-dl,
-blockquote,
-hr,
-pre,
-table,
-form,
-fieldset,
-figure,
-address {
-  margin-bottom: 1.5 * $rem;
-}
-
 ::-webkit-datetime-edit-fields-wrapper,
 ::-webkit-datetime-edit-text,
 ::-webkit-datetime-edit-minute,
@@ -52,7 +37,6 @@ span {
   font-size: 1.1 * $rem;
   line-height: 1.7 * $rem;
   color: $gray;
-  margin: 1.2 * $rem 0;
 }
 
 strong {
