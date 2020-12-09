@@ -160,10 +160,10 @@ strong {
 
 a {
   color: #1a82e5;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
-  text-decoration: underline #1a82e5;
+  text-decoration: underline #5fa8ed;
 }
 
 hr {
@@ -527,7 +527,6 @@ h6,
 .h6 {
   color: #313131;
   font-family: system-ui, "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
-  margin-bottom: 0.625rem;
   line-height: 1;
   font-weight: 600;
 }
@@ -12533,10 +12532,6 @@ h6, .h6 {
   overflow: hidden;
 }
 
-.card-border {
-  border: 1px solid rgba(0, 0, 0, 0.09);
-}
-
 .card-content {
   flex: 1 1 auto;
   padding: 0.9375rem 0.9375rem;
@@ -12544,74 +12539,57 @@ h6, .h6 {
 
 .card-header,
 .card-footer {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.07);
-  color: #585858;
+  flex: 1 1 auto;
   padding: 0.46875rem 0.46875rem;
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .card-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .card-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.card-footer > .card-title,
-.card-footer > .card-subtitle,
-.card-header > .card-title,
-.card-header > .card-subtitle {
-  margin-bottom: 0;
-}
-
-.card-title {
-  margin-bottom: 0.9375rem;
-  font-size: 1.5rem;
-}
-
-.card-subtitle {
-  font-size: 1.125rem;
-  margin-bottom: 0.9375rem;
-}
-
-.card-text {
-  font-size: 1rem;
-  margin-bottom: 0.9375rem;
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-.card-image > img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.card-img,
+.card-img-top,
+.card-img-bottom {
   display: block;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-.card-image-top {
-  margin-bottom: 0.9375rem;
-}
-
-.card-image-bottom {
-  margin-top: -0.9375rem;
-}
-
-.card-image-radius-bottom {
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.card-image-radius {
+.card-img {
   border-radius: 5px;
 }
 
-.card-image-radius-top {
-  border-bottom-right-radius: 5px;
+.card-img-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-img-bottom {
   border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.card-title {
+  margin-bottom: 0.46875rem;
+}
+
+.card-subtitle {
+  margin-top: -0.46875rem/2;
+  margin-bottom: 0.46875rem;
+}
+
+.card-text {
+  margin-bottom: 0.9375rem;
+}
+.card-text:last-child {
+  margin-bottom: 0;
 }
 
 .flex div {
