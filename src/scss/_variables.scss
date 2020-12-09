@@ -488,17 +488,20 @@ $grid_gutters: (
 // cards 
 $card_border_radius: $border_radius_generic;
 $card_border_width: $border_width;
-$card_border_color: rgba(0,0,0,0.090);
+$card_border_color: rgba(0,0,0,0.080);
 $card_color: null !default;
 
 $card_spacer_y: $spacer;
 $card_spacer_x: $spacer;
+$card_title_spacer: $spacer / 2;
 $card_spacer_section_y: $spacer / 2;
 $card_spacer_section_x: $spacer / 2;
 
 $card_title_font_size: 24 / 16 * $rem;
 $card_subtitle_font_size: 18 / 16 * $rem;
 $card_text_font_size: $rem; 
+$card_title_color: $dark-4;
+$card_subtitle_color: $gray-4;
 
 $card_bg: $white;
-$card_section_bg: rgba(0,0,0,0.070);
+$card_section_bg: rgba(0,0,0,0.060);
