@@ -46,10 +46,10 @@ strong {
 
 a {
   color: $blue;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline $blue;
+    text-decoration: underline $blue-3;
   }
 }
 
@@ -188,7 +188,6 @@ button[type="button"] {
     color: darken($white, 23);
   }
 }
-
 
 input,
 select,
