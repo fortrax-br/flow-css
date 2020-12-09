@@ -17,7 +17,7 @@
   @return mix(black, $color, $percentage);
 }
 
-@function valid-radius($radius) {
+@function valid_radius($radius) {
   $return: ();
   @each $value in $radius {
     @if type-of($value) == number {
