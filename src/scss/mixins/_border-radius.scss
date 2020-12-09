@@ -1,3 +1,23 @@
-@mixin border_radius($radius: $border_radius) {
-  border-radius: valid-radius($radius);
+@mixin border_radius_all($radius: $border_radius) {
+  border-radius: valid_radius($radius);
+}
+
+@mixin border_left_radius($radius: $border_radius) {
+  border-top-left-radius: valid_radius($radius);
+  border-bottom-left-radius: valid_radius($radius);
+}
+
+@mixin border_right_radius($radius: $border_radius) {
+  border-top-right-radius: valid_radius($radius);
+  border-bottom-right-radius: valid_radius($radius);
+}
+
+@mixin border_top_radius($radius: $border_radius) {
+  border-top-left-radius: valid_radius($radius);
+  border-top-right-radius: valid_radius($radius);
+}
+
+@mixin border_bottom_radius($radius: $border_radius) {
+  border-bottom-left-radius: valid_radius($radius);
+  border-bottom-right-radius: valid_radius($radius);
 }
