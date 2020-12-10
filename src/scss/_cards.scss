@@ -12,6 +12,7 @@
 }
 
 .card-content {
+  width: 100%;
   flex: 1 1 auto;
   padding: $card_spacer_y $card_spacer_x;
   color: $card_color;
@@ -68,4 +69,13 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+.card-faxa {
+  width: 100%;
+  height: 30px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 25%;
+  background: red;
 }
