@@ -505,3 +505,8 @@ $card_subtitle_color: $gray-4;
 
 $card_bg: $white;
 $card_section_bg: rgba(0,0,0,0.060);
+
+// Spinners variables 
+$spinners_transiation_duration: 0.8s !default;
+$spinners_size: 3.125 * $rem;
+$spinner_border_width: 4px;

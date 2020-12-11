@@ -40,7 +40,7 @@
   }
 }
 
-@mixin include_utilitities() {
+@mixin include_utilities() {
   // gerar as classes utilitarias sem o prefixo de breakpoint.
   @each $utility_key, $utility in $utilities {
     @include generate_utilities($utility_key, $utility);

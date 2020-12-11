@@ -12593,14 +12593,26 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
-.card-faxa {
-  width: 100%;
-  height: 30px;
-  transform: rotate(45deg);
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner-spaced {
+  position: relative;
+  color: #9f9f9f;
+}
+.spinner-spaced::before {
+  content: "";
+  box-sizing: border-box;
   position: absolute;
-  top: 0;
-  left: 25%;
-  background: red;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: currentColor;
+  border-bottom-color: currentColor;
+  animation: spinner 0.8s ease infinite;
 }
 
 .flex div {
