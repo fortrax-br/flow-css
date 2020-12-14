@@ -9,7 +9,6 @@
   color: $white;
   transition: background $btn_transition_duration linear;
   margin-bottom: 0.3125 * $rem;
-  margin-right: 0;
 }
 
 @mixin button_link_style {
@@ -18,6 +17,7 @@
   display: inline-block;
   text-align: center;
   font-family: $sans-serif;
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;

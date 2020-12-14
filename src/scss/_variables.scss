@@ -253,9 +253,10 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 %font {
   font-size: $body_font_size;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.1 * $rem;
+  font-family: $sans-serif;
 }
 
 %font-form {
@@ -299,7 +300,7 @@ $container_widths: (
 );
 
 // utilities
-$spacer: 0.9375 * $rem;
+$spacer: 0.875 * $rem;
 $spacings_measures: (
   '10': (10 / $rem_global) * $rem,
   '15': (15 / $rem_global) * $rem,
@@ -512,3 +513,17 @@ $spinners_size: 3.125 * $rem;
 $spinner_border_width: 4px;
 $spinner_border_color: #ccc;
 $spinner_color: $gray-2;
+
+// tooltips
+$tooltip_position_normalize: -3px !default;
+$tooltip_position: calc(100% + 14px) !default;
+$tooltip_transition_duration: 0.2s !default;
+$tooltip_translate: 1.875 * $rem;
+
+// z-index 
+$z_index_1: 1001;
+$z_index_2: 1003;
+$z_index_3: 1005;
+$z_index_4: 1007;
+$z_index_5: 1009;
+$z_index_6: 1011;

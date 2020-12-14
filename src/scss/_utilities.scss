@@ -127,6 +127,11 @@ $utilities: map-merge(
       property: margin-left,
       values: $spacings_measures,
       ),
+    "margin-auto": (
+      class: "m-auto",
+      property: margin-left margin-right,
+      values: auto,
+    ),
     // flex box utilities classes
     "flex": (
       class: "flex",
