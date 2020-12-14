@@ -1,9 +1,16 @@
 @import './mixins/buttons';
 @import './mixins/typography';
+
+// grid and breakpoints
 @import './mixins/breakpoints';
-@import './mixins/utilities';
 @import './mixins/container';
 @import './mixins/grid';
+
+// utilities
+@import './mixins/utilities';
 @import './mixins/gradients';
 @import './mixins/border-radius';
+
+// components
 @import './mixins/spinners';
+@import './mixins/tooltips';
