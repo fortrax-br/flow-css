@@ -1,0 +1,101 @@
+@mixin after_beofre_tooltip {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.tooltips {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  background: $dark;
+  padding: $spacer / 2;
+  transition: transform $tooltip_transition_duration ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  z-index: $z_index_2;
+  color: $dark;
+  background: currentColor;
+  border-radius: $border_radius_generic;
+
+  > * {
+    font-size: 14px;
+    color: $white;
+  }
+}
+
+.tooltip-top {
+  left: $tooltip_position_normalize;
+  bottom: $tooltip_position;
+  transform: translateY($tooltip_translate);
+
+  &::before {
+    @include after_beofre_tooltip();
+    bottom: -4px;
+    left: 5.2px;
+    background: currentColor;
+  }
+}
+
+.tooltip-bottom {
+  left: $tooltip_position_normalize;
+  top: $tooltip_position;
+  transform: translateY($tooltip_translate);
+
+  &::before {
+    @include after_beofre_tooltip();
+    top: -4px;
+    left: 5.2px;
+    background: currentColor;
+  }
+
+}
+
+.tooltip-left {
+  top: -3px;
+  right: $tooltip_position;
+  transform: translateX($tooltip_translate);
+
+  &::after {
+    @include after_beofre_tooltip();
+    right: -4px;
+    top: 5px;
+    background: currentColor;
+  }
+}
+
+.tooltip-right {
+  top: -3px;
+  left: $tooltip_position;
+  transform: translateX($tooltip_translate);
+
+  &::after {
+    @include after_beofre_tooltip();
+    left: -4px;
+    top: 5px;
+    background: currentColor;
+  }
+}
+
+.tooltips:hover {
+  > .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  > .tooltip-top,
+  > .tooltip-bottom {
+    transform: translateY(0);
+  }
+
+  > .tooltip-left,
+  > .tooltip-right {
+    transform: translateX(0);
+  } 
+}
