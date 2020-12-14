@@ -4,6 +4,7 @@
   width: 10px;
   height: 10px;
   transform: rotate(45deg);
+  background: currentColor;
 }
 
 .tooltips {
@@ -15,7 +16,7 @@
   width: auto;
   white-space: nowrap;
   background: $dark;
-  padding: $spacer / 2;
+  padding: $tooltip_padding;
   transition: transform $tooltip_transition_duration ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -25,7 +26,7 @@
   border-radius: $border_radius_generic;
 
   > * {
-    font-size: 14px;
+    font-size: $tooltip_font_size;
     color: $white;
   }
 }
@@ -37,9 +38,8 @@
 
   &::before {
     @include after_beofre_tooltip();
-    bottom: -4px;
-    left: 5.2px;
-    background: currentColor;
+    bottom: $tooltip_triangle_mid;
+    left: $tooltip_triangle_position;
   }
 }
 
@@ -50,36 +50,32 @@
 
   &::before {
     @include after_beofre_tooltip();
-    top: -4px;
-    left: 5.2px;
-    background: currentColor;
+    top: $tooltip_triangle_mid;
+    left: $tooltip_triangle_position;
   }
-
 }
 
 .tooltip-left {
-  top: -3px;
+  top: $tooltip_position_normalize;
   right: $tooltip_position;
   transform: translateX($tooltip_translate);
 
   &::after {
     @include after_beofre_tooltip();
-    right: -4px;
-    top: 5px;
-    background: currentColor;
+    right: $tooltip_triangle_mid;
+    top: $tooltip_triangle_position;
   }
 }
 
 .tooltip-right {
-  top: -3px;
+  top: $tooltip_position_normalize;
   left: $tooltip_position;
   transform: translateX($tooltip_translate);
 
   &::after {
     @include after_beofre_tooltip();
-    left: -4px;
-    top: 5px;
-    background: currentColor;
+    left: $tooltip_triangle_mid;
+    top: $tooltip_triangle_position;
   }
 }
 
