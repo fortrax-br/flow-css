@@ -8,7 +8,7 @@
   background: $gray;
   color: $white;
   transition: background $btn_transition_duration linear;
-  margin-bottom: 0.3125 * $rem;
+  margin-bottom: size(0.3125);
 }
 
 @mixin button_link_style {
@@ -27,7 +27,7 @@
 @mixin flat_btn_hover($shade_and_tint_color, $color) {   
   &:hover {
     background: tint($shade_and_tint_color, 9%);
-    box-shadow: inset 0 0 3px 4px shade($shade_and_tint_color, 15%);
+    box-shadow: inset 0 0 3px 3px shade($shade_and_tint_color, 14%);
     color: $color;
   }
 }
