@@ -6809,6 +6809,11 @@
   margin-left: 5rem !important;
 }
 
+.m-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .flex {
   display: flex !important;
 }
