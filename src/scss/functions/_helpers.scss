@@ -28,3 +28,22 @@
   }
   @return $return;
 }
+
+@function size($size: 0, $div_to_rem: false) {
+  @if (type-of($size) == number) {
+    @if $div_to_rem {
+      @return $size / $rem_global * $rem; 
+    } @else {
+      @return $size * $rem; 
+    }
+  }
+}
+
+// Retornar o valor inteiro recebido em um valor float, 
+// que é obtido pela divisão do numero recebido por 16, que é o valor padrão do font-size dos navegadores
+// logo esse valor deve ser usado para gerar possiveis valores a serem utiizados no codigo
+@function int_to_float($number: 0) {
+  @if type-of($number) {
+    @return $number / $rem_global;    
+  }
+}
