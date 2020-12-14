@@ -246,7 +246,7 @@ $theme_colors: (
 // fonts variables
 $rem: 1rem;
 $body_font_size: 100%;
-$responsive_mobile: 45 * $rem;
+$responsive_mobile: size(45);
 
 $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -255,7 +255,7 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: $body_font_size;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.1 * $rem;
+  letter-spacing: size(0.1);
   font-family: $sans-serif;
 }
 
@@ -263,7 +263,7 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: $body_font_size;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.1 * $rem;
+  letter-spacing: size(0.1);
 }
 
 // breakpoints and medias query
@@ -300,22 +300,22 @@ $container_widths: (
 );
 
 // utilities
-$spacer: 0.875 * $rem;
+$spacer: size(0.875);
 $spacings_measures: (
-  '10': (10 / $rem_global) * $rem,
-  '15': (15 / $rem_global) * $rem,
-  '20': (20 / $rem_global) * $rem,
-  '25': (25 / $rem_global) * $rem,
-  '30': (30 / $rem_global) * $rem,
-  '35': (35 / $rem_global) * $rem,
-  '40': (40 / $rem_global) * $rem,
-  '45': (45 / $rem_global) * $rem,
-  '50': (50 / $rem_global) * $rem,
-  '55': (55 / $rem_global) * $rem,
-  '60': (60 / $rem_global) * $rem,
-  '65': (65 / $rem_global) * $rem,
-  '70': (70 / $rem_global) * $rem,
-  '75': (75 / $rem_global) * $rem,
+  '10': size(10, true),
+  '15': size(15, true),
+  '20': size(20, true),
+  '25': size(25, true),
+  '30': size(30, true),
+  '35': size(35, true),
+  '40': size(40, true),
+  '45': size(45, true),
+  '50': size(50, true),
+  '55': size(55, true),
+  '60': size(60, true),
+  '65': size(65, true),
+  '70': size(70, true),
+  '75': size(75, true),
   '80': (80 / $rem_global) * $rem,
 );
 
@@ -339,15 +339,27 @@ $sizings: (
 );
 
 $border_radius: (
-  '1': (5 / $rem_global) * $rem,
-  '2': (10 / $rem_global) * $rem,
-  '3': (15 / $rem_global) * $rem,
-  '4': (20 / $rem_global) * $rem,
-  '5': (25 / $rem_global) * $rem,
-  '6': (30 / $rem_global) * $rem,
-  '7': (35 / $rem_global) * $rem,
-  '8': (40 / $rem_global) * $rem,
-  '9': (45 / $rem_global) * $rem,
+  '1': size(5, true),
+  '2': size(10, true),
+  '3': size(15, true),
+  '4': size(20, true),
+  '5': size(25, true),
+  '6': size(30, true),
+  '7': size(35, true),
+  '8': size(40, true),
+  '9': size(45, true),
+  '10': size(50, true),
+  '50': 50%,
+  '100': 100%,
+);
+
+$border_styles: (
+  '10': (50 / $rem_global) * $rem,
+  '50': 50%,
+  '100': 100%,
+);
+
+$border_styles: (
   '10': (50 / $rem_global) * $rem,
   '50': 50%,
   '100': 100%,
@@ -379,26 +391,26 @@ $border_radius_directions: (
 );
 
 $border_sizes: (
-  '1': (1 / $rem_global) * $rem,
-  '2': (2 / $rem_global) * $rem,
-  '3': (3 / $rem_global) * $rem,
-  '4': (4 / $rem_global) * $rem,
-  '5': (5 / $rem_global) * $rem,
-  '6': (6 / $rem_global) * $rem,
-  '7': (7 / $rem_global) * $rem,
-  '8': (8 / $rem_global) * $rem,
-  '9': (9 / $rem_global) * $rem,
-  '10': (10 / $rem_global) * $rem,
-);
+  '1': size(1, true),
+  '2': size(2, true),
+  '3': size(3, true),
+  '4': size(4, true),
+  '5': size(5, true),
+  '6': size(6, true),
+  '7': size(7, true),
+  '8': size(8, true),
+  '9': size(9, true),
+  '10': size(10, true),
+) !default;
 
 // typography
 $expand_sizes: (
-  '1': 5 * $rem,
-  '2': 4.8 * $rem,
-  '3': 4.375 * $rem,
-  '4': 4.0625 * $rem,
-  '5': 3.75 * $rem,
-  '6': 3.4375 * $rem,
+  '1': size(5),
+  '2': size(4.8),
+  '3': size(4.375),
+  '4': size(4.0625),
+  '5': size(3.75),
+  '6': size(3.4375),
 );
 
 $bold_weights: (
@@ -423,32 +435,32 @@ $line_height_base: 1.5 !default;
 $line_height_sm: 1.25 !default;
 $line_height_lg: 2 !default;
 
-$text_font_size: $font_size_base * 1.125 !default;
-$h1_font_size: $font_size_base * 2.5 !default;
-$h2_font_size: $font_size_base * 2 !default;
-$h3_font_size: $font_size_base * 1.75 !default;
-$h4_font_size: $font_size_base * 1.5 !default;
-$h5_font_size: $font_size_base * 1.25 !default;
+$text_font_size: $font_size_base * int_to_float(18) !default;
+$h1_font_size: $font_size_base * int_to_float(40) !default;
+$h2_font_size: $font_size_base * int_to_float(32) !default;
+$h3_font_size: $font_size_base * int_to_float(28) !default;
+$h4_font_size: $font_size_base * int_to_float(24) !default;
+$h5_font_size: $font_size_base * int_to_float(20) !default;
 $h6_font_size: $font_size_base !default;
 
 $font_sizes: (
-  1: (12 / $rem_global) * $rem,
+  1: size(12, true),
   2: $rem,
-  3: (18 / $rem_global) * $rem,
-  4: (20 / $rem_global) * $rem,
-  5: (22 / $rem_global) * $rem,
-  6: (26 / $rem_global) * $rem,
-  7: (32 / $rem_global) * $rem,
-  8: (36 / $rem_global) * $rem,
-  9: (40 / $rem_global) * $rem,
-  10: (46 / $rem_global) * $rem,
-  11: (52 / $rem_global) * $rem,
-  12: (56 / $rem_global) * $rem,
-  13: (60 / $rem_global) * $rem,
-  14: (70 / $rem_global) * $rem,
-  15: (80 / $rem_global) * $rem,
-  16: (90 / $rem_global) * $rem,
-  17: (110 / $rem_global) * $rem,
+  3: size(18, true),
+  4: size(20, true),
+  5: size(22, true),
+  6: size(26, true),
+  7: size(32, true),
+  8: size(36, true),
+  9: size(40, true),
+  10: size(46, true),
+  11: size(52, true),
+  12: size(56, true),
+  13: size(60, true),
+  14: size(70, true),
+  15: size(80, true),
+  16: size(90, true),
+  17: size(110, true),
 ) !default;
 
 // buttons 
@@ -457,33 +469,33 @@ $btn_line_height: 1.4;
 $btn_border_width: $border_width;
 $btn_transition_duration: .2s;
 $btn_border_radius_default: $border_radius_generic;
-$btn_border_radius: 1.375 * $rem;
+$btn_border_radius: size(1.375);
 
-$btn_mobile_padding: 0.4375 * $rem;
+$btn_mobile_padding: size(0.4375);
 $btn_mobile_font_size: $rem;
 
-$btn_medium_padding: 0.75 * $rem;
+$btn_medium_padding: size(0.75);
 $btn_medium_font_size: $rem;
 
-$btn_large_padding: 1.0625 * $rem;
+$btn_large_padding: size(1.0625);
 $btn_large_font_size: $rem;
 
-$btn_ex_large_padding: 1.3125 * $rem;
-$btn_ex_font_size: 1.125 * $rem;
+$btn_ex_large_padding: size(1.3125);
+$btn_ex_font_size: size(1.125);
 
 // grid system variables
 $grid_columns: 12 !default;
-$grid_gutter: 20 / $rem_global * $rem !default;
+$grid_gutter: size(20, true) !default;
 $grid_rows_columns: 6 !default;
 
 $grid_gutters: (
   "1": $grid_gutter,
-  "2": 30 / $rem_global * $rem,
-  "3": 40 / $rem_global * $rem,
-  "4": 50 / $rem_global * $rem,
-  "5": 60 / $rem_global * $rem,
-  "6": 70 / $rem_global * $rem,
-  "7": 80 / $rem_global * $rem,
+  "2": size(30, true),
+  "3": size(40, true),
+  "4": size(50, true),
+  "5": size(60, true),
+  "6": size(70, true),
+  "7": size(80, true),
 ) !default;
 
 // cards 
@@ -498,8 +510,8 @@ $card_title_spacer: $spacer / 2;
 $card_spacer_section_y: $spacer / 2;
 $card_spacer_section_x: $spacer / 2;
 
-$card_title_font_size: 24 / 16 * $rem;
-$card_subtitle_font_size: 18 / 16 * $rem;
+$card_title_font_size: size(1.5);
+$card_subtitle_font_size: size(1.125);
 $card_text_font_size: $rem; 
 $card_title_color: $dark-4;
 $card_subtitle_color: $gray-4;
@@ -509,7 +521,7 @@ $card_section_bg: rgba(0,0,0,0.060);
 
 // Spinners variables 
 $spinners_transiation_duration: 0.8s !default;
-$spinners_size: 3.125 * $rem;
+$spinners_size: size(3.125);
 $spinner_border_width: 4px;
 $spinner_border_color: #ccc;
 $spinner_color: $gray-2;
@@ -518,7 +530,13 @@ $spinner_color: $gray-2;
 $tooltip_position_normalize: -3px !default;
 $tooltip_position: calc(100% + 14px) !default;
 $tooltip_transition_duration: 0.2s !default;
-$tooltip_translate: 1.875 * $rem;
+$tooltip_translate: size(1.875) !default;
+$tooltip_font_size: size(0.875) !default;
+$tooltip_padding: $spacer / 2;
+
+$tooltip_triangle_size: size(0.625) !default;
+$tooltip_triangle_position: 5.2px !default;
+$tooltip_triangle_mid: -4px;
 
 // z-index 
 $z_index_1: 1001;
