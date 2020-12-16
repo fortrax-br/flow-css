@@ -1,12 +1,18 @@
 {
   "name": "Flow-CSS",
   "version": "0.0.1",
-  "description": "Framework para resetar e aplicar estilos, adequados no HTML padrão dos browsers, permitindo ao desenvolvedor que utiize o framework, ter uma maior facilidade na hora, de estilizar sua página.",
   "main": "index.html",
-  "repository": "https://notabug.org/Altos-Codigos/flow-css.git",
   "author": "AlexDK",
-  "license": "GLP v3",
-  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
   "scripts": {
     "css-compile": "nodemon --watch src/scss --ext scss --exec \"npm-run-all --parallel css-compile-*\"",
     "css-compile-main": "npx sass src/scss/flowcss.scss:dist/css/flowcss.css",
