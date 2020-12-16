@@ -1,8 +1,0 @@
-@mixin after_before_tooltip($triangle_width: $tooltip_triangle_size, $triangle_height: $tooltip_triangle_size) {
-  content: "";
-  position: absolute;
-  width: $triangle_width;
-  height: $triangle_height;
-  transform: rotate(45deg);
-  background: currentColor;
-}
