@@ -1,9 +1,9 @@
 /* Error: Undefined operation "1rem * int_to_float(18)".
  *     ,
- * 438 | $text_font_size: $font_size_base * int_to_float(18) !default;
+ * 427 | $text_font_size: $font_size_base * int_to_float(18) !default;
  *     |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *     '
- *   src/scss/_variables.scss 438:18  @import
+ *   src/scss/_variables.scss 427:18  @import
  *   src/scss/flowcss-grid.scss 1:9   root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Undefined operation "1rem * int_to_float(18)".\a     \2577 \a 438 \2502  $text_font_size: $font_size_base * int_to_float(18) !default;\a     \2502                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   src/scss/_variables.scss 438:18  @import\a   src/scss/flowcss-grid.scss 1:9   root stylesheet';
+  content: 'Error: Undefined operation "1rem * int_to_float(18)".\a     \2577 \a 427 \2502  $text_font_size: $font_size_base * int_to_float(18) !default;\a     \2502                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   src/scss/_variables.scss 427:18  @import\a   src/scss/flowcss-grid.scss 1:9   root stylesheet';
 }
