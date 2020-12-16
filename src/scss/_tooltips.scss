@@ -1,14 +1,5 @@
-@mixin after_beofre_tooltip {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  background: currentColor;
-}
-
 .tooltips {
-  position: relative;
+  position: relative !important;
 }
 
 .tooltip {
@@ -37,7 +28,7 @@
   transform: translateY($tooltip_translate);
 
   &::before {
-    @include after_beofre_tooltip();
+    @include after_before_tooltip();
     bottom: $tooltip_triangle_mid;
     left: $tooltip_triangle_position;
   }
@@ -49,7 +40,7 @@
   transform: translateY($tooltip_translate);
 
   &::before {
-    @include after_beofre_tooltip();
+    @include after_before_tooltip();
     top: $tooltip_triangle_mid;
     left: $tooltip_triangle_position;
   }
@@ -61,7 +52,7 @@
   transform: translateX($tooltip_translate);
 
   &::after {
-    @include after_beofre_tooltip();
+    @include after_before_tooltip();
     right: $tooltip_triangle_mid;
     top: $tooltip_triangle_position;
   }
@@ -73,7 +64,7 @@
   transform: translateX($tooltip_translate);
 
   &::after {
-    @include after_beofre_tooltip();
+    @include after_before_tooltip();
     left: $tooltip_triangle_mid;
     top: $tooltip_triangle_position;
   }
