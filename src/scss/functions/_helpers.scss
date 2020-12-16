@@ -29,6 +29,10 @@
   @return $return;
 }
 
+// Retornar uma medida usando a propriedade rem do css, baseado no valor de entrada
+// sendo ele o resultado da divisão do valor de entrada por 16, sendo 16 o valor base das medidas geradas
+// o valor de entrada pode vim sem ser dividido, e a função fazer esta divisão, basta passar o valor
+// e um segundo argumento, true, size(10, true) retorna 0.625rem
 @function size($size: 0, $div_to_rem: false) {
   @if (type-of($size) == number) {
     @if $div_to_rem {
