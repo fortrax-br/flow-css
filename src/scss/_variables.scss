@@ -22,6 +22,7 @@ $white: #fff !default;
 $whiteDark: #aaa !default;
 $gray: #3f3f3f !default;
 $body_base_color: #f4f4f4 !default;
+$b-color: #ccc;
 
 $primary: $blue !default;
 $secondary: $darkLight!default;
@@ -246,7 +247,7 @@ $theme_colors: (
 // fonts variables
 $rem: 1rem;
 $body_font_size: 100%;
-$responsive_mobile: size(45);
+$responsive_mobile: size(int_to_float(720));
 
 $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -255,7 +256,7 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: $body_font_size;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: size(0.1);
+  letter-spacing: size(1, true);
   font-family: $sans-serif;
 }
 
@@ -263,7 +264,7 @@ $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: $body_font_size;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: size(0.1);
+  letter-spacing: size(1, true);
 }
 
 // breakpoints and medias query
@@ -300,7 +301,7 @@ $container_widths: (
 );
 
 // utilities
-$spacer: size(0.875);
+$spacer: size(14, true);
 $spacings_measures: (
   '10': size(10, true),
   '15': size(15, true),
@@ -316,7 +317,7 @@ $spacings_measures: (
   '65': size(65, true),
   '70': size(70, true),
   '75': size(75, true),
-  '80': (80 / $rem_global) * $rem,
+  '80': size(80, true),
 );
 
 $sizings: (
@@ -349,18 +350,6 @@ $border_radius: (
   '8': size(40, true),
   '9': size(45, true),
   '10': size(50, true),
-  '50': 50%,
-  '100': 100%,
-);
-
-$border_styles: (
-  '10': (50 / $rem_global) * $rem,
-  '50': 50%,
-  '100': 100%,
-);
-
-$border_styles: (
-  '10': (50 / $rem_global) * $rem,
   '50': 50%,
   '100': 100%,
 );
@@ -523,7 +512,7 @@ $card_section_bg: rgba(0,0,0,0.060);
 $spinners_transiation_duration: 0.8s !default;
 $spinners_size: size(3.125);
 $spinner_border_width: 4px;
-$spinner_border_color: #ccc;
+$spinner_border_color: $b-color;
 $spinner_color: $gray-2;
 
 // tooltips
@@ -537,6 +526,15 @@ $tooltip_padding: $spacer / 2;
 $tooltip_triangle_size: size(0.625) !default;
 $tooltip_triangle_position: 5.2px !default;
 $tooltip_triangle_mid: -4px;
+
+// quotes
+$quote_border_simple_width: 1px;
+$quote_border_simple_color: $b-color;
+$quote_border_width: size(6, true);
+$quote_color: $dark;
+$quote_bg: $white;
+$quote_border_radius: size(8, true);
+$quote_padding: $spacer;
 
 // z-index 
 $z_index_1: 1001;
