@@ -1,7 +1,6 @@
 @import './utilities/borders';
 
 // o mapa utilities, deve armazenar todas as classes utilitarias, com suas devidas configurações.
-
 $utilities: ();
 $utilities: map-merge(
   (
