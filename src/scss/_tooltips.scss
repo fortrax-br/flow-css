@@ -1,5 +1,6 @@
 .tooltips {
   position: relative !important;
+  overflow: hidden;
 }
 
 .tooltip {
@@ -71,6 +72,8 @@
 }
 
 .tooltips:hover {
+  overflow: initial;
+  
   > .tooltip {
     visibility: visible;
     opacity: 1;
