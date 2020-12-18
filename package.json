@@ -1,8 +1,8 @@
 {
   "name": "Flow-CSS",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "index.html",
-  "author": "AlexDK",
+  "author": "Fortrax",
   "license": "MIT",
   "keywords": [
     "css",
@@ -13,6 +13,7 @@
     "framework",
     "web"
   ],
+  "homepage": "https://github.com/fortrax-br/flow-css",
   "scripts": {
     "css-compile": "nodemon --watch src/scss --ext scss --exec \"npm-run-all --parallel css-compile-*\"",
     "css-compile-main": "npx sass src/scss/flowcss.scss:dist/css/flowcss.css",
@@ -21,13 +22,19 @@
     "css-build": "npm-run-all --parallel css-build-*",
     "css-build-main": "postcss --use autoprefixer cssnano -o dist/css/flowcss.min.css dist/css/flowcss.css",
     "css-build-grid": "postcss --use autoprefixer cssnano -o dist/css/flowcss-grid.min.css dist/css/flowcss-grid.css",
-    "css-build-utilities": "postcss --use autoprefixer cssnano -o dist/css/flowcss-utilities.min.css dist/css/flowcss-utilities.css"
+    "css-build-utilities": "postcss --use autoprefixer cssnano -o dist/css/flowcss-utilities.min.css dist/css/flowcss-utilities.css",
+    "js-compile": "npm-run-all --parallel js-compile-*",
+    "js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
+    "js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.js --sourcemap",
+    "js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@rollup/plugin-babel": "^5.2.2",
     "express": "^4.17.1",
-    "nodemon": "^2.0.6"
-  },
-  "dependencies": {
+    "nodemon": "^2.0.6",
+    "rollup": "^2.35.1",
+    "rollup-plugin-terser": "^7.0.2",
     "autoprefixer": "^10.0.2",
     "cssnano": "^4.1.10",
     "npm-run-all": "^4.1.5",
