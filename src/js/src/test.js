@@ -1,4 +1,4 @@
-function testing() {
+const testing = () => {
   alert('testing script compile');
 }
 

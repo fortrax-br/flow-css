@@ -14,7 +14,7 @@
   }
 
   var index_umd = {
-    testing
+    testing: testing()
   };
 
   return index_umd;

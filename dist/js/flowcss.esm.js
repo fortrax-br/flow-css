@@ -8,7 +8,7 @@ function testing() {
 }
 
 var index_esm = {
-  testing
+  testing: testing()
 };
 
 export default index_esm;
