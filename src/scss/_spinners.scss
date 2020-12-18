@@ -1,0 +1,36 @@
+.spinner-spaced,
+.spinner-arrow,
+.spinner-arrow-triple,
+.spinner-border {
+  @include spinners_style();
+}
+
+.spinner-spaced {
+  border: $spinner_border_width solid transparent;
+  border-top-color: currentColor;
+  border-bottom-color: currentColor;
+  animation: spinner $spinners_transiation_duration ease infinite;
+}
+
+.spinner-arrow {
+  border-top: $spinner_border_width solid currentColor;
+  border-right: $spinner_border_width solid transparent;
+  animation: spinner $spinners_transiation_duration linear infinite;
+}
+
+.spinner-arrow-triple {
+  border-top: $spinner_border_width solid currentColor;
+  border-bottom: $spinner_border_width solid currentColor;
+  animation: spinner $spinners_transiation_duration linear infinite;
+}
+
+.spinner-border {
+  border: $spinner_border_width solid $spinner_border_color;
+  border-top-color: currentColor;
+  animation: spinner $spinners_transiation_duration linear infinite;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+

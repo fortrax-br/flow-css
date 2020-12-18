@@ -1,13 +1,545 @@
 // prefixo padrão para todas as variaveis css do framework.
 $variable_prefix: flowcss- !default;
-
+$border_width: 1px;
+$border_radius_generic: 5px;
 $rem_global: 16;
 
-@import './variables/colors';
-@import './variables/fonts';
-@import './variables/breakpoints_and_medias';
-@import './variables/utilities';
-@import './variables/typography';
-@import './variables/buttons';
-@import './variables/grid';
-@import './variables/cards';
+$custom_colors: false !default;
+$enable_gradient: true !default;
+
+$blue: #1a82e5 !default;
+$green: #009d4f !default;
+$yellow: #ffc107 !default;
+$red: #e73b4a !default;
+$pink: #d85598 !default;
+$violet: #911eC7 !default;
+$indigo: #6B11FF !default;
+$orange: #EE9238 !default;
+$cyan: #10C1C9 !default;
+$dark: #313131 !default;
+$darkLight: #585858 !default;
+$white: #fff !default;
+$whiteDark: #aaa !default;
+$gray: #3f3f3f !default;
+$body_base_color: #f4f4f4 !default;
+$b-color: #ccc;
+
+$primary: $blue !default;
+$secondary: $darkLight!default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $white !default;
+
+// blue
+$blue-1: tint($blue, 70%) !default;
+$blue-2: tint($blue, 50%) !default;
+$blue-3: tint($blue, 30%) !default;
+$blue-4: tint($blue, 20%) !default;
+$blue-5: $blue !default;
+$blue-6: shade($blue, 20%) !default;
+$blue-7: shade($blue, 30%) !default;
+
+// gray 
+$gray-1: tint($gray, 70%) !default;
+$gray-2: tint($gray, 50%) !default;
+$gray-3: tint($gray, 30%) !default;
+$gray-4: tint($gray, 20%) !default;
+$gray-5: $gray !default;
+$gray-6: shade($gray, 20%) !default;
+$gray-7: shade($gray, 30%) !default;
+
+// green
+$green-1: tint($green, 70%) !default;
+$green-2: tint($green, 50%) !default;
+$green-3: tint($green, 30%) !default;
+$green-4: tint($green, 20%) !default;
+$green-5: $green;
+$green-6: shade($green, 20%) !default;
+$green-7: shade($green, 30%) !default;
+
+// yellow 
+$yellow-1: tint($yellow, 70%) !default;
+$yellow-2: tint($yellow, 50%) !default;
+$yellow-3: tint($yellow, 30%) !default;
+$yellow-4: tint($yellow, 20%) !default;
+$yellow-5: $yellow !default;
+$yellow-6: shade($yellow, 20%) !default;
+$yellow-7: shade($yellow, 30%) !default;
+
+// red
+$red-1: tint($red, 70%) !default;
+$red-2: tint($red, 50%) !default;
+$red-3: tint($red, 30%) !default;
+$red-4: tint($red, 20%) !default;
+$red-5: $red !default;
+$red-6: shade($red, 20%) !default;
+$red-7: shade($red, 30%) !default;
+
+// pink
+$pink-1: tint($pink, 70%);
+$pink-2: tint($pink, 50%);
+$pink-3: tint($pink, 30%);
+$pink-4: tint($pink, 20%);
+$pink-5: $pink;
+$pink-6: shade($pink, 20%);
+$pink-7: shade($pink, 30%);
+
+// violet
+$violet-1: tint($violet, 70%);
+$violet-2: tint($violet, 50%);
+$violet-3: tint($violet, 30%);
+$violet-4: tint($violet, 20%);
+$violet-5: $violet;
+$violet-6: shade($violet, 20%);
+$violet-7: shade($violet, 30%);
+
+// indigo
+$indigo-1: tint($indigo, 70%);
+$indigo-2: tint($indigo, 50%);
+$indigo-3: tint($indigo, 30%);
+$indigo-4: tint($indigo, 20%);
+$indigo-5: $indigo;
+$indigo-6: shade($indigo, 20%);
+$indigo-7: shade($indigo, 30%);
+
+// orange
+$orange-1: tint($orange, 70%);
+$orange-2: tint($orange, 50%);
+$orange-3: tint($orange, 30%);
+$orange-4: tint($orange, 20%);
+$orange-5: $orange;
+$orange-6: shade($orange, 20%);
+$orange-7: shade($orange, 30%);
+
+// cyan 
+$cyan-1: tint($cyan, 70%);
+$cyan-2: tint($cyan, 50%);
+$cyan-3: tint($cyan, 30%);
+$cyan-4: tint($cyan, 20%);
+$cyan-5: $cyan;
+$cyan-6: shade($cyan, 20%);
+$cyan-7: shade($cyan, 30%);
+
+// dark
+$dark-1: #292929;
+$dark-2: #2c2c2c;
+$dark-3: #2e2e2e;
+$dark-4: #313131;
+$dark-5: #343434;
+$dark-6: #363636;
+$dark-7: #393939;
+
+// white 
+$white-1: #f1f1f1;
+$white-2: #f2f2f2;
+$white-3: #f3f3f3;
+$white-4: #f4f4f4;
+$white-5: #f5f5f5;
+$white-6: #f6f6f6;
+$white-7: #f7f7f7;
+
+$colors: ();
+
+$pattern_colors: (
+  'blue-1': $blue-1,
+  'blue-2': $blue-2,
+  'blue-3': $blue-3,
+  'blue-4': $blue-4,
+  'blue-5': $blue-5,
+  'blue-6': $blue-6,
+  'blue-7': $blue-7,
+  'green-1': $green-1,
+  'green-2': $green-2,
+  'green-3': $green-3,
+  'green-4': $green-4,
+  'green-5': $green-5,
+  'green-6': $green-6,
+  'green-7': $green-7,
+  'red-1': $red-1,
+  'red-2': $red-2,
+  'red-3': $red-3,
+  'red-4': $red-4,
+  'red-5': $red-5,
+  'red-6': $red-6,
+  'red-7': $red-7,
+  'orange-1': $orange-1,
+  'orange-2': $orange-2,
+  'orange-3': $orange-3,
+  'orange-4': $orange-4,
+  'orange-5': $orange-5,
+  'orange-6': $orange-6,
+  'orange-7': $orange-7,
+  'violet-1': $violet-1,
+  'violet-2': $violet-2,
+  'violet-3': $violet-3,
+  'violet-4': $violet-4,
+  'violet-5': $violet-5,
+  'violet-6': $violet-6,
+  'violet-7': $violet-7,
+  'indigo-1': $indigo-1,
+  'indigo-2': $indigo-2,
+  'indigo-3': $indigo-3,
+  'indigo-4': $indigo-4,
+  'indigo-5': $indigo-5,
+  'indigo-6': $indigo-6,
+  'indigo-7': $indigo-7,
+  'cyan-1': $cyan-1,
+  'cyan-2': $cyan-2,
+  'cyan-3': $cyan-3,
+  'cyan-4': $cyan-4,
+  'cyan-5': $cyan-5,
+  'cyan-6': $cyan-6,
+  'cyan-7': $cyan-7,
+  'pink-1': $pink-1,
+  'pink-2': $pink-2,
+  'pink-3': $pink-3,
+  'pink-4': $pink-4,
+  'pink-5': $pink-5,
+  'pink-6': $pink-6,
+  'pink-7': $pink-7,
+  'yellow-1': $yellow-1,
+  'yellow-2': $yellow-2,
+  'yellow-3': $yellow-3,
+  'yellow-4': $yellow-4,
+  'yellow-5': $yellow-5,
+  'yellow-6': $yellow-6,
+  'yellow-7': $yellow-7,
+  'dark-1': $dark-1,
+  'dark-2': $dark-2,
+  'dark-3': $dark-3,
+  'dark-4': $dark-4,
+  'dark-5': $dark-5,
+  'dark-6': $dark-6,
+  'dark-7': $dark-7,
+  'white-1': $white-1,
+  'white-2': $white-2,
+  'white-3': $white-3,
+  'white-4': $white-4,
+  'white-5': $white-5,
+  'white-6': $white-6,
+  'white-7': $white-7,
+  'gray-1': $gray-1,
+  'gray-2': $gray-2,
+  'gray-3': $gray-3,
+  'gray-4': $gray-4,
+  'gray-5': $gray-5,
+  'gray-6': $gray-6,
+  'gray-7': $gray-7,
+);
+
+$theme_colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'danger': $danger,
+  'warning': $warning,
+  'success': $success,
+  'light': $light,
+  'dark': $dark,
+  'info': $cyan,
+);
+
+@if $custom_colors == false {
+  $colors: map-merge($theme_colors, $pattern_colors);
+} 
+
+// fonts variables
+$rem: 1rem;
+$body_font_size: 100%;
+$responsive_mobile: size(int_to_float(720));
+
+$sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
+$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+%font {
+  font-size: $body_font_size;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: size(1, true);
+  font-family: $sans-serif;
+}
+
+%font-form {
+  font-size: $body_font_size;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: size(1, true);
+}
+
+// breakpoints and medias query
+$breakpoint_xs: 0 !default; // max width 440px
+$breakpoint_sm: 410px !default; // min width 440px
+$breakpoint_md: 740px !default; // min width 740px
+$breakpoint_lg: 980px !default; // min width 980px
+$breakpoint_xl: 1200px !default; // min width 1200px; 
+$breakpoint_xxl: 1400px !default; // min width 1400px; 
+
+$container_xs_width: 390px !default; // max width 390px
+$container_sm_width: 560px !default; // max width 560px
+$container_md_width: 720px !default; // max width 720px
+$container_lg_width: 940px !default; // max width 940px
+$container_xl_width: 1120px !default; // max width 1120px
+$container_xxl_width: 1220px !default; // max width 1220px
+
+$media_breakpoints: (
+  "xs": $breakpoint_xs,
+  "sm": $breakpoint_sm,
+  "md": $breakpoint_md,
+  "lg": $breakpoint_lg,
+  "xl": $breakpoint_xl,
+  "xxl": $breakpoint_xxl,
+);
+
+$container_widths: (
+  "xs": $container_xs_width,
+  "sm": $container_sm_width,
+  "md": $container_md_width,
+  "lg": $container_lg_width,
+  "xl": $container_xl_width,
+  "xxl": $container_xxl_width,
+);
+
+// utilities
+$spacer: size(14, true);
+$spacings_measures: (
+  '10': size(10, true),
+  '15': size(15, true),
+  '20': size(20, true),
+  '25': size(25, true),
+  '30': size(30, true),
+  '35': size(35, true),
+  '40': size(40, true),
+  '45': size(45, true),
+  '50': size(50, true),
+  '55': size(55, true),
+  '60': size(60, true),
+  '65': size(65, true),
+  '70': size(70, true),
+  '75': size(75, true),
+  '80': size(80, true),
+);
+
+$sizings: (
+  25: 20%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  45: 45%,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+  100: 100%,
+);
+
+$border_radius: (
+  '1': size(5, true),
+  '2': size(10, true),
+  '3': size(15, true),
+  '4': size(20, true),
+  '5': size(25, true),
+  '6': size(30, true),
+  '7': size(35, true),
+  '8': size(40, true),
+  '9': size(45, true),
+  '10': size(50, true),
+  '50': 50%,
+  '100': 100%,
+);
+
+$border_styles: (
+  'solid': solid,
+  'dotted': dotted,
+  'dashed': dashed,
+  'double': double,
+  'groove': groove,
+  'ridge': ridge,
+  'inset': inset,
+  'outset': outset,
+);
+
+$border_directions: (
+  'lf': border-left,
+  'rt': border-right,
+  'bm': border-bottom,
+  'tp': border-top,
+);
+
+$border_radius_directions: (
+  'tp-lf': border-top-left-radius,
+  'tp-rt': border-top-right-radius,
+  'bm-lf': border-top-left-radius,
+  'bm-rt': border-top-right-radius,
+);
+
+$border_sizes: (
+  '1': size(1, true),
+  '2': size(2, true),
+  '3': size(3, true),
+  '4': size(4, true),
+  '5': size(5, true),
+  '6': size(6, true),
+  '7': size(7, true),
+  '8': size(8, true),
+  '9': size(9, true),
+  '10': size(10, true),
+) !default;
+
+// typography
+$expand_sizes: (
+  '1': size(5),
+  '2': size(4.8),
+  '3': size(4.375),
+  '4': size(4.0625),
+  '5': size(3.75),
+  '6': size(3.4375),
+);
+
+$bold_weights: (
+  '300': 300,
+  '400': 400,
+  '500': 500,
+  '600': 600,
+  '700': 700,
+  '800': 800,
+  '900': 900,
+);
+
+$font_size_base: $rem !default; // default is 16px
+$font_weight_lighter: lighter !default;
+$font_weight_light: 300 !default;
+$font_weight_normal: 400 !default;
+$font_weight_regular: 500 !default;
+$font_weight_bold: 700 !default;
+$font_weight_bolder: bolder !default;
+
+$line_height_base: 1.5 !default;
+$line_height_sm: 1.25 !default;
+$line_height_lg: 2 !default;
+
+$text_font_size: $font_size_base * int_to_float(18) !default;
+$h1_font_size: $font_size_base * int_to_float(40) !default;
+$h2_font_size: $font_size_base * int_to_float(32) !default;
+$h3_font_size: $font_size_base * int_to_float(28) !default;
+$h4_font_size: $font_size_base * int_to_float(24) !default;
+$h5_font_size: $font_size_base * int_to_float(20) !default;
+$h6_font_size: $font_size_base !default;
+
+$font_sizes: (
+  1: size(12, true),
+  2: $rem,
+  3: size(18, true),
+  4: size(20, true),
+  5: size(22, true),
+  6: size(26, true),
+  7: size(32, true),
+  8: size(36, true),
+  9: size(40, true),
+  10: size(46, true),
+  11: size(52, true),
+  12: size(56, true),
+  13: size(60, true),
+  14: size(70, true),
+  15: size(80, true),
+  16: size(90, true),
+  17: size(110, true),
+) !default;
+
+// buttons 
+$btn_font_weight: 600;
+$btn_line_height: 1.4;
+$btn_border_width: $border_width;
+$btn_transition_duration: .2s;
+$btn_border_radius_default: $border_radius_generic;
+$btn_border_radius: size(1.375);
+
+$btn_mobile_padding: size(0.4375);
+$btn_mobile_font_size: $rem;
+
+$btn_medium_padding: size(0.75);
+$btn_medium_font_size: $rem;
+
+$btn_large_padding: size(1.0625);
+$btn_large_font_size: $rem;
+
+$btn_ex_large_padding: size(1.3125);
+$btn_ex_font_size: size(1.125);
+
+// grid system variables
+$grid_columns: 12 !default;
+$grid_gutter: size(20, true) !default;
+$grid_rows_columns: 6 !default;
+
+$grid_gutters: (
+  "1": $grid_gutter,
+  "2": size(30, true),
+  "3": size(40, true),
+  "4": size(50, true),
+  "5": size(60, true),
+  "6": size(70, true),
+  "7": size(80, true),
+) !default;
+
+// cards 
+$card_border_radius: $border_radius_generic;
+$card_border_width: $border_width;
+$card_border_color: rgba(0,0,0,0.080);
+$card_color: null !default;
+
+$card_spacer_y: $spacer;
+$card_spacer_x: $spacer;
+$card_title_spacer: $spacer / 2;
+$card_spacer_section_y: $spacer / 2;
+$card_spacer_section_x: $spacer / 2;
+
+$card_title_font_size: size(1.5);
+$card_subtitle_font_size: size(1.125);
+$card_text_font_size: $rem; 
+$card_title_color: $dark-4;
+$card_subtitle_color: $gray-4;
+
+$card_bg: $white;
+$card_section_bg: rgba(0,0,0,0.060);
+
+// Spinners variables 
+$spinners_transiation_duration: 0.8s !default;
+$spinners_size: size(3.125);
+$spinner_border_width: 4px;
+$spinner_border_color: $b-color;
+$spinner_color: $gray-2;
+
+// tooltips
+$tooltip_position_normalize: -3px !default;
+$tooltip_position: calc(100% + 14px) !default;
+$tooltip_transition_duration: 0.2s !default;
+$tooltip_translate: size(1.875) !default;
+$tooltip_font_size: size(0.875) !default;
+$tooltip_padding: $spacer / 2;
+
+$tooltip_triangle_size: size(0.625) !default;
+$tooltip_triangle_position: 5.2px !default;
+$tooltip_triangle_mid: -4px;
+
+// quotes
+$quote_border_simple_width: 1px;
+$quote_border_simple_color: $b-color;
+$quote_border_width: size(6, true);
+$quote_color: $dark;
+$quote_bg: $white;
+$quote_border_radius: size(8, true);
+$quote_padding: $spacer;
+
+// z-index 
+$z_index_1: 1001;
+$z_index_2: 1003;
+$z_index_3: 1005;
+$z_index_4: 1007;
+$z_index_5: 1009;
+$z_index_6: 1011;

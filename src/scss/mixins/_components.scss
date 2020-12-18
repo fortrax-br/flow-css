@@ -1,0 +1,28 @@
+@mixin spinners_style() {
+  color: $spinner_color;
+  box-sizing: border-box;
+  width: $spinners_size;
+  height: $spinners_size;
+  border-radius: 50%;
+}
+
+@mixin after_before_tooltip($triangle_width: $tooltip_triangle_size, $triangle_height: $tooltip_triangle_size) {
+  content: "";
+  position: absolute;
+  width: $triangle_width;
+  height: $triangle_height;
+  transform: rotate(45deg);
+  background: currentColor;
+}
+
+@mixin quote_styles() {
+  width: auto;
+  display: block;
+  padding: $quote_padding;
+  border-radius: $quote_border_radius;
+  border-top: $quote_border_simple_width solid $quote_border_simple_color;
+  border-bottom: $quote_border_simple_width solid $quote_border_simple_color;
+  color: $quote_color;
+  background: $quote_bg;
+}
+

@@ -1,0 +1,11 @@
+.long-quote {
+  @include quote_styles();
+  border-left: $quote_border_width solid currentColor;
+  border-right: $quote_border_simple_width solid $quote_border_simple_color;
+}
+
+.long-quote-x {
+  @include quote_styles();
+  border-left: $quote_border_width solid currentColor;
+  border-right: $quote_border_width solid currentColor;
+}

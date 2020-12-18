@@ -1,7 +1,6 @@
 @import './utilities/borders';
 
 // o mapa utilities, deve armazenar todas as classes utilitarias, com suas devidas configurações.
-
 $utilities: ();
 $utilities: map-merge(
   (
@@ -18,7 +17,7 @@ $utilities: map-merge(
       values: center left right justify,
     ),
     "font-style": (
-      class: "fs-style",
+      class: "font-style",
       using_key: true,
       property: font-style,
       values: italic oblique normal initial inherit,
@@ -127,6 +126,11 @@ $utilities: map-merge(
       property: margin-left,
       values: $spacings_measures,
       ),
+    "margin-auto": (
+      class: "m-auto",
+      property: margin-left margin-right,
+      values: auto,
+    ),
     // flex box utilities classes
     "flex": (
       class: "flex",
@@ -302,4 +306,4 @@ $utilities: map-merge(
   ), $utilities
 );
 
-@include include_utilitities();
+@include include_utilities();

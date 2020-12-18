@@ -1,44 +1,72 @@
 .card {
-  width: 380px;
-  background: $white;
-  border-radius: 0.8rem;
-  text-align: left;
-}
-
-.card-body {
-  padding-left: $card_body_padding; 
-  padding-right: $card_body_padding; 
-  padding-bottom: $card_body_padding; 
-  padding-top: $card_body_padding; 
-}
-
-.card-p {
-  padding-left: $card_body_padding; 
-  padding-right: $card_body_padding; 
-  padding-bottom: $card_body_padding; 
-  padding-top: $card_body_padding; 
-
-  > .card-body {
-    padding-bottom: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.card-image {
-  max-width: 100%;
-  max-height: 240px;
-  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  height: auto;
+  word-wrap: break-word;
+  background-color: $card_bg;
+  background-clip: border-box;
+  border-radius: $card_border_radius;
   overflow: hidden;
+}
 
-  > img {
-    width: 100%;
-    max-height: 100%;
-  }
+.card-content {
+  width: 100%;
+  flex: 1 1 auto;
+  padding: $card_spacer_y $card_spacer_x;
+  color: $card_color;
+}
+
+.card-header,
+.card-footer {
+  flex: 1 1 auto;
+  padding: $card_spacer_section_y $card_spacer_section_x;
+  background: $card_section_bg;
+}
+
+.card-header {
+  margin-bottom: 0;
+  border-bottom: $card_border_width solid $card_border_color;
+}
+.card-footer {
+  border-top: $card_border_width solid $card_border_color;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-img {
+  @include border_radius_all($card_border_radius);
+}
+
+.card-img-top {
+  @include border_top_radius($card_border_radius);
+}
+
+.card-img-bottom {
+  @include border_bottom_radius($card_border_radius);
 }
 
 .card-title {
-  font-size: $card_title_font_size;
-  font-weight: $card_title_font_weight;
-  margin-bottom: $card_title_margin_bottom;
+  margin-bottom: $card_title_spacer;
+}
+
+.card-subtitle {
+  margin-top: -#{$card_title_spacer} / 2;
+  margin-bottom: $card_title_spacer;
+}
+
+.card-text {
+  margin-bottom: $card_spacer_y;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
