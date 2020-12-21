@@ -536,6 +536,16 @@ $quote_bg: $white;
 $quote_border_radius: size(8, true);
 $quote_padding: $spacer;
 
+// alerts 
+$alert_border_width: size(1, true);
+$alert_border_left: size(5, true);
+$alert_border_radius: $border_radius_generic;
+$alert_padding: $spacer;
+$alert_color_scale: -60%;
+$alert_bg_scale: -70%;
+$alert_border_scale: 40%;
+$alert_margin_bottom: size(10, true);
+
 // z-index 
 $z_index_1: 1001;
 $z_index_2: 1003;
@@ -543,3 +553,5 @@ $z_index_3: 1005;
 $z_index_4: 1007;
 $z_index_5: 1009;
 $z_index_6: 1011;
+
+
