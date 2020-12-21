@@ -1,5 +1,5 @@
-import testing from './src/test';
+import Alert from './src/alert';
 
 export default {
-  testing: testing(),
+  Alert,
 }
