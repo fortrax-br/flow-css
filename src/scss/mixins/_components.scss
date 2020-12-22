@@ -27,12 +27,13 @@
 }
 
 @mixin alert_theme($background, $color, $border) {
-  color: $color;
+  color: $color !important;
   background-color: $background;
   border-color: $border;
 
-  > .alert_link {
-    color: shade($color, 25%);
+  .alert-link {
+    font-weight: $font_weight_bold;
+    color: shade($color, 20%);
   }
 }
 
