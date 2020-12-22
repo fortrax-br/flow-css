@@ -7,7 +7,11 @@
   margin-bottom: $alert_margin_bottom;
   border-radius: $alert_border_radius;
   padding: $alert_padding;
-  color: $gray;
+  overflow: hidden;
+  
+  > * {
+    color: currentColor;
+  }
 }
 
 .btn-close {
@@ -15,32 +19,37 @@
   top: 0;
   right: calc(-#{$alert_padding} + 1px);
   background-color: transparent;
-  padding: $spacer / 2;
+  padding: $spacer / 2 $spacer;
   border: none;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s ease-in-out;
+  
+  &,
+  > * {
+    font-weight: $font_weight_regular;
+    font-size: size(28, true);
+    color: currentColor;
+  }
+  
   &:hover {
-    border-top-left-radius: 0;
-    border-left: $alert_border_width solid currentColor;
-    border-bottom: $alert_border_width solid currentColor;
+    color: currentColor;
+    transform: scale(1.2);
     background-color: transparent;
+  }
+
+  &:focus {
+    outline-color: currentColor;
   }
 }
 
-$alert_colors: (
-  'success': $green-4,
-  'danger': $red-4,
-  'warning': $yellow-4,
-  'info': $cyan-4,
-  'dark': $dark,
-  'light': $white,
-  'orange': $orange-4,
-  'violet': $violet-4,
-  'indigo': $indigo-4,
-  'pink': $pink-4,
-);
-
 @each $key, $color in $alert_colors {
+  $alert_color: shade($color, $alert_color_scale);
+  $alert_bg: tint($color, $alert_bg_scale);
+  $alert_border: shade($color, $alert_border_scale);
+
   .alert-#{$key} {
-    @include alert_theme(tint($color, 45%), shade($color, 25%), shade($color, 25%));
+    @include alert_theme($alert_bg, $alert_color, $alert_border);
   }
 }
