@@ -53,5 +53,5 @@
 }
 
 @function variante_color($color, $scale) {
- @return if($scale > 0, shade($color, $scale), tint($color, -$scale));
+ @return if($scale > 0, shade($color, $scale), tint($color, $scale));
 }
