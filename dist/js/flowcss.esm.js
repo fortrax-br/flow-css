@@ -3,53 +3,112 @@
   * Copyright 2020-2020 Fortrax
   * Licensed under MIT (https://github.com/fortrax/flowcss/blob/main/LICENSE)
   */
-function selectAllElements(selector = null, documentSelect = document) {
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+function selectAllElements(selector, documentSelect) {
+  if (selector === void 0) {
+    selector = null;
+  }
+
+  if (documentSelect === void 0) {
+    documentSelect = document;
+  }
+
   if (selector) {
-    const domElements = documentSelect.querySelectorAll(selector);
+    var domElements = documentSelect.querySelectorAll(selector);
     return domElements.length > 0 ? domElements : [];
   }
 
   return [];
 }
 
-const DATA_ALERT_HIDE = '[data-flow-hide="alert"]';
-const CLASS_ALERT = 'alert';
-const ALERT_EVENT = 'click';
+var Components = new Map();
+var FLOW_VERSION = '1.0.0';
 
-class Alert {
-  constructor(element = DATA_ALERT_HIDE) {
-    this.element = element;
+var ExtendComponent = /*#__PURE__*/function () {
+  function ExtendComponent(element, componentKey) {
+    if (!element) {
+      return;
+    }
+
+    this._element = element;
+    this.componentKey = componentKey;
+    Components.set(this._element, this.componentKey);
   }
 
-  _getMainElement(childElement) {
-    return childElement.closest(`.${CLASS_ALERT}`);
+  var _proto = ExtendComponent.prototype;
+
+  _proto.drop = function drop() {
+    Components["delete"](this._element);
+    this._element = null;
+  };
+
+  _proto.getInstance = function getInstance() {
+    return Components.get(this._element);
+  };
+
+  _proto.version = function version() {
+    return FLOW_VERSION;
+  };
+
+  return ExtendComponent;
+}();
+
+var DATA_ALERT_HIDE = '[data-flow-hide="alert"]';
+var CLASS_ALERT = 'alert';
+var ALERT_EVENT = 'click';
+var COMPONENT_KEY = 'fw.alert';
+
+var Alert = /*#__PURE__*/function (_ExtendComponent) {
+  _inheritsLoose(Alert, _ExtendComponent);
+
+  function Alert(element, componentKey) {
+    return _ExtendComponent.call(this, element, componentKey) || this;
   }
 
-  _destroyDomElement(element) {
+  var _proto = Alert.prototype;
+
+  _proto._getMainElement = function _getMainElement(childElement) {
+    return childElement.closest("." + CLASS_ALERT);
+  };
+
+  _proto._destroyDomElement = function _destroyDomElement(element) {
     if (element.parentNode) {
       element.parentNode.removeChild(element);
     }
-  }
+  };
 
-  _closeAlert(closeElement) {
-    const mainElement = this._getMainElement(closeElement);
+  _proto._closeAlert = function _closeAlert(closeElement) {
+    var mainElement = this._getMainElement(closeElement);
 
     this._destroyDomElement(mainElement);
-  }
+  };
 
-  execute() {
-    const domElements = selectAllElements(this.element);
-    domElements.forEach(element => {
-      element.addEventListener(ALERT_EVENT, () => this._closeAlert(element), false);
+  _proto.execute = function execute() {
+    var _this = this;
+
+    alert(this.version());
+    var domElements = selectAllElements(this._element);
+    domElements.forEach(function (element) {
+      element.addEventListener(ALERT_EVENT, function () {
+        return _this._closeAlert(element);
+      }, false);
     });
-  }
+  };
 
-}
+  return Alert;
+}(ExtendComponent);
 
-window.addEventListener('load', () => new Alert().execute(), false);
+window.addEventListener('load', function () {
+  new Alert(DATA_ALERT_HIDE, COMPONENT_KEY).execute();
+}, false);
 
 var index_esm = {
-  Alert
+  Alert: Alert
 };
 
 export default index_esm;
