@@ -1,14 +1,14 @@
 import { selectAllElements } from './DOM/selectDomElements';
+import ExtendComponent from './extends/extendComponent';
 
 const DATA_ALERT_HIDE = '[data-flow-hide="alert"]';
 const CLASS_ALERT = 'alert';
-const CLASS_ALERT_SHOW = 'show';
-const CLASS_ALERT_EASY = 'alert-easy';
 const ALERT_EVENT = 'click';
+const COMPONENT_KEY = 'fw.alert';
 
-class Alert {
-  constructor(element = DATA_ALERT_HIDE) {
-    this.element = element;
+class Alert extends ExtendComponent {
+  constructor(element, componentKey) {
+    super(element, componentKey);
   } 
 
   _getMainElement(childElement) {
@@ -27,7 +27,7 @@ class Alert {
   }
 
   execute() {
-    const domElements = selectAllElements(this.element);
+    const domElements = selectAllElements(this._element);
     
     domElements.forEach(( element ) => {
       element.addEventListener(ALERT_EVENT, () => this._closeAlert(element), false);
@@ -35,6 +35,8 @@ class Alert {
   }
 }
 
-window.addEventListener('load', () => new Alert().execute(), false);
+window.addEventListener('load', () => {
+  new Alert(DATA_ALERT_HIDE, COMPONENT_KEY).execute();
+}, false);
 
 export default Alert;
