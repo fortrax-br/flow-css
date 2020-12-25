@@ -1,0 +1,10 @@
+@mixin quote_styles() {
+  width: auto;
+  display: block;
+  padding: $quote_padding;
+  border-radius: $quote_border_radius;
+  border-top: $quote_border_simple_width solid $quote_border_simple_color;
+  border-bottom: $quote_border_simple_width solid $quote_border_simple_color;
+  color: $quote_color;
+  background: $quote_bg;
+}

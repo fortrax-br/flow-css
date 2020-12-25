@@ -1,0 +1,7 @@
+@mixin spinners_style() {
+  color: $spinner_color;
+  box-sizing: border-box;
+  width: $spinners_size;
+  height: $spinners_size;
+  border-radius: 50%;
+}
