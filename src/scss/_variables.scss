@@ -238,6 +238,10 @@ $theme_colors: (
   'light': $light,
   'dark': $dark,
   'info': $cyan,
+  'orange': $orange-4,
+  'violet': $violet-4,
+  'indigo': $indigo-4,
+  'pink': $pink-4,
 );
 
 @if $custom_colors == false {
@@ -537,19 +541,6 @@ $quote_border_radius: size(8, true);
 $quote_padding: $spacer;
 
 // alerts 
-$alert_colors: (
-  'success': $green-4,
-  'danger': $red-4,
-  'warning': $yellow-4,
-  'info': $cyan-4,
-  'dark': $dark,
-  'light': $white,
-  'orange': $orange-4,
-  'violet': $violet-4,
-  'indigo': $indigo-4,
-  'pink': $pink-4,
-);
-
 $alert_border_width: size(1, true);
 $alert_border_left: size(5, true);
 $alert_border_radius: $border_radius_generic;
@@ -558,6 +549,21 @@ $alert_color_scale: 25%;
 $alert_bg_scale: 45%;
 $alert_border_scale: 25%;
 $alert_margin_bottom: size(10, true);
+
+
+// pagenation 
+$page_border_radius: $border_radius_generic;
+$page_controll_radius: 50%;
+$page_border_width: size(1, true);
+$page_border_color: $b-color;
+$page_font_size: size(18, true);
+$page_min_width: size(50, true);
+$page_margin_left: size(3, true);
+$page_padding: size(10, true);
+$page_color: $gray-4;
+$page_bg: $light;
+$page_default_bg: $white;
+$page_default_color: $blue-4;
 
 // z-index 
 $z_index_1: 1001;
