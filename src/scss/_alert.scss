@@ -44,7 +44,7 @@
   }
 }
 
-@each $key, $color in $alert_colors {
+@each $key, $color in $theme_colors {
   $alert_color: shade($color, $alert_color_scale);
   $alert_bg: tint($color, $alert_bg_scale);
   $alert_border: shade($color, $alert_border_scale);
