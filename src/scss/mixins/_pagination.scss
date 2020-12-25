@@ -1,0 +1,8 @@
+@mixin pagination_theme($background, $color, $border, $effect_color) {
+  background-color: $background;
+  color: $color;
+  border-color: shade($border, 25%);
+  
+  @include flat_btn_hover($background, $effect_color);
+  @include flat_btn_focus($background, $effect_color);
+}
