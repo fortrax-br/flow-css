@@ -264,6 +264,7 @@ $utilities: map-merge(
     "width": (
       using_key: true,
       property: width,
+      responsive: true,
       class: "w",
       values: $sizings,
     ),
