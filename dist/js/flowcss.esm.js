@@ -91,7 +91,6 @@ var Alert = /*#__PURE__*/function (_ExtendComponent) {
   _proto.execute = function execute() {
     var _this = this;
 
-    alert(this.version());
     var domElements = selectAllElements(this._element);
     domElements.forEach(function (element) {
       element.addEventListener(ALERT_EVENT, function () {
