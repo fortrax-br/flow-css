@@ -1,11 +1,11 @@
-.pagenation {
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
 }
 
-ul.pagenation {
+ul.pagination {
   list-style: none;
 }
 
@@ -26,29 +26,21 @@ ul.pagenation {
   font-weight: $font_weight_regular;
 }
 
-@mixin pagenation_theme($background, $color, $border, $effect_color) {
-  background-color: $background;
-  color: $color;
-  border-color: shade($border, 25%);
-  @include flat_btn_hover($background, $effect_color);
-  @include flat_btn_focus($background, $effect_color);
-}
-
 @each $key, $color in $theme_colors {
-  .pagenation-#{$key} {
+  .pagination-#{$key} {
     .page-item,
     .page-controll,
     .page-link > * {
-      @include pagenation_theme($color, $white, $color, $white);
+      @include pagination_theme($color, $white, $color, $white);
     }
   }
 }
 
-.pagenation-default {
+.pagination-default {
   .page-item,
   .page-controll,
   .page-link > * {
-    @include pagenation_theme($page_default_bg, $page_default_color, $page_default_bg, $page_default_color);
+    @include pagination_theme($page_default_bg, $page_default_color, $page_default_bg, $page_default_color);
   }
 }
 
