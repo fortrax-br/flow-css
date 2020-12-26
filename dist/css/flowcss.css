@@ -14048,6 +14048,50 @@ ul.pagination {
   color: #fff;
 }
 
+.gradient-db {
+  background-image: linear-gradient(to right, #314755 0%, #26A0DA 100%);
+}
+
+.gradient-oy {
+  background-image: linear-gradient(to right, #E65C00 0%, #F9D423 100%);
+}
+
+.gradient-vp {
+  background-image: linear-gradient(to right, #EC008C 0%, #FC6767 100%);
+}
+
+.gradient-bi {
+  background-image: linear-gradient(to right, #2B32B2 0%, #1488CC 100%);
+}
+
+.gradient-rb {
+  background-image: linear-gradient(to right, #00F260 0%, #0575E6 100%);
+}
+
+.gradient-red {
+  background-image: linear-gradient(to right, #D31027 0%, #EA384D 100%);
+}
+
+.gradient-violet {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 100%);
+}
+
+.gradient-gray {
+  background-image: linear-gradient(to right, #606C88 0%, #3F4C6B 100%);
+}
+
+.gradient-pink {
+  background-image: linear-gradient(to right, #FBD3E9 0%, #BB377D 100%);
+}
+
+.gradient-dark {
+  background-image: linear-gradient(to right, #000000 0%, #434343 100%);
+}
+
+.gradient-light {
+  background-image: linear-gradient(to right, #E0EAFC 0%, #CFDEF3 100%);
+}
+
 .flex div {
   width: calc(33.333% - 20px);
 }
