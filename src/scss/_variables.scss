@@ -325,7 +325,10 @@ $spacings_measures: (
 );
 
 $sizings: (
-  25: 20%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  25: 25%,
   30: 30%,
   35: 35%,
   40: 40%,
@@ -564,6 +567,16 @@ $page_color: $gray-4;
 $page_bg: $light;
 $page_default_bg: $white;
 $page_default_color: $blue-4;
+
+// progress
+$progress_height: size(20, true);
+$progress_margin_bottom: size(10, true);
+$progress_bg: $b-color;
+$progress_border_radius: $border_radius_generic;
+$progress_bar_font_size: size(18, true);
+$progress_bar_font_weight: $font_weight_regular;
+$progress_bar_color: $white;
+$progress_bar_bg: $gray-3;
 
 // z-index 
 $z_index_1: 1001;
