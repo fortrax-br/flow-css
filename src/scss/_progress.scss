@@ -1,60 +1,15 @@
 .progress {
   display: flex;
-  border-radius: $border_radius_generic;
-  background-color: $b-color;
+  border-radius: $progress_border_radius;
+  background-color: $progress_bg;
   white-space: nowrap;
-  height: 20px;
-  margin-bottom: 10px; 
-}
-
-@mixin progress_style() {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: $gray-3;
-  height: 100%;
-  border-radius: $border_radius_generic;
-  transition: width .7s ease-in-out;
+  height: $progress_height;
+  margin-bottom: $progress_margin_bottom;
+  overflow: hidden;
 }
 
 .progress-bar {
   @include progress_style();
-  text-align: center;
-  font-size: $rem;
-  font-weight: $font_weight_regular;
-  color: $white;
+  @include progress_font_style();
 }
 
-.progress-bar-tooltip {
-  @include progress_style();
-  position: relative;
-}
-
-.progress-bar-tooltip::after {
-  content: attr(data-progress);
-  position: absolute;
-  top: calc(-100% - 10px);
-  right: -15px;
-  width: 40px;
-  height: 25px;
-  padding: 5px;
-  background-color: $dark;
-  color: $white;
-  border-radius: $border_radius_generic;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.progress-bar-tooltip::before {
-  content: "";
-  position: absolute;
-  left: calc(100% - 10px);
-  top: calc(-60%);
-  width: 10px;
-  height: 10px;
-  background-color: $dark;
-  color: $white;
-  transform: rotate(45deg);
-}
