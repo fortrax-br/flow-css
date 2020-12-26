@@ -1,0 +1,15 @@
+@mixin progress_style() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $progress_bar_bg;
+  height: 100%;
+  border-radius: $progress_border_radius;
+}
+
+@mixin progress_font_style() {
+  text-align: center;
+  font-size: $progress_bar_font_size;
+  font-weight: $progress_bar_font_weight;
+  color: $progress_bar_color;
+}
