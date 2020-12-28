@@ -9,13 +9,14 @@
     <meta name="keywords" content="reset css, reset styles of browser, css reset"/>
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="AlexDK">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../../../css/flowcss.css">
 </head>
 <body>
   <section class="container py-30">
     <h1 class="color-green-4 mb-30">Cards components</h1>
 
-    <div class="card mb-30 w-60">
+    <div class="card mb-30 w-100 w-md-50">
       <div class="card-faxa"></div>
       <h5 class="card-header bg-blue-4">Header</h5>
       <div class="card-content">
@@ -26,7 +27,7 @@
       <h5 class="card-footer bg-blue-4">Footer</h5>
     </div>
 
-    <div class="card mb-30 w-50">
+    <div class="card mb-30 w-100 w-md-50">
       <img class="card-img-top" src="https://tlgur.com/d/g05nk7X4"/>
       <div class="card-content">
         <h3 class="card-title">My title</h3>
@@ -37,7 +38,7 @@
       </div>
     </div>
 
-    <div class="card mb-30 w-50">
+    <div class="card mb-30 w-100 w-md-50">
       <div class="card-content">
         <h3 class="card-title">My title</h3>
         <h5 class="card-subtitle color-gray-2">My sub-title</h5>
@@ -47,7 +48,7 @@
       <img class="card-img-bottom" src="https://tlgur.com/d/g05nk7X4"/>
     </div>
 
-    <div class="card mb-30">
+    <div class="card mb-30 w-100 w-md-50">
       <div class="row g-0">
         <div class="col-4 bg-red-4">
           <span class="color-white bold-700">Image</span>
@@ -100,7 +101,7 @@
       Tooltip top
     </button>
 
-    <h1 class="color-green-4 mb-30">Blockquote components</h1>
+    <h1 class="color-green-4 my-30">Blockquote components</h1>
 
     <blockquote class="long-quote color-red-4 mb-10">
       <h3 class="mb-10">My quote</h3>
@@ -111,7 +112,105 @@
       <h3 class="mb-10">My quote</h3>
       <p class="text">Until we get over the yearning for boundless love, we cannot grow emotionally.</p>
     </div> 
+    
+    <h1 class="color-green-4 my-30">Alerts components</h1>
+   
+    <div class="alert alert-danger">
+      <h3 class="mb-30">Danger!!</h3>
+      <p>Until we get over the yearning for boundless love, we cannot grow emotionally.</p>
+      <button class="btn-close" data-flow-hide="alert"><i class="fa fa-times"></i></button>
+    </div>
+
+    <div class="alert alert-success">
+      <h3 class="mb-30">Success!</h3>
+      <p>Until we get over the yearning for boundless love, we cannot grow emotionally.</p>
+      <button class="btn-close" data-flow-hide="alert"><i class="fa fa-times"></i></button>
+    </div>
+
+    <h1 class="color-green-4 my-30">Pagination components</h1>
+
+    <ul class="pagination mb-20">
+      <li class="page-controll">Prev</li>
+      <li class="page-link"><a href="#">1</a></li>
+      <li class="page-link"><a href="#">2</a></li>
+      <li class="page-link"><a href="#">3</a></li>
+      <li class="page-link"><a href="#">4</a></li>
+      <li class="page-link"><a href="#">5</a></li>
+      <li class="page-controll">Next</li>
+    </ul>
+
+    <ul class="pagination mb-20 pagination-danger">
+      <li class="page-controll"><i class="fas fa-chevron-left"></i></li>
+      <li class="page-link"><a href="#">1</a></li>
+      <li class="page-link"><a href="#">2</a></li>
+      <li class="page-link"><a href="#">3</a></li>
+      <li class="page-link"><a href="#">4</a></li>
+      <li class="page-link"><a href="#">5</a></li>
+      <li class="page-controll"><i class="fas fa-chevron-right"></i></li>
+    </ul>
+
+    <ul class="pagination mb-20 pagination-info">
+      <li class="page-controll"><i class="fas fa-chevron-left"></i></li>
+      <li class="page-link"><a href="#">1</a></li>
+      <li class="page-link"><a href="#">2</a></li>
+      <li class="page-link"><a href="#">3</a></li>
+      <li class="page-link"><a href="#">4</a></li>
+      <li class="page-link"><a href="#">5</a></li>
+      <li class="page-controll"><i class="fas fa-chevron-right"></i></li>
+    </ul>
+
+    <ul class="pagination my-20 pagination-warning">
+      <li class="page-controll"><i class="fas fa-chevron-left"></i></li>
+      <li class="page-link"><a href="#">1</a></li>
+      <li class="page-link"><a href="#">2</a></li>
+      <li class="page-link"><a href="#">3</a></li>
+      <li class="page-link"><a href="#">4</a></li>
+      <li class="page-link"><a href="#">5</a></li>
+      <li class="page-controll"><i class="fas fa-chevron-right"></i></li>
+    </ul>
+ 
+    <ul class="pagination my-20 pagination-orange">
+      <li class="page-controll"><i class="fas fa-chevron-left"></i></li>
+      <li class="page-link"><a href="#">1</a></li>
+      <li class="page-link"><a href="#">2</a></li>
+      <li class="page-link"><a href="#">3</a></li>
+      <li class="page-link"><a href="#">4</a></li>
+      <li class="page-link"><a href="#">5</a></li>
+      <li class="page-controll"><i class="fas fa-chevron-right"></i></li>
+    </ul>
+
+    <ul class="pagination my-20 pagination-default">
+      <li class="page-controll"><i class="fas fa-chevron-left"></i></li>
+      <li class="page-link"><a href="#">1</a></li>
+      <li class="page-link"><a href="#">2</a></li>
+      <li class="page-link"><a href="#">3</a></li>
+      <li class="page-link"><a href="#">4</a></li>
+      <li class="page-link"><a href="#">5</a></li>
+      <li class="page-controll"><i class="fas fa-chevron-right"></i></li>
+    </ul>
+
+    <ul class="pagination mb-20 pagination-success">
+      <li class="page-controll"><i class="fas fa-chevron-left"></i></li>
+      <li class="page-item">1</li>
+      <li class="page-item">2</li>
+      <li class="page-item">3</li>
+      <li class="page-item">4</li>
+      <li class="page-item">5</li>
+      <li class="page-controll"><i class="fas fa-chevron-right"></i></li>
+    </ul>
+  
+    <h1 class="color-green-4 my-30">Progress components</h1>
+
+    <div class="progress">
+      <div class="progress-bar bg-green-4 w-30">30%</div>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar bg-red bg-violet-4 w-50">50%</div>
+    </div>
 
   </section>
+
+  <script src="../../../js/flowcss.js"></script>
 </body>
 </html>

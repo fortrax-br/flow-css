@@ -123,7 +123,7 @@ $utilities: map-merge(
     "margin-top": (
       class: "mt",
       using_key: true,
-      property: margin-left,
+      property: margin-top,
       values: $spacings_measures,
       ),
     "margin-auto": (
@@ -264,6 +264,7 @@ $utilities: map-merge(
     "width": (
       using_key: true,
       property: width,
+      responsive: true,
       class: "w",
       values: $sizings,
     ),

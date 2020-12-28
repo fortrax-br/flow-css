@@ -238,6 +238,10 @@ $theme_colors: (
   'light': $light,
   'dark': $dark,
   'info': $cyan,
+  'orange': $orange-4,
+  'violet': $violet-4,
+  'indigo': $indigo-4,
+  'pink': $pink-4,
 );
 
 @if $custom_colors == false {
@@ -321,7 +325,10 @@ $spacings_measures: (
 );
 
 $sizings: (
-  25: 20%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  25: 25%,
   30: 30%,
   35: 35%,
   40: 40%,
@@ -536,6 +543,41 @@ $quote_bg: $white;
 $quote_border_radius: size(8, true);
 $quote_padding: $spacer;
 
+// alerts 
+$alert_border_width: size(1, true);
+$alert_border_left: size(5, true);
+$alert_border_radius: $border_radius_generic;
+$alert_padding: $spacer;
+$alert_color_scale: 25%;
+$alert_bg_scale: 45%;
+$alert_border_scale: 25%;
+$alert_margin_bottom: size(10, true);
+
+
+// pagenation 
+$page_border_radius: $border_radius_generic;
+$page_controll_radius: 50%;
+$page_border_width: size(1, true);
+$page_border_color: $b-color;
+$page_font_size: size(18, true);
+$page_min_width: size(50, true);
+$page_margin_left: size(3, true);
+$page_padding: size(10, true);
+$page_color: $gray-4;
+$page_bg: $light;
+$page_default_bg: $white;
+$page_default_color: $blue-4;
+
+// progress
+$progress_height: size(20, true);
+$progress_margin_bottom: size(10, true);
+$progress_bg: $b-color;
+$progress_border_radius: $border_radius_generic;
+$progress_bar_font_size: size(18, true);
+$progress_bar_font_weight: $font_weight_regular;
+$progress_bar_color: $white;
+$progress_bar_bg: $gray-3;
+
 // z-index 
 $z_index_1: 1001;
 $z_index_2: 1003;
@@ -543,3 +585,5 @@ $z_index_3: 1005;
 $z_index_4: 1007;
 $z_index_5: 1009;
 $z_index_6: 1011;
+
+

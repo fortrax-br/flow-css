@@ -1,0 +1,79 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+ul.pagination {
+  list-style: none;
+}
+
+.page-item,
+.page-controll,
+.page-link > * {
+  display: block;
+  min-width: $page_min_width;
+  width: auto;
+  padding: $page_padding;
+  margin-left: $page_margin_left;
+  box-sizing: border-box;
+  background-color: $page_bg;
+  border: $page_border_width solid $page_border_color;
+  color: $page_color;
+  font-size: $page_font_size;
+  text-align: center;
+  font-weight: $font_weight_regular;
+}
+
+@each $key, $color in $theme_colors {
+  .pagination-#{$key} {
+    .page-item,
+    .page-controll,
+    .page-link > * {
+      @include pagination_theme($color, $white, $color, $white);
+    }
+  }
+}
+
+.pagination-default {
+  .page-item,
+  .page-controll,
+  .page-link > * {
+    @include pagination_theme($page_default_bg, $page_default_color, $page_default_bg, $page_default_color);
+  }
+}
+
+.page-item,
+.page-link {
+  border-radius: $page_border_radius;
+  overflow: hidden;
+}
+
+.page-link {
+  > * {
+    border-radius: $page_border_radius;
+  }
+
+  > *,
+  > *:hover {
+    text-decoration: none;
+  }
+}
+
+.page-controll {
+  > * {
+    background-color: transparent;
+    padding: 0;
+    min-width: 0;
+  }
+}
+
+.page-controll:first-child {
+  border-radius: $page_controll_radius $page_border_radius $page_border_radius $page_controll_radius;
+  margin-left: 0;
+}
+
+.page-controll:last-child {
+  border-radius: $page_border_radius $page_controll_radius $page_controll_radius $page_border_radius;
+}

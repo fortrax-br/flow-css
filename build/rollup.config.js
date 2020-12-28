@@ -13,7 +13,9 @@ const plugins = [
     babelHelpers: 'bundled'
   }),
 ]
-if (BUNDLE) `${fileDest}.bundle`;
+if (BUNDLE) {
+  fileDest += '.bundle';
+};
 
 const rollupConfig = {
   input: path.resolve(__dirname, `../src/js/index.${ESM ? 'esm' : 'umd'}.js`),

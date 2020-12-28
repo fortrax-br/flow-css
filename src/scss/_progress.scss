@@ -1,0 +1,15 @@
+.progress {
+  display: flex;
+  border-radius: $progress_border_radius;
+  background-color: $progress_bg;
+  white-space: nowrap;
+  height: $progress_height;
+  margin-bottom: $progress_margin_bottom;
+  overflow: hidden;
+}
+
+.progress-bar {
+  @include progress_style();
+  @include progress_font_style();
+}
+

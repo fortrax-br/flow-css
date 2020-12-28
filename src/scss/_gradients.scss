@@ -1,0 +1,21 @@
+@use "sass:list";
+
+$gradients_colors: (
+  'gradient-db': #314755 #26A0DA,
+  'gradient-oy': #E65C00 #F9D423,
+  'gradient-vp': #EC008C #FC6767,
+  'gradient-bi': #2B32B2 #1488CC,
+  'gradient-rb': #00F260 #0575E6,
+  'gradient-red': #D31027 #EA384D,
+  'gradient-violet': #DA22FF #9733EE,
+  'gradient-gray': #606C88 #3F4C6B,
+  'gradient-pink': #FBD3E9 #BB377D,
+  'gradient-dark': #000000 #434343,
+  'gradient-light': #E0EAFC #CFDEF3,
+);
+
+@each $key, $g_colors in $gradients_colors {
+  .#{$key} {
+    @include linear_gradient_right(list.nth($g_colors, 1), list.nth($g_colors, 2));
+  }
+}

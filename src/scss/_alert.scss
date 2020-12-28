@@ -1,0 +1,55 @@
+.alert {
+  position: relative;
+  border-top: $alert_border_width solid transparent;
+  border-right: $alert_border_width solid transparent;
+  border-bottom: $alert_border_width solid transparent;
+  border-left: $alert_border_left solid transparent;
+  margin-bottom: $alert_margin_bottom;
+  border-radius: $alert_border_radius;
+  padding: $alert_padding;
+  overflow: hidden;
+  
+  > * {
+    color: currentColor;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: calc(-#{$alert_padding} + 1px);
+  background-color: transparent;
+  padding: $spacer / 2 $spacer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s ease-in-out;
+  
+  &,
+  > * {
+    font-weight: $font_weight_regular;
+    font-size: size(28, true);
+    color: currentColor;
+  }
+  
+  &:hover {
+    color: currentColor;
+    transform: scale(1.2);
+    background-color: transparent;
+  }
+
+  &:focus {
+    outline-color: currentColor;
+  }
+}
+
+@each $key, $color in $theme_colors {
+  $alert_color: shade($color, $alert_color_scale);
+  $alert_bg: tint($color, $alert_bg_scale);
+  $alert_border: shade($color, $alert_border_scale);
+
+  .alert-#{$key} {
+    @include alert_theme($alert_bg, $alert_color, $alert_border);
+  }
+}

@@ -6,96 +6,74 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=f1f1f1&labelColor=16DD8E">
 </p>
 
-![Flow Csss](https://github.com/fortrax-br/flow-css/blob/master/flow.png)
+> FlowCss is a framework under development, which seeks to facilitate front-end 
+> developers when creating a beautiful website, in a short time.
 
-## Dependências do projeto atualmente
+## Topics
 
-No projeto estamos utlizando o pré-processador css Sass e o Postcss para
-minimizar e prefixar o código css gerado na build.
+- [Quick start](#quick-start)
+- [Files and folders](#filed-and-folders)
+- [Contributing](#contributing)
+- [License](#license)
 
-[Sass](https://sass-lang.com/)
+<a id="quick-start"></a>
+## Quick start
 
-[Postcss](https://postcss.org/)
-
-## Testar as implementações localmente
-
-Para você poder conferir as features atuais do framework, atualmente, é necessário seguir os passos abaixo
-, para poder visualizar as ṕáginas html em seu browser.
-
-* Primeiro clone o repositório para sua máquina.
+Stream css is not yet available on cdns or package managers, for now you can use it by cloning the repository on your machine.
 
 ```sh
-git clone https://notabug.org/Altos-Codigos/flow-css.git
-# ou caso já tenha clonado:
-# cd flow-css
-# git pull
+git clone https://github.com/fortrax-br/flow-css
 ```
 
-* Após isso, acesse a pasta criada, (o exemplo é usando comandos linux, em seu cmd pode ser diferente caso o sistema não seja linux).
+After cloned, you can access the css and javascript files in the following directory.
 
 ```sh
-cd flow-css
+# css files
+cd flow-css/dist/css/
+# javascript files
+cd flow-css/dist/js/
 ```
 
-* Agora é necessário instalar as depêndencias do projeto, para isso faça o seguinte, ( é necessário ter o nodejs instalado em sua máquina).
+Accessing the directories, you can copy a minified or un minified css file as well as a javascript file, and use it in your project.
+
+<a id="filed-and-folders"></a>
+## Files and folders 
 
 ```sh
-yarn
+dist/
+  /css:
+    flowcss-grid.css
+    flowcss-grid.css.map
+    flowcss-grid.min.css
+    flowcss-utilities.css
+    flowcss-utilities.css.map
+    flowcss-utilities.min.css
+    flowcss.css
+    flowcss.css.map
+    flowcss.min.css
+
+dist/
+  /js:
+    flowcss.bundle.js
+    flowcss.bundle.js.map
+    flowcss.bundle.min.js
+    flowcss.bundle.min.js.map
+    flowcss.esm.js
+    flowcss.esm.js.map
+    flowcss.esm.min.js
+    flowcss.esm.min.js.map
+    flowcss.js
+    flowcss.js.map
+    flowcss.min.js
+    flowcss.min.js.map
 ```
+<a id="contributing"></a>
+## Contributing
 
-ou com npm 
+Before contributing to the project, please read our [contribution guide](https://github.com/fortrax-br/flow-css/blob/master/.github/CONTRIBUTING.md), we explain the standard that the written code should follow, topics on what should and should not be done and other things.
 
-```sh
-npm install
-```
+<a id="license"></a>
+## Copyright and License
 
-* Agora basta iniciar o servidor próprio do projeto, é necessário ter o nodejs instalado em sua máquina.
-
-```sh
-node server.js
-```
-
-* Agora basta acessar o endereço ``http://localhost:3003`` em seu navegador.
-
-## Trabalhando no projeto
-
-Toda vez que você finalizar algo no projeto, é necessário compilar os arquivos css criados ou modificados
-para garantir que o arquivo de build final esteja sempre atualizado, para isso nosso arquivo de configuração,
-package.json contém um comando para fazer este processo, simplismente execute:
-
-```sh
-yarn run css-build
-```
-
-ou com npm:
-
-```sh
-npm run css-build
-```
-
-Enquanto tiver testando as funcionalidades, não é necessário fazer este processo, basta apenas 
-executar o comando para o sass fazer a compilação automatica a cada nova modifcação que você fizer em algum arquivo .scss,
-esse auto compile, vai facilitar no processo de modificação antes de fazer o build em si, para isos apenas diite o comando.
-
-```sh
-yarn run css-compile
-```
-
-ou com npm:
-
-```sh
-npm run css-compile
-```
-
-Feito isso, o sass vai ficar automaticamente recompilando os arquivos a cada nova modificação, sem necessidade 
-de se fazer este processo manualmente.
-
-## Em produção
-
-O projeto final apenas necessita de um arquivo, atualmente, sendo ele o arquivo presente na pasta raiz do projeto
-na pasta dist, onde fica o arquivo css final, que deve ser importado no arquivo html, que se deseja
-utilizar o framework. Todos os outros arquivos são a respeito de desenvolvimento e teste.
-
-```sh
-cd dist/css/flowcss.min.css
-```
+Code and documentation copyright 2020 the [Fortrax](https://github.com/fortrax-br)
+Code released under the [MIT](https://github.com/fortrax-br/flow-css/blob/master/LICENSE.md) License.
