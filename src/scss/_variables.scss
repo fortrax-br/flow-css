@@ -578,6 +578,17 @@ $progress_bar_font_weight: $font_weight_regular;
 $progress_bar_color: $white;
 $progress_bar_bg: $gray-3;
 
+// roadmap
+$roadmap_padding: 10px 10px 10px 40px;
+$roadmap_border_width: 2px;
+$roadmap_border_color: $b-color;
+$roadmap_font_weight: $font_weight_regular;
+$roadmap_font_size: size(24, true);
+$roadmap_color: $white;
+$roadmap_circle_width: size(50, true);
+$roadmap_circle_height: size(50, true);
+$roadmap_bg: $blue-4;
+
 // z-index 
 $z_index_1: 1001;
 $z_index_2: 1003;
