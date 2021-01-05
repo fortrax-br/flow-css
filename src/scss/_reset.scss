@@ -95,7 +95,6 @@ input,
 select,
 textarea {
   @extend %font-form;
-  border-radius: 0.3125 * $rem;
   border: none;
   border: 1px solid $gray;
 
