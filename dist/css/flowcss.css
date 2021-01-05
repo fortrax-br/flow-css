@@ -12167,7 +12167,7 @@ h6, .h6 {
 }
 
 .grid-gap > .row + .row {
-  margin-top: var(--flowcss--gutter-x);
+  margin-top: var(--flowcss-gutter-x);
 }
 
 .container {
@@ -14227,6 +14227,7 @@ ul.pagination {
 }
 
 .accordion {
+  --flowcss-accordion-color: #8dc1f2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14234,6 +14235,7 @@ ul.pagination {
   align-items: center;
   border: 1px solid #ccc;
   padding: 10px;
+  margin-bottom: 10px;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -14266,9 +14268,8 @@ ul.pagination {
 
 .accordion-button {
   width: 100%;
-  display: block;
   padding: 10px;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
   text-align: left;
@@ -14281,34 +14282,82 @@ ul.pagination {
   outline: none;
   margin: 0;
 }
-.accordion-button:focus {
-  border-radius: none;
-  background-color: #5fa8ed;
-  border-bottom: 1px solid #ccc;
+.accordion-button:hover {
+  background-color: var(--flowcss-accordion-color);
 }
 
 .accordion-content {
   background-color: #fff;
-  width: 0;
-  padding: 0;
-  height: 0;
-  transition: height 0.3 linear;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .accordion-body {
-  display: none;
+  border-left: 5px solid var(--flowcss-accordion-color);
+  padding: 5px;
 }
 .accordion-body > * {
   text-align: left;
 }
 
 .accordion-show {
-  width: 100%;
+  max-height: 100%;
   padding: 10px;
-  height: 100%;
+  transition: max-height 0.3s linear;
 }
-.accordion-show > .accordion-body {
-  display: block;
+
+.accordion-clicked {
+  border-bottom: 1px solid #ccc;
+  background-color: var(--flowcss-accordion-color);
+}
+
+.accordion-primary {
+  --flowcss-accordion-color: #1a82e5;
+}
+
+.accordion-secondary {
+  --flowcss-accordion-color: #585858;
+}
+
+.accordion-danger {
+  --flowcss-accordion-color: #e73b4a;
+}
+
+.accordion-warning {
+  --flowcss-accordion-color: #ffc107;
+}
+
+.accordion-success {
+  --flowcss-accordion-color: #009d4f;
+}
+
+.accordion-light {
+  --flowcss-accordion-color: #fff;
+}
+
+.accordion-dark {
+  --flowcss-accordion-color: #313131;
+}
+
+.accordion-info {
+  --flowcss-accordion-color: #10C1C9;
+}
+
+.accordion-orange {
+  --flowcss-accordion-color: #f1a860;
+}
+
+.accordion-violet {
+  --flowcss-accordion-color: #a74bd2;
+}
+
+.accordion-indigo {
+  --flowcss-accordion-color: #8941ff;
+}
+
+.accordion-pink {
+  --flowcss-accordion-color: #e077ad;
 }
 
 .flex div {
