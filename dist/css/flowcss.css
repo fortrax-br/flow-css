@@ -210,7 +210,6 @@ button,
 input,
 select,
 textarea {
-  border-radius: 0.3125rem;
   border: none;
   border: 1px solid #3f3f3f;
 }
@@ -14225,6 +14224,91 @@ ul.pagination {
 
 .roadmap-pink::before {
   background-color: #e077ad;
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.accordion-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.accordion-item + .accordion-item {
+  border-top: none;
+}
+.accordion-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.accordion-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 0;
+}
+
+.accordion-button {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  color: #313131;
+  background-color: #fff;
+  border: none;
+  border-radius: none;
+  outline: none;
+  margin: 0;
+}
+.accordion-button:focus {
+  border-radius: none;
+  background-color: #5fa8ed;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-content {
+  background-color: #fff;
+  width: 0;
+  padding: 0;
+  height: 0;
+  transition: height 0.3 linear;
+}
+
+.accordion-body {
+  display: none;
+}
+.accordion-body > * {
+  text-align: left;
+}
+
+.accordion-show {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+}
+.accordion-show > .accordion-body {
+  display: block;
 }
 
 .flex div {
