@@ -115,6 +115,7 @@
   var ACCORDION_CLASS = '.accordion';
   var ACCORDION_BUTTON = '[data-flow-toggle="accordion"]';
   var ACCORDION_CLASS_SHOW = 'accordion-show';
+  var ACCORDION_BUTTON_CLICKED = 'accordion-clicked';
   var COMPONENT_KEY$1 = 'fw.accordion';
 
   var Accordion = /*#__PURE__*/function (_ExtendComponent) {
@@ -139,25 +140,26 @@
       return buttonsAndElements;
     };
 
-    _proto._setClassesInElements = function _setClassesInElements(targetElement) {
+    _proto._setClassesInElements = function _setClassesInElements(targetButton, targetElement) {
       var currentElement = document.querySelector("." + ACCORDION_CLASS_SHOW);
+      var currentButton = document.querySelector("." + ACCORDION_BUTTON_CLICKED);
 
-      if (currentElement && currentElement.id !== targetElement.id) {
+      if (currentElement && currentElement.id !== targetElement.id && currentButton) {
         currentElement.classList.remove(ACCORDION_CLASS_SHOW);
+        currentButton.classList.remove(ACCORDION_BUTTON_CLICKED);
       }
 
       if (!targetElement.classList.contains(ACCORDION_CLASS_SHOW)) {
         targetElement.classList.add(ACCORDION_CLASS_SHOW);
+        targetButton.classList.add(ACCORDION_BUTTON_CLICKED);
       }
-
-      return;
     };
 
     _proto._addEventInButton = function _addEventInButton(button, element) {
       var _this = this;
 
       button.addEventListener('click', function () {
-        return _this._setClassesInElements(element);
+        return _this._setClassesInElements(button, element);
       }, true);
     };
 
@@ -175,7 +177,10 @@
   }(ExtendComponent);
 
   window.addEventListener('load', function () {
-    new Accordion(ACCORDION_CLASS, COMPONENT_KEY$1).execute();
+    var accordions = document.querySelectorAll(ACCORDION_CLASS);
+    accordions.forEach(function (accordion) {
+      new Accordion(accordion, COMPONENT_KEY$1).execute();
+    });
   }, false);
 
   var index_umd = {
