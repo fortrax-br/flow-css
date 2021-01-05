@@ -1,0 +1,89 @@
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $b-color;
+  padding: 10px;
+  background-color: $white;
+  border-radius: 5px;
+}
+
+.accordion-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $b-color;
+  background-color: $white;
+  
+  & + & {
+    border-top: none;
+  }
+
+  &:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 0;
+}
+
+.accordion-button {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  color: $dark;
+  background-color: $white;
+  border: none;
+  border-radius: none;
+  outline: none;
+  margin: 0;
+
+  &:focus {
+  border-radius: none;
+    background-color: $blue-3;
+    border-bottom: 1px solid $b-color;
+  }
+}
+
+.accordion-content {
+  background-color: $white;
+  width: 0;
+  padding: 0;
+  height: 0;
+  transition: height .3 linear;
+}
+
+.accordion-body {
+  display: none;
+  > * {
+    text-align: left;
+  }
+}
+
+.accordion-show {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+
+  > .accordion-body {
+    display: block;
+  }
+}
