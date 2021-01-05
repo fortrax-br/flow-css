@@ -1,10 +1,9 @@
 import ExtendComponent from './extends/extendComponent';
 
 const ACCORDION_CLASS = '.accordion';
-const ACCORDION_CLASS_ITEM = '.accordion-item';
 const ACCORDION_BUTTON = '[data-flow-toggle="accordion"]';
 const ACCORDION_CLASS_SHOW = 'accordion-show';
-const ACCORDION_CLASS_CONTENT = '.accordion-content';
+const ACCORDION_BUTTON_CLICKED = 'accordion-clicked';
 const COMPONENT_KEY = 'fw.accordion';
 
 class Accordion extends ExtendComponent {
@@ -28,22 +27,23 @@ class Accordion extends ExtendComponent {
     return buttonsAndElements;
   }
 
-  _setClassesInElements(targetElement) {
+  _setClassesInElements(targetButton, targetElement) {
     const currentElement = document.querySelector(`.${ACCORDION_CLASS_SHOW}`);
+    const currentButton = document.querySelector(`.${ACCORDION_BUTTON_CLICKED}`);
 
-    if (currentElement && currentElement.id !== targetElement.id) {
+    if ( currentElement && currentElement.id !== targetElement.id && currentButton) {
       currentElement.classList.remove(ACCORDION_CLASS_SHOW);
+      currentButton.classList.remove(ACCORDION_BUTTON_CLICKED);
     }
 
     if (!targetElement.classList.contains(ACCORDION_CLASS_SHOW)) {
-      targetElement.classList.add(ACCORDION_CLASS_SHOW);
+        targetElement.classList.add(ACCORDION_CLASS_SHOW);
+        targetButton.classList.add(ACCORDION_BUTTON_CLICKED);
     }
-
-    return;
   }
 
   _addEventInButton(button, element) {
-    button.addEventListener('click', () => this._setClassesInElements(element), true);
+    button.addEventListener('click', () => this._setClassesInElements(button, element), true);
   }
 
   execute() {
@@ -52,12 +52,15 @@ class Accordion extends ExtendComponent {
     buttonsAndElements.forEach(item => {
       this._addEventInButton(item.button, item.element);
     });
-
   }
 }
 
 window.addEventListener('load', () => {
-  new Accordion(ACCORDION_CLASS, COMPONENT_KEY).execute();
+  const accordions = document.querySelectorAll(ACCORDION_CLASS);
+
+  accordions.forEach(accordion => {
+    new Accordion(accordion, COMPONENT_KEY).execute();
+  });
 }, false);
 
 export default Accordion;
