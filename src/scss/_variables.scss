@@ -590,7 +590,18 @@ $roadmap_circle_height: size(50, true);
 $roadmap_bg: $blue-4;
 
 // accordion 
-
+$accordion_border_width: size(1, true);
+$accordion_padding: size(10, true);
+$accordion_margin_bottom: size(10, true);
+$accordion_border_radius: size(5, true);
+$accordion_border_color: $b-color;
+$accordion_btn_font_size: size(18, true);
+$accordion_btn_font_weight: $font_weight_regular;
+$accordion_color: $dark;
+$accordion_bg: $white;
+$accordion_body_padding: size(5, true);
+$accordion_body_border_width: size(5, true);
+$accordion_transition_duration: .3s;
 
 // z-index 
 $z_index_1: 1001;
