@@ -1,4 +1,5 @@
 import ExtendComponent from './extends/extendComponent';
+import { selectAllElements } from './DOM/selectDomElements';
 
 const ACCORDION_CLASS = '.accordion';
 const ACCORDION_BUTTON = '[data-flow-toggle="accordion"]';
@@ -31,7 +32,7 @@ class Accordion extends ExtendComponent {
     const currentElement = document.querySelector(`.${ACCORDION_CLASS_SHOW}`);
     const currentButton = document.querySelector(`.${ACCORDION_BUTTON_CLICKED}`);
 
-    if ( currentElement && currentElement.id !== targetElement.id && currentButton) {
+    if (currentElement && currentButton) {
       currentElement.classList.remove(ACCORDION_CLASS_SHOW);
       currentButton.classList.remove(ACCORDION_BUTTON_CLICKED);
     }
@@ -56,7 +57,7 @@ class Accordion extends ExtendComponent {
 }
 
 window.addEventListener('load', () => {
-  const accordions = document.querySelectorAll(ACCORDION_CLASS);
+  const accordions = selectAllElements(ACCORDION_CLASS);
 
   accordions.forEach(accordion => {
     new Accordion(accordion, COMPONENT_KEY).execute();
