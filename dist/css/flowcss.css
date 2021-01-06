@@ -14233,11 +14233,11 @@ ul.pagination {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 0.0625rem solid #ccc;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .accordion-item {
@@ -14246,19 +14246,19 @@ ul.pagination {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   background-color: #fff;
 }
 .accordion-item + .accordion-item {
   border-top: none;
 }
 .accordion-item:first-child {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
 }
 .accordion-item:last-child {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
 }
 
 .accordion-header {
@@ -14268,12 +14268,12 @@ ul.pagination {
 
 .accordion-button {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   display: flex !important;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #313131;
   background-color: #fff;
@@ -14294,8 +14294,8 @@ ul.pagination {
 }
 
 .accordion-body {
-  border-left: 5px solid var(--flowcss-accordion-color);
-  padding: 5px;
+  border-left: 0.3125rem solid var(--flowcss-accordion-color);
+  padding: 0.3125rem;
 }
 .accordion-body > * {
   text-align: left;
@@ -14303,13 +14303,17 @@ ul.pagination {
 
 .accordion-show {
   max-height: 100%;
-  padding: 10px;
-  transition: max-height 0.3s linear;
+  padding: 0.625rem;
+  transition: all 0.3s linear;
 }
 
 .accordion-clicked {
-  border-bottom: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   background-color: var(--flowcss-accordion-color);
+}
+.accordion-clicked > .accordion-icon {
+  transition: transform 0.3s linear;
+  transform: rotate(180deg);
 }
 
 .accordion-primary {
