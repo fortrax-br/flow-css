@@ -20,7 +20,7 @@ function selectAllElements(selector, documentSelect) {
 
   if (selector) {
     var domElements = documentSelect.querySelectorAll(selector);
-    return domElements.length > 0 ? domElements : [];
+    return domElements ? domElements : [];
   }
 
   return [];
@@ -138,7 +138,7 @@ var Accordion = /*#__PURE__*/function (_ExtendComponent) {
     var currentElement = document.querySelector("." + ACCORDION_CLASS_SHOW);
     var currentButton = document.querySelector("." + ACCORDION_BUTTON_CLICKED);
 
-    if (currentElement && currentElement.id !== targetElement.id && currentButton) {
+    if (currentElement && currentButton) {
       currentElement.classList.remove(ACCORDION_CLASS_SHOW);
       currentButton.classList.remove(ACCORDION_BUTTON_CLICKED);
     }
@@ -171,7 +171,7 @@ var Accordion = /*#__PURE__*/function (_ExtendComponent) {
 }(ExtendComponent);
 
 window.addEventListener('load', function () {
-  var accordions = document.querySelectorAll(ACCORDION_CLASS);
+  var accordions = selectAllElements(ACCORDION_CLASS);
   accordions.forEach(function (accordion) {
     new Accordion(accordion, COMPONENT_KEY$1).execute();
   });
