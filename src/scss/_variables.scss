@@ -1,8 +1,8 @@
 // prefixo padrão para todas as variaveis css do framework.
-$variable_prefix: flowcss- !default;
-$border_width: 1px;
-$border_radius_generic: 5px;
-$rem_global: 16;
+$variable_prefix: fw- !default;
+$border_width: 1px !default;
+$border_radius_generic: 5px !default;
+$rem_global: 16 !default;
 
 $custom_colors: false !default;
 $enable_gradient: true !default;
@@ -227,7 +227,7 @@ $pattern_colors: (
   'gray-5': $gray-5,
   'gray-6': $gray-6,
   'gray-7': $gray-7,
-);
+) !default;
 
 $theme_colors: (
   'primary': $primary,
@@ -242,7 +242,7 @@ $theme_colors: (
   'violet': $violet-4,
   'indigo': $indigo-4,
   'pink': $pink-4,
-);
+) !default;
 
 @if $custom_colors == false {
   $colors: map-merge($theme_colors, $pattern_colors);
@@ -251,9 +251,9 @@ $theme_colors: (
 // fonts variables
 $rem: 1rem;
 $body_font_size: 100%;
-$responsive_mobile: size(int_to_float(720));
+$responsive_mobile: size(720, true);
 
-$sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
+$sans-serif: system-ui, Arial, Roboto, sans-serif;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 %font {
@@ -377,14 +377,14 @@ $border_directions: (
   'rt': border-right,
   'bm': border-bottom,
   'tp': border-top,
-);
+) !default;
 
 $border_radius_directions: (
   'tp-lf': border-top-left-radius,
   'tp-rt': border-top-right-radius,
   'bm-lf': border-top-left-radius,
   'bm-rt': border-top-right-radius,
-);
+) !default;
 
 $border_sizes: (
   '1': size(1, true),
@@ -396,7 +396,7 @@ $border_sizes: (
   '7': size(7, true),
   '8': size(8, true),
   '9': size(9, true),
-  '10': size(10, true),
+  '10': size(10, true)
 ) !default;
 
 // typography
@@ -407,7 +407,7 @@ $expand_sizes: (
   '4': size(4.0625),
   '5': size(3.75),
   '6': size(3.4375),
-);
+) !default;
 
 $bold_weights: (
   '300': 300,
@@ -417,7 +417,7 @@ $bold_weights: (
   '700': 700,
   '800': 800,
   '900': 900,
-);
+) !default;
 
 $font_size_base: $rem !default; // default is 16px
 $font_weight_lighter: lighter !default;
@@ -460,24 +460,24 @@ $font_sizes: (
 ) !default;
 
 // buttons 
-$btn_font_weight: 600;
-$btn_line_height: 1.4;
-$btn_border_width: $border_width;
-$btn_transition_duration: .2s;
-$btn_border_radius_default: $border_radius_generic;
-$btn_border_radius: size(1.375);
+$btn_font_weight: 600 !default;
+$btn_line_height: 1.4 !default;
+$btn_border_width: $border_width !default;
+$btn_transition_duration: .2s !default;
+$btn_border_radius_default: $border_radius_generic !default;
+$btn_border_radius: size(1.375) !default;
 
-$btn_mobile_padding: size(0.4375);
-$btn_mobile_font_size: $rem;
+$btn_mobile_padding: size(0.4375) !default;
+$btn_mobile_font_size: $rem !default;
 
-$btn_medium_padding: size(0.75);
-$btn_medium_font_size: $rem;
+$btn_medium_padding: size(0.75) !default;
+$btn_medium_font_size: $rem !default;
 
-$btn_large_padding: size(1.0625);
-$btn_large_font_size: $rem;
+$btn_large_padding: size(1.0625) !default;
+$btn_large_font_size: $rem !default;
 
-$btn_ex_large_padding: size(1.3125);
-$btn_ex_font_size: size(1.125);
+$btn_ex_large_padding: size(1.3125) !default;
+$btn_ex_font_size: size(1.125) !default;
 
 // grid system variables
 $grid_columns: 12 !default;
@@ -495,32 +495,32 @@ $grid_gutters: (
 ) !default;
 
 // cards 
-$card_border_radius: $border_radius_generic;
-$card_border_width: $border_width;
-$card_border_color: rgba(0,0,0,0.080);
+$card_border_radius: $border_radius_generic !default;
+$card_border_width: $border_width !default;
+$card_border_color: rgba(0,0,0,0.080) !default;
 $card_color: null !default;
 
-$card_spacer_y: $spacer;
-$card_spacer_x: $spacer;
-$card_title_spacer: $spacer / 2;
-$card_spacer_section_y: $spacer / 2;
-$card_spacer_section_x: $spacer / 2;
+$card_spacer_y: $spacer !default;
+$card_spacer_x: $spacer !default;
+$card_title_spacer: $spacer / 2 !default;
+$card_spacer_section_y: $spacer / 2 !default;
+$card_spacer_section_x: $spacer / 2 !default;
 
-$card_title_font_size: size(1.5);
-$card_subtitle_font_size: size(1.125);
-$card_text_font_size: $rem; 
-$card_title_color: $dark-4;
-$card_subtitle_color: $gray-4;
+$card_title_font_size: size(1.5) !default;
+$card_subtitle_font_size: size(1.125) !default;
+$card_text_font_size: $rem !default; 
+$card_title_color: $dark-4 !default;
+$card_subtitle_color: $gray-4 !default;
 
-$card_bg: $white;
-$card_section_bg: rgba(0,0,0,0.060);
+$card_bg: $white !default;
+$card_section_bg: rgba(0,0,0,0.060) !default;
 
 // Spinners variables 
 $spinners_transiation_duration: 0.8s !default;
-$spinners_size: size(3.125);
-$spinner_border_width: 4px;
-$spinner_border_color: $b-color;
-$spinner_color: $gray-2;
+$spinners_size: size(3.125) !default;
+$spinner_border_width: 4px !default;
+$spinner_border_color: $b-color !default;
+$spinner_color: $gray-2 !default;
 
 // tooltips
 $tooltip_position_normalize: -3px !default;
@@ -528,87 +528,96 @@ $tooltip_position: calc(100% + 14px) !default;
 $tooltip_transition_duration: 0.2s !default;
 $tooltip_translate: size(1.875) !default;
 $tooltip_font_size: size(0.875) !default;
-$tooltip_padding: $spacer / 2;
+$tooltip_padding: $spacer / 2 !default;
 
 $tooltip_triangle_size: size(0.625) !default;
 $tooltip_triangle_position: 5.2px !default;
-$tooltip_triangle_mid: -4px;
+$tooltip_triangle_mid: -4px !default;
 
 // quotes
-$quote_border_simple_width: 1px;
-$quote_border_simple_color: $b-color;
-$quote_border_width: size(6, true);
-$quote_color: $dark;
-$quote_bg: $white;
-$quote_border_radius: size(8, true);
-$quote_padding: $spacer;
+$quote_border_simple_width: 1px !default;
+$quote_border_simple_color: $b-color !default;
+$quote_border_width: size(6, true) !default;
+$quote_color: $dark !default;
+$quote_bg: $white !default;
+$quote_border_radius: $border_radius_generic !default;
+$quote_padding: $spacer !default;
 
 // alerts 
-$alert_border_width: size(1, true);
-$alert_border_left: size(5, true);
-$alert_border_radius: $border_radius_generic;
-$alert_padding: $spacer;
-$alert_color_scale: 25%;
-$alert_bg_scale: 45%;
-$alert_border_scale: 25%;
-$alert_margin_bottom: size(10, true);
-
+$alert_border_width: size(1, true) !default;
+$alert_border_left: size(5, true) !default;
+$alert_border_radius: $border_radius_generic !default;
+$alert_padding: $spacer !default;
+$alert_color_scale: 25% !default;
+$alert_bg_scale: 45% !default;
+$alert_border_scale: 25% !default;
+$alert_margin_bottom: size(10, true) !default;
 
 // pagenation 
-$page_border_radius: $border_radius_generic;
-$page_controll_radius: 50%;
-$page_border_width: size(1, true);
-$page_border_color: $b-color;
-$page_font_size: size(18, true);
-$page_min_width: size(50, true);
-$page_margin_left: size(3, true);
-$page_padding: size(10, true);
-$page_color: $gray-4;
-$page_bg: $light;
-$page_default_bg: $white;
-$page_default_color: $blue-4;
+$page_border_radius: $border_radius_generic !default;
+$page_controll_radius: 50% !default;
+$page_border_width: size(1, true) !default;
+$page_border_color: $b-color !default;
+$page_font_size: size(18, true) !default;
+$page_min_width: size(50, true) !default;
+$page_margin_left: size(3, true) !default;
+$page_padding: size(10, true) !default;
+$page_color: $gray-4 !default;
+$page_bg: $white !default;
+$page_default_bg: $white !default;
+$page_default_color: $blue-4 !default;
 
 // progress
-$progress_height: size(20, true);
-$progress_margin_bottom: size(10, true);
-$progress_bg: $b-color;
-$progress_border_radius: $border_radius_generic;
-$progress_bar_font_size: size(18, true);
-$progress_bar_font_weight: $font_weight_regular;
-$progress_bar_color: $white;
-$progress_bar_bg: $gray-3;
+$progress_height: size(20, true) !default;
+$progress_margin_bottom: size(10, true) !default;
+$progress_bg: $b-color !default;
+$progress_border_radius: $border_radius_generic !default;
+$progress_bar_font_size: size(18, true) !default;
+$progress_bar_font_weight: $font_weight_regular !default;
+$progress_bar_color: $white !default;
+$progress_bar_bg: $gray-3 !default;
 
 // roadmap
-$roadmap_padding: 10px 10px 10px 40px;
-$roadmap_border_width: 2px;
-$roadmap_border_color: $b-color;
-$roadmap_font_weight: $font_weight_regular;
-$roadmap_font_size: size(24, true);
-$roadmap_color: $white;
-$roadmap_circle_width: size(50, true);
-$roadmap_circle_height: size(50, true);
-$roadmap_bg: $blue-4;
+$roadmap_padding: 10px 10px 10px 40px !default;
+$roadmap_border_width: 2px !default;
+$roadmap_border_color: $b-color !default;
+$roadmap_font_weight: $font_weight_regular !default;
+$roadmap_font_size: size(24, true) !default;
+$roadmap_color: $white !default;
+$roadmap_circle_width: size(50, true) !default;
+$roadmap_circle_height: size(50, true) !default;
+$roadmap_bg: $blue-4 !default;
 
 // accordion 
-$accordion_border_width: size(1, true);
-$accordion_padding: size(10, true);
-$accordion_margin_bottom: size(10, true);
-$accordion_border_radius: size(5, true);
-$accordion_border_color: $b-color;
-$accordion_btn_font_size: size(18, true);
-$accordion_btn_font_weight: $font_weight_regular;
-$accordion_color: $dark;
-$accordion_bg: $white;
-$accordion_body_padding: size(5, true);
-$accordion_body_border_width: size(5, true);
-$accordion_transition_duration: .3s;
+$accordion_border_width: size(1, true) !default;
+$accordion_padding: size(10, true) !default;
+$accordion_margin_bottom: size(10, true) !default;
+$accordion_border_radius: size(5, true) !default;
+$accordion_border_color: $b-color !default;
+$accordion_btn_font_size: size(18, true) !default;
+$accordion_btn_font_weight: $font_weight_regular !default;
+$accordion_color: $dark !default;
+$accordion_bg: $white !default;
+$accordion_body_padding: size(5, true) !default;
+$accordion_body_border_width: size(5, true) !default;
+$accordion_transition_duration: .3s !default;
+
+// badge 
+$badge_padding_y: .30em !default;
+$badge_padding_x: .65em !default;
+$badge_border_radius: $border_radius_generic !default;
+$badge_bg: $gray-4 !default;
+$badge_color: $white !default;
+$badge_font_size: .80em !default;
+$badge_font_weight: $font_weight_bold !default;
+$badge_margin: size(10, true) size(5, true) !default;
 
 // z-index 
-$z_index_1: 1001;
-$z_index_2: 1003;
-$z_index_3: 1005;
-$z_index_4: 1007;
-$z_index_5: 1009;
-$z_index_6: 1011;
+$z_index_1: 1001 !default;
+$z_index_2: 1003 !default;
+$z_index_3: 1005 !default;
+$z_index_4: 1007 !default;
+$z_index_5: 1009 !default;
+$z_index_6: 1011 !default;
 
 
