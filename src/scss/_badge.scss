@@ -1,0 +1,13 @@
+.badge {
+  display: inline-block;
+  padding: $badge_padding_y $badge_padding_x;
+  border-radius: $badge_border_radius;
+  background-color: $badge_bg;
+  color: $badge_color;
+  font-size: $badge_font_size;
+  line-height: 1;
+  font-weight: $badge_font_weight;
+  white-space: nowrap;
+  vertical-align: baseline;
+  margin: $badge_margin;
+}
