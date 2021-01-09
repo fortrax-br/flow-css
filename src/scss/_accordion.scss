@@ -71,7 +71,7 @@
 }
 
 .accordion-body {
-  border-left: $accordion_body_border_width solid  var(--#{$variable_prefix}accordion-color);
+  border-left: $accordion_body_border_width solid var(--#{$variable_prefix}accordion-color);
 
   padding: $accordion_body_padding;
 
