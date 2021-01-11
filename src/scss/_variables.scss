@@ -612,6 +612,12 @@ $badge_font_size: .80em !default;
 $badge_font_weight: $font_weight_bold !default;
 $badge_margin: size(10, true) size(5, true) !default;
 
+// carousel
+$carousel_border_radius: $border_radius_generic;
+$carousel_transition: 1s;
+
+
+
 // z-index 
 $z_index_1: 1001 !default;
 $z_index_2: 1003 !default;
@@ -619,5 +625,3 @@ $z_index_3: 1005 !default;
 $z_index_4: 1007 !default;
 $z_index_5: 1009 !default;
 $z_index_6: 1011 !default;
-
-

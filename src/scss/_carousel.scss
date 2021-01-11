@@ -1,0 +1,28 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: $carousel_border_radius;
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  transition: transform .8s linear;
+}
+
+.carousel-item {
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+
+  > * {
+    height: 100%;
+    width: 100%;
+  }
+
+  > img {
+    object-fit: cover;
+    object-position: center;
+  }
+}

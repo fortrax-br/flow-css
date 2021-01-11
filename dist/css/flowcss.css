@@ -14381,6 +14381,33 @@ ul.pagination {
   margin: 0.625rem 0.3125rem;
 }
 
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  transition: transform 0.8s linear;
+}
+
+.carousel-item {
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+}
+.carousel-item > * {
+  height: 100%;
+  width: 100%;
+}
+.carousel-item > img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .flex div {
   width: calc(33.333% - 20px);
 }

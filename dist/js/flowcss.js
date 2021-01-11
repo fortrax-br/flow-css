@@ -183,9 +183,82 @@
     });
   }, false);
 
+  var CAROUSEL_DATA_TYPE = '[data-fw-type="carousel"]';
+  var COMPONENT_KEY$2 = 'fw.carousel';
+
+  var Carousel = /*#__PURE__*/function (_ExtendComponent) {
+    _inheritsLoose(Carousel, _ExtendComponent);
+
+    function Carousel(element, componentKey) {
+      var _this;
+
+      _this = _ExtendComponent.call(this, element, componentKey) || this; // initial position is index 1
+
+      _this._slidesAll = Array.from(_this._element.children);
+      return _this;
+    }
+
+    var _proto = Carousel.prototype;
+
+    _proto._getFirstChildrenWidth = function _getFirstChildrenWidth() {
+      var slide = this._slidesAll[0];
+      var slideWidth = slide.getBoundingClientRect().width;
+      return slideWidth;
+    };
+
+    _proto._setPositionInSlideChildrens = function _setPositionInSlideChildrens(slides) {
+      var slideWidth = this._getFirstChildrenWidth();
+
+      for (var index = 0; index < slides.length; index++) {
+        slides[index].style.left = slideWidth * index + "px";
+      }
+    };
+
+    _proto._automaticallyMovesSlide = function _automaticallyMovesSlide(carouselElement) {
+      var currentSlide = carouselElement.querySelector('.active');
+      var nextSlide = currentSlide.nextElementSibling;
+      var targetSlide = nextSlide || this._slidesAll[0];
+
+      this._moveSlide(carouselElement, currentSlide, targetSlide);
+
+      this._toggleClassActiveSlide(currentSlide, targetSlide);
+    };
+
+    _proto._moveSlide = function _moveSlide(carousel, currentSlide, targetSlide) {
+      var positionToSlide = targetSlide.style.left;
+      carousel.parentNode.removeChild(currentSlide);
+      carousel.style.transform = "translateX(-100%)";
+    };
+
+    _proto._toggleClassActiveSlide = function _toggleClassActiveSlide(currentActive, newActive) {
+      currentActive.classList.remove('active');
+      newActive.classList.add('active');
+    };
+
+    _proto.execute = function execute() {
+      var _this2 = this;
+
+      this._setPositionInSlideChildrens(this._slidesAll);
+
+      setInterval(function () {
+        _this2._automaticallyMovesSlide(_this2._element);
+      }, 2000);
+    };
+
+    return Carousel;
+  }(ExtendComponent);
+
+  window.addEventListener('load', function () {
+    var elements = selectAllElements(CAROUSEL_DATA_TYPE);
+    elements.forEach(function (element) {
+      return new Carousel(element, COMPONENT_KEY$2).execute();
+    });
+  }, true);
+
   var index_umd = {
     Alert: Alert,
-    Accordion: Accordion
+    Accordion: Accordion,
+    Carousel: Carousel
   };
 
   return index_umd;
