@@ -226,8 +226,7 @@
 
     _proto._moveSlide = function _moveSlide(carousel, currentSlide, targetSlide) {
       var positionToSlide = targetSlide.style.left;
-      carousel.parentNode.removeChild(currentSlide);
-      carousel.style.transform = "translateX(-100%)";
+      carousel.style.transform = "translateX(-" + positionToSlide + ")";
     };
 
     _proto._toggleClassActiveSlide = function _toggleClassActiveSlide(currentActive, newActive) {
