@@ -14383,21 +14383,33 @@ ul.pagination {
 
 .carousel {
   width: 100%;
+  height: 100%;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9f9f9f;
   border-radius: 5px;
 }
 
 .carousel-container {
   width: 100%;
-  display: flex;
-  position: relative;
-  transition: transform 0.8s linear;
+  height: auto;
 }
 
 .carousel-item {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   min-width: 100%;
+  min-height: 100%;
+  clip-path: circle(0% at 0% 50%);
 }
 .carousel-item > * {
   height: 100%;
@@ -14406,6 +14418,69 @@ ul.pagination {
 .carousel-item > img {
   object-fit: cover;
   object-position: center;
+}
+.carousel-item.active {
+  clip-path: circle(150% at 0 50%);
+  transition: clip-path 0.9s linear;
+}
+
+.carousel-dots {
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  width: auto;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-dot {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #656565;
+  background-color: transparent;
+}
+.carousel-dot + .carousel-dot {
+  margin-left: 20px;
+}
+.carousel-dot.active {
+  border-color: #c5c5c5;
+}
+
+.carousel-control {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 30px);
+  width: 50px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.carousel-control,
+.carousel-control > * {
+  font-size: 35px;
+  color: #656565;
+}
+.carousel-control.active, .carousel-control:hover, .carousel-control:focus {
+  background-color: transparent;
+}
+.carousel-control.active,
+.carousel-control.active > *, .carousel-control:hover,
+.carousel-control:hover > *, .carousel-control:focus,
+.carousel-control:focus > * {
+  color: #c5c5c5;
+}
+
+.carousel-control:nth-child(1) {
+  left: 0;
+}
+
+.carousel-control:nth-child(2) {
+  right: 0;
 }
 
 .flex div {
