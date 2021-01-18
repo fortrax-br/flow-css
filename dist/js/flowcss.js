@@ -183,74 +183,123 @@
     });
   }, false);
 
-  var CAROUSEL_DATA_TYPE = '[data-fw-type="carousel"]';
+  var CAROUSEL = '.carousel';
+  var CAROUSEL_DATA_TARGET = '[data-tw-target="carousel"]';
+  var CAROUSEL_DOT = '.carousel-dot';
+  var CAROUSEL_CONTROL_PREV = '.carousel-control-prev';
+  var CAROUSEL_CONTROL_NEXT = '.carousel-control-next';
   var COMPONENT_KEY$2 = 'fw.carousel';
+  var SLIDE_DELAY = 2000;
 
   var Carousel = /*#__PURE__*/function (_ExtendComponent) {
     _inheritsLoose(Carousel, _ExtendComponent);
 
-    function Carousel(element, componentKey) {
+    function Carousel(element, childElement, componentKey) {
       var _this;
 
-      _this = _ExtendComponent.call(this, element, componentKey) || this; // initial position is index 1
-
-      _this._slidesAll = Array.from(_this._element.children);
+      _this = _ExtendComponent.call(this, element, componentKey) || this;
+      _this._childElement = childElement;
+      _this._allSlides = Array.from(_this._childElement.children);
+      _this._currentSlide = 0;
+      _this._isWithControls = Boolean(_this._element.dataset.twControls);
+      _this._isWithDots = Boolean(_this._element.dataset.twDots);
+      _this._dotElements = [];
+      _this._controlElements = [];
+      _this._interval;
       return _this;
     }
 
     var _proto = Carousel.prototype;
 
-    _proto._getFirstChildrenWidth = function _getFirstChildrenWidth() {
-      var slide = this._slidesAll[0];
-      var slideWidth = slide.getBoundingClientRect().width;
-      return slideWidth;
+    _proto._moveSlide = function _moveSlide(targetSlide) {
+      var _this2 = this;
+
+      this._allSlides.forEach(function (slide, index) {
+        slide.classList.remove('active');
+
+        _this2._dotElements[index].classList.remove('active');
+      });
+
+      this._allSlides[targetSlide].classList.add('active');
+
+      this._dotElements[targetSlide].classList.add('active');
     };
 
-    _proto._setPositionInSlideChildrens = function _setPositionInSlideChildrens(slides) {
-      var slideWidth = this._getFirstChildrenWidth();
+    _proto._incrementAndMoveSlide = function _incrementAndMoveSlide(targetSlide) {
+      this._currentSlide = targetSlide;
 
-      for (var index = 0; index < slides.length; index++) {
-        slides[index].style.left = slideWidth * index + "px";
-      }
+      this._moveSlide(targetSlide);
     };
 
-    _proto._automaticallyMovesSlide = function _automaticallyMovesSlide(carouselElement) {
-      var currentSlide = carouselElement.querySelector('.active');
-      var nextSlide = currentSlide.nextElementSibling;
-      var targetSlide = nextSlide || this._slidesAll[0];
+    _proto._configureDotElements = function _configureDotElements() {
+      var _this3 = this;
 
-      this._moveSlide(carouselElement, currentSlide, targetSlide);
+      this._dotElements = selectAllElements(CAROUSEL_DOT);
 
-      this._toggleClassActiveSlide(currentSlide, targetSlide);
+      this._dotElements[0].classList.add('active');
+
+      this._dotElements.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+          return _this3._incrementAndMoveSlide(index);
+        });
+      });
     };
 
-    _proto._moveSlide = function _moveSlide(carousel, currentSlide, targetSlide) {
-      var positionToSlide = targetSlide.style.left;
-      carousel.style.transform = "translateX(-" + positionToSlide + ")";
-    };
+    _proto._configureControlElements = function _configureControlElements() {
+      var _this4 = this;
 
-    _proto._toggleClassActiveSlide = function _toggleClassActiveSlide(currentActive, newActive) {
-      currentActive.classList.remove('active');
-      newActive.classList.add('active');
+      var controlPrevSlide = selectAllElements(CAROUSEL_CONTROL_PREV);
+      var controlNextSlide = selectAllElements(CAROUSEL_CONTROL_NEXT);
+      controlPrevSlide.forEach(function (control, index) {
+        control.addEventListener('click', function () {
+          var prevIndex = _this4._currentSlide > 0 ? _this4._currentSlide - 1 : _this4._allSlides.length - 1;
+
+          _this4._incrementAndMoveSlide(prevIndex);
+        });
+      });
+      controlNextSlide.forEach(function (control, index) {
+        if (control.closest("#" + _this4._element.id)) {
+          control.addEventListener('click', function () {
+            var nextIndex = _this4._currentSlide < _this4._allSlides.length - 1 ? _this4._currentSlide + 1 : 0;
+
+            _this4._incrementAndMoveSlide(nextIndex);
+          });
+        }
+      });
     };
 
     _proto.execute = function execute() {
-      var _this2 = this;
+      var _this5 = this;
 
-      this._setPositionInSlideChildrens(this._slidesAll);
+      if (this._isWithDots) {
+        this._configureDotElements();
+      }
 
-      setInterval(function () {
-        _this2._automaticallyMovesSlide(_this2._element);
-      }, 2000);
+      var interval = setInterval(function () {
+        if (_this5._currentSlide === _this5._allSlides.length) {
+          _this5._currentSlide = 0;
+        }
+
+        _this5._moveSlide(_this5._currentSlide);
+
+        _this5._currentSlide += 1;
+      }, SLIDE_DELAY);
+
+      if (this._isWithControls) {
+        this._configureControlElements();
+
+        clearInterval(interval);
+      }
     };
 
     return Carousel;
   }(ExtendComponent);
 
   window.addEventListener('load', function () {
-    var elements = selectAllElements(CAROUSEL_DATA_TYPE);
-    elements.forEach(function (element) {
-      return new Carousel(element, COMPONENT_KEY$2).execute();
+    var elements = selectAllElements(CAROUSEL);
+    var childElements = selectAllElements(CAROUSEL_DATA_TARGET);
+    elements.forEach(function (element, index) {
+      new Carousel(element, childElements[index], COMPONENT_KEY$2).execute();
     });
   }, true);
 
