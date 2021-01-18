@@ -16,38 +16,46 @@
   <section class="container py-30">
     <h1 class="color-green-4 mb-30">Carousel components</h1>
   
-    <div id="carouselPrimary" class="carousel">
-      <div class="carousel-container" data-fw-type="carousel" data-fw-target="#carouselPrimary">
+   <!-- <div id="carouselPrimary" class="carousel mb-30" data-tw-controls="true" data-tw-dots="false" style="height: 600px;">
+      <button class="carousel-control carousel-control-prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-control carousel-control-next"><i class="fas fa-chevron-right"></i></button>
+      
+      <div class="carousel-container" data-tw-target="carousel" data-tw-toggle="carouselPrimary">
         <div class="carousel-item active">
-          <img src="https://tlgur.com/d/8ekXx1zg" alt="image" class="w-100">
+          <img src="./slide-1.jpg">
         </div>
         <div class="carousel-item">
-          <img src="https://tlgur.com/d/g2ZLwxOg" alt="image" class="w-100">
+          <img src="./slide-2.jpg">
         </div>
         <div class="carousel-item">
-          <img src="https://tlgur.com/d/GdBv01j4" alt="image" class="w-100">
+          <img src="./slide-3.jpg">
+        </div>
+      </div>
+   </div>-->
+
+    <div id="carouselSecondary" class="carousel" data-tw-controls="false" data-tw-dots="true" style="height: 600px;">
+      <div class="carousel-container" data-tw-target="carousel" data-tw-toggle="carouselSecondary">
+        <div class="carousel-item active">
+          <img src="./slide-3.jpg">
         </div>
         <div class="carousel-item">
-          <img src="https://tlgur.com/d/g2ZLwxOg" alt="image" class="w-100">
+          <img src="./slide-2.jpg">
         </div>
         <div class="carousel-item">
-          <img src="https://tlgur.com/d/GdBv01j4" alt="image" class="w-100">
+          <img src="./slide-1.jpg">
         </div>
-        <div class="carousel-item">
-          <img src="https://tlgur.com/d/g2ZLwxOg" alt="image" class="w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://tlgur.com/d/GdBv01j4" alt="image" class="w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://tlgur.com/d/g2ZLwxOg" alt="image" class="w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://tlgur.com/d/GdBv01j4" alt="image" class="w-100">
-        </div>
+      </div>
+    
+      <div class="carousel-dots">
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
       </div>
     </div>
   </section>
+
+  </section>
+
 
   <script src="../../../js/flowcss.js"></script>
 </body>
