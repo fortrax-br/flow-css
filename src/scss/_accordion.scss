@@ -1,0 +1,103 @@
+.accordion {
+  --#{$variable_prefix}accordion-color: #{$blue-2};
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: $accordion_border_width solid $accordion_border_color;
+  padding: $accordion_padding;
+  margin-bottom: $accordion_margin_bottom;
+  background-color: $accordion_bg;
+  border-radius: $accordion_border_radius;    
+}
+
+.accordion-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: $accordion_border_width solid $accordion_border_color;
+  background-color: $accordion_bg;
+  
+  & + & {
+    border-top: none;
+  }
+
+  &:first-child {
+    border-top-left-radius: $accordion_border_radius;
+    border-top-right-radius: $accordion_border_radius;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $accordion_border_radius;
+    border-bottom-right-radius: $accordion_border_radius;
+  }
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 0;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: $accordion_padding;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: $accordion_btn_font_size;
+  font-weight: $accordion_btn_font_weight;
+  color: $accordion_color;
+  background-color: $accordion_bg;
+  border: none;
+  border-radius: none;
+  outline: none;
+  margin: 0;
+
+  &:hover {
+    background-color: var(--#{$variable_prefix}accordion-color);
+  }
+}
+
+.accordion-content {
+  background-color: $white;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-body {
+  border-left: $accordion_body_border_width solid var(--#{$variable_prefix}accordion-color);
+
+  padding: $accordion_body_padding;
+
+  > * {
+    text-align: left;
+  }
+}
+
+.accordion-show {
+  max-height: 100%;
+  padding: $accordion_padding;
+  transition: all $accordion_transition_duration linear;
+}
+
+.accordion-clicked {
+  border: $accordion_border_width solid $accordion_border_color;
+  background-color: var(--#{$variable_prefix}accordion-color);
+
+  > .accordion-icon {
+    transition: transform $accordion_transition_duration linear;
+    transform: rotate(180deg);
+  }
+}
+
+@each $key, $color in $theme_colors {
+  .accordion-#{$key} {
+    --#{$variable_prefix}accordion-color: #{$color};
+  }
+}

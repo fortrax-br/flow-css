@@ -6,7 +6,7 @@
 
 .grid-gap {
   > .row + .row {
-    margin-top: var(--#{$variable_prefix}-gutter-x);
+    margin-top: var(--#{$variable_prefix}gutter-x);
   }
 }
 

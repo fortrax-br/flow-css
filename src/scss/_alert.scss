@@ -8,6 +8,7 @@
   border-radius: $alert_border_radius;
   padding: $alert_padding;
   overflow: hidden;
+  z-index: $z-index-6;
   
   > * {
     color: currentColor;

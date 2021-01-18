@@ -33,6 +33,10 @@
   }
 }
 
+.roadmap-content {
+  max-width: 100%;
+}
+
 .roadmap-border {
   color: $roadmap_bg;
   &::before {

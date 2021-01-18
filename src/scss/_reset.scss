@@ -32,15 +32,13 @@ img {
 
 p,
 span {
-  width: 100%;
-  max-width: 70ch;
-  font-size: 1.1 * $rem;
-  line-height: 1.7 * $rem;
+  font-size: $rem;
+  line-height: 1.4;
   color: $gray;
 }
 
 strong {
-  font-size: 1.1 * $rem;
+  font-size: $rem;
   font-weight: 800;
 }
 
@@ -95,7 +93,6 @@ input,
 select,
 textarea {
   @extend %font-form;
-  border-radius: 0.3125 * $rem;
   border: none;
   border: 1px solid $gray;
 

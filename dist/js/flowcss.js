@@ -1,6 +1,6 @@
 /*!
   * FlowCss v1.0.0 (https://github.com/fortrax-br/flow-css)
-  * Copyright 2020-2020 Fortrax
+  * Copyright 2020-2021 Fortrax
   * Licensed under MIT (https://github.com/fortrax/flowcss/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -26,7 +26,7 @@
 
     if (selector) {
       var domElements = documentSelect.querySelectorAll(selector);
-      return domElements.length > 0 ? domElements : [];
+      return domElements ? domElements : [];
     }
 
     return [];
@@ -112,8 +112,201 @@
     new Alert(DATA_ALERT_HIDE, COMPONENT_KEY).execute();
   }, false);
 
+  var ACCORDION_CLASS = '.accordion';
+  var ACCORDION_BUTTON = '[data-flow-toggle="accordion"]';
+  var ACCORDION_CLASS_SHOW = 'accordion-show';
+  var ACCORDION_BUTTON_CLICKED = 'accordion-clicked';
+  var COMPONENT_KEY$1 = 'fw.accordion';
+
+  var Accordion = /*#__PURE__*/function (_ExtendComponent) {
+    _inheritsLoose(Accordion, _ExtendComponent);
+
+    function Accordion(element, componentKey) {
+      return _ExtendComponent.call(this, element, componentKey) || this;
+    }
+
+    var _proto = Accordion.prototype;
+
+    _proto._takeTheElementsThatEachButtonRepresents = function _takeTheElementsThatEachButtonRepresents() {
+      var buttons = document.querySelectorAll(ACCORDION_BUTTON);
+      var buttonsAndElements = Array.prototype.map.call(buttons, function (button) {
+        var dataButtonTarget = button.dataset.flowTarget;
+        var element = document.querySelector(dataButtonTarget);
+        return {
+          button: button,
+          element: element
+        };
+      });
+      return buttonsAndElements;
+    };
+
+    _proto._setClassesInElements = function _setClassesInElements(targetButton, targetElement) {
+      var currentElement = document.querySelector("." + ACCORDION_CLASS_SHOW);
+      var currentButton = document.querySelector("." + ACCORDION_BUTTON_CLICKED);
+
+      if (currentElement && currentButton) {
+        currentElement.classList.remove(ACCORDION_CLASS_SHOW);
+        currentButton.classList.remove(ACCORDION_BUTTON_CLICKED);
+      }
+
+      if (!targetElement.classList.contains(ACCORDION_CLASS_SHOW)) {
+        targetElement.classList.add(ACCORDION_CLASS_SHOW);
+        targetButton.classList.add(ACCORDION_BUTTON_CLICKED);
+      }
+    };
+
+    _proto._addEventInButton = function _addEventInButton(button, element) {
+      var _this = this;
+
+      button.addEventListener('click', function () {
+        return _this._setClassesInElements(button, element);
+      }, true);
+    };
+
+    _proto.execute = function execute() {
+      var _this2 = this;
+
+      var buttonsAndElements = this._takeTheElementsThatEachButtonRepresents();
+
+      buttonsAndElements.forEach(function (item) {
+        _this2._addEventInButton(item.button, item.element);
+      });
+    };
+
+    return Accordion;
+  }(ExtendComponent);
+
+  window.addEventListener('load', function () {
+    var accordions = selectAllElements(ACCORDION_CLASS);
+    accordions.forEach(function (accordion) {
+      new Accordion(accordion, COMPONENT_KEY$1).execute();
+    });
+  }, false);
+
+  var CAROUSEL = '.carousel';
+  var CAROUSEL_DATA_TARGET = '[data-tw-target="carousel"]';
+  var CAROUSEL_DOT = '.carousel-dot';
+  var CAROUSEL_CONTROL_PREV = '.carousel-control-prev';
+  var CAROUSEL_CONTROL_NEXT = '.carousel-control-next';
+  var COMPONENT_KEY$2 = 'fw.carousel';
+  var SLIDE_DELAY = 2000;
+
+  var Carousel = /*#__PURE__*/function (_ExtendComponent) {
+    _inheritsLoose(Carousel, _ExtendComponent);
+
+    function Carousel(element, childElement, componentKey) {
+      var _this;
+
+      _this = _ExtendComponent.call(this, element, componentKey) || this;
+      _this._childElement = childElement;
+      _this._allSlides = Array.from(_this._childElement.children);
+      _this._currentSlide = 0;
+      _this._isWithControls = Boolean(_this._element.dataset.twControls);
+      _this._isWithDots = Boolean(_this._element.dataset.twDots);
+      _this._dotElements = [];
+      _this._controlElements = [];
+      _this._interval;
+      return _this;
+    }
+
+    var _proto = Carousel.prototype;
+
+    _proto._moveSlide = function _moveSlide(targetSlide) {
+      var _this2 = this;
+
+      this._allSlides.forEach(function (slide, index) {
+        slide.classList.remove('active');
+
+        _this2._dotElements[index].classList.remove('active');
+      });
+
+      this._allSlides[targetSlide].classList.add('active');
+
+      this._dotElements[targetSlide].classList.add('active');
+    };
+
+    _proto._incrementAndMoveSlide = function _incrementAndMoveSlide(targetSlide) {
+      this._currentSlide = targetSlide;
+
+      this._moveSlide(targetSlide);
+    };
+
+    _proto._configureDotElements = function _configureDotElements() {
+      var _this3 = this;
+
+      this._dotElements = selectAllElements(CAROUSEL_DOT);
+
+      this._dotElements[0].classList.add('active');
+
+      this._dotElements.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+          return _this3._incrementAndMoveSlide(index);
+        });
+      });
+    };
+
+    _proto._configureControlElements = function _configureControlElements() {
+      var _this4 = this;
+
+      var controlPrevSlide = selectAllElements(CAROUSEL_CONTROL_PREV);
+      var controlNextSlide = selectAllElements(CAROUSEL_CONTROL_NEXT);
+      controlPrevSlide.forEach(function (control, index) {
+        control.addEventListener('click', function () {
+          var prevIndex = _this4._currentSlide > 0 ? _this4._currentSlide - 1 : _this4._allSlides.length - 1;
+
+          _this4._incrementAndMoveSlide(prevIndex);
+        });
+      });
+      controlNextSlide.forEach(function (control, index) {
+        if (control.closest("#" + _this4._element.id)) {
+          control.addEventListener('click', function () {
+            var nextIndex = _this4._currentSlide < _this4._allSlides.length - 1 ? _this4._currentSlide + 1 : 0;
+
+            _this4._incrementAndMoveSlide(nextIndex);
+          });
+        }
+      });
+    };
+
+    _proto.execute = function execute() {
+      var _this5 = this;
+
+      if (this._isWithDots) {
+        this._configureDotElements();
+      }
+
+      var interval = setInterval(function () {
+        if (_this5._currentSlide === _this5._allSlides.length) {
+          _this5._currentSlide = 0;
+        }
+
+        _this5._moveSlide(_this5._currentSlide);
+
+        _this5._currentSlide += 1;
+      }, SLIDE_DELAY);
+
+      if (this._isWithControls) {
+        this._configureControlElements();
+
+        clearInterval(interval);
+      }
+    };
+
+    return Carousel;
+  }(ExtendComponent);
+
+  window.addEventListener('load', function () {
+    var elements = selectAllElements(CAROUSEL);
+    var childElements = selectAllElements(CAROUSEL_DATA_TARGET);
+    elements.forEach(function (element, index) {
+      new Carousel(element, childElements[index], COMPONENT_KEY$2).execute();
+    });
+  }, true);
+
   var index_umd = {
-    Alert: Alert
+    Alert: Alert,
+    Accordion: Accordion,
+    Carousel: Carousel
   };
 
   return index_umd;
