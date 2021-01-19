@@ -107,7 +107,7 @@ window.addEventListener('load', function () {
 }, false);
 
 var ACCORDION_CLASS = '.accordion';
-var ACCORDION_BUTTON = '[data-flow-toggle="accordion"]';
+var ACCORDION_BUTTON = '[data-fw-toggle="accordion"]';
 var ACCORDION_CLASS_SHOW = 'accordion-show';
 var ACCORDION_BUTTON_CLICKED = 'accordion-clicked';
 var COMPONENT_KEY$1 = 'fw.accordion';
@@ -177,9 +177,126 @@ window.addEventListener('load', function () {
   });
 }, false);
 
+var CAROUSEL_DATA_TARGET = '[data-fw-target="carousel"]';
+var CAROUSEL_DOT = '.carousel-dot';
+var CAROUSEL_CONTROL_PREV = '.carousel-control-prev';
+var CAROUSEL_CONTROL_NEXT = '.carousel-control-next';
+var CAROUSEL_ACTIVE = 'active';
+var COMPONENT_KEY$2 = 'fw.carousel';
+var SLIDE_DELAY = 2000;
+
+var Carousel = /*#__PURE__*/function (_ExtendComponent) {
+  _inheritsLoose(Carousel, _ExtendComponent);
+
+  function Carousel(element, childElement, componentKey) {
+    var _this;
+
+    _this = _ExtendComponent.call(this, element, componentKey) || this;
+    _this._childElement = childElement;
+    _this._allSlides = Array.from(_this._childElement.children);
+    _this._currentSlide = 0;
+    _this._isWithControls = Boolean(_this._element.dataset.fwControls == 'true');
+    _this._isWithDots = Boolean(_this._element.dataset.fwDots == 'true');
+    _this._dotElements = [];
+    _this._controlElements = [];
+    return _this;
+  }
+
+  var _proto = Carousel.prototype;
+
+  _proto._moveSlide = function _moveSlide(targetSlide) {
+    var _this2 = this;
+
+    this._allSlides.forEach(function (slide, index) {
+      slide.classList.remove(CAROUSEL_ACTIVE);
+      _this2._isWithDots && _this2._dotElements[index].classList.remove(CAROUSEL_ACTIVE);
+    });
+
+    this._allSlides[targetSlide].classList.add(CAROUSEL_ACTIVE);
+
+    this._isWithDots && this._dotElements[targetSlide].classList.add(CAROUSEL_ACTIVE);
+  };
+
+  _proto._incrementAndMoveSlide = function _incrementAndMoveSlide(targetSlide) {
+    this._currentSlide = targetSlide;
+
+    this._moveSlide(targetSlide);
+  };
+
+  _proto._configureDotElements = function _configureDotElements() {
+    var _this3 = this;
+
+    this._dotElements = selectAllElements(CAROUSEL_DOT, this._element);
+
+    this._dotElements[0].classList.add(CAROUSEL_ACTIVE);
+
+    this._dotElements.forEach(function (dot, index) {
+      dot.addEventListener('click', function () {
+        return _this3._incrementAndMoveSlide(index);
+      });
+    });
+  };
+
+  _proto._configureControlElements = function _configureControlElements() {
+    var _this4 = this;
+
+    var controlPrevSlide = selectAllElements(CAROUSEL_CONTROL_PREV, this._element);
+    var controlNextSlide = selectAllElements(CAROUSEL_CONTROL_NEXT, this._element);
+    controlPrevSlide.forEach(function (control) {
+      control.addEventListener('click', function () {
+        var prevIndex = _this4._currentSlide > 0 ? _this4._currentSlide - 1 : _this4._allSlides.length - 1;
+
+        _this4._incrementAndMoveSlide(prevIndex);
+      });
+    });
+    controlNextSlide.forEach(function (control) {
+      control.addEventListener('click', function () {
+        var nextIndex = _this4._currentSlide < _this4._allSlides.length - 1 ? _this4._currentSlide + 1 : 0;
+
+        _this4._incrementAndMoveSlide(nextIndex);
+      });
+    });
+  };
+
+  _proto._animateCarousel = function _animateCarousel() {
+    var _this5 = this;
+
+    if (this._currentSlide === this._allSlides.length) {
+      this._currentSlide = 0;
+    }
+
+    this._moveSlide(this._currentSlide);
+
+    this._currentSlide += 1;
+    setTimeout(function () {
+      requestAnimationFrame(function () {
+        return _this5._animateCarousel();
+      });
+    }, SLIDE_DELAY);
+  };
+
+  _proto.execute = function execute() {
+    this._isWithDots && this._configureDotElements();
+    this._isWithControls ? this._configureControlElements() : this._animateCarousel();
+  };
+
+  return Carousel;
+}(ExtendComponent);
+
+window.addEventListener('load', function () {
+  var childElements = Array.from(selectAllElements(CAROUSEL_DATA_TARGET));
+  var elementsID = childElements.map(function (child) {
+    return document.querySelector("#" + child.dataset.fwToggle);
+  });
+  elementsID.forEach(function (element, index) {
+    new Carousel(element, childElements[index], COMPONENT_KEY$2).execute();
+  });
+}, true);
+
 var index_esm = {
   Alert: Alert,
-  Accordion: Accordion
+  Accordion: Accordion,
+  Carousel: Carousel
 };
 
 export default index_esm;
