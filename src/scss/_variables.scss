@@ -614,9 +614,25 @@ $badge_margin: size(10, true) size(5, true) !default;
 
 // carousel
 $carousel_border_radius: $border_radius_generic;
-$carousel_transition: 1s;
-
-
+$carousel_bg_main: $gray-1;
+$carousel_transition: .8s;
+$carousel_item_z_index: -1;
+$carousel_item_z_index_active: 1;
+$carousel_dots_z_index: 2;
+$carousel_dots_bottom: size(5, true);
+$carousel_dots_padding: size(5, true);
+$carousel_dot_width: size(20, true);
+$carousel_dot_height: size(20, true);
+$carousel_dot_border_width: size(3, true);
+$carousel_dot_border_color: $gray-2;
+$carousel_dot_color: $gray-1;
+$carousel_dot_margin_left: size(20, true);
+$carousel_control_z_index: 2;
+$carousel_control_width: size(50, true);
+$carousel_control_height: size(60, true);
+$carousel_control_font_size: size(35, true);
+$carousel_control_color: $gray-3;
+$carousel_control_color_active: $gray-1;
 
 // z-index 
 $z_index_1: 1001 !default;
