@@ -2,7 +2,7 @@ import ExtendComponent from './extends/extendComponent';
 import { selectAllElements } from './DOM/selectDomElements';
 
 const ACCORDION_CLASS = '.accordion';
-const ACCORDION_BUTTON = '[data-flow-toggle="accordion"]';
+const ACCORDION_BUTTON = '[data-fw-toggle="accordion"]';
 const ACCORDION_CLASS_SHOW = 'accordion-show';
 const ACCORDION_BUTTON_CLICKED = 'accordion-clicked';
 const COMPONENT_KEY = 'fw.accordion';
@@ -19,10 +19,7 @@ class Accordion extends ExtendComponent {
       const dataButtonTarget = button.dataset.flowTarget;
       const element = document.querySelector(dataButtonTarget);
 
-      return {
-        button,
-        element,
-      }
+      return { button, element }
     });
 
     return buttonsAndElements;
@@ -38,8 +35,8 @@ class Accordion extends ExtendComponent {
     }
 
     if (!targetElement.classList.contains(ACCORDION_CLASS_SHOW)) {
-        targetElement.classList.add(ACCORDION_CLASS_SHOW);
-        targetButton.classList.add(ACCORDION_BUTTON_CLICKED);
+      targetElement.classList.add(ACCORDION_CLASS_SHOW);
+      targetButton.classList.add(ACCORDION_BUTTON_CLICKED);
     }
   }
 
