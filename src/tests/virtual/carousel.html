@@ -16,46 +16,66 @@
   <section class="container py-30">
     <h1 class="color-green-4 mb-30">Carousel components</h1>
   
-   <!-- <div id="carouselPrimary" class="carousel mb-30" data-tw-controls="true" data-tw-dots="false" style="height: 600px;">
+    <div id="carouselPrimary" class="carousel mb-30" data-fw-dots="false" data-fw-controls="true" style="height: 150px;">
       <button class="carousel-control carousel-control-prev"><i class="fas fa-chevron-left"></i></button>
       <button class="carousel-control carousel-control-next"><i class="fas fa-chevron-right"></i></button>
       
-      <div class="carousel-container" data-tw-target="carousel" data-tw-toggle="carouselPrimary">
+      <div class="carousel-container" data-fw-target="carousel" data-fw-toggle="carouselPrimary">
         <div class="carousel-item active">
-          <img src="./slide-1.jpg">
+          <div class="bg-pink-4 color-white d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">1</div>
         </div>
         <div class="carousel-item">
-          <img src="./slide-2.jpg">
+          <div class="bg-violet-4 color-white d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">2</div>
         </div>
         <div class="carousel-item">
-          <img src="./slide-3.jpg">
+          <div class="bg-orange-4 color-white d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">3</div>
         </div>
       </div>
-   </div>-->
+    </div>
 
-    <div id="carouselSecondary" class="carousel" data-tw-controls="false" data-tw-dots="true" style="height: 600px;">
-      <div class="carousel-container" data-tw-target="carousel" data-tw-toggle="carouselSecondary">
+    <div id="carouselThird" class="carousel mb-30" data-fw-dots="true" data-fw-controls="true" style="height: 150px;">
+      <button class="carousel-control carousel-control-prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-control carousel-control-next"><i class="fas fa-chevron-right"></i></button>
+      
+      <div class="carousel-container" data-fw-target="carousel" data-fw-toggle="carouselThird">
         <div class="carousel-item active">
-          <img src="./slide-3.jpg">
+          <div class="bg-cyan-4 color-white d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">1</div>
         </div>
         <div class="carousel-item">
-          <img src="./slide-2.jpg">
+          <div class="bg-dark-4 color-white d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">2</div>
         </div>
         <div class="carousel-item">
-          <img src="./slide-1.jpg">
+          <div class="bg-indigo-4 color-white d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">3</div>
+        </div>
+      </div>
+
+      <div class="carousel-dots">
+        <div class="carousel-dot color-white"></div>
+        <div class="carousel-dot color-white"></div>
+        <div class="carousel-dot color-white"></div>
+      </div>
+    </div>
+
+    <section id="carouselSecondary" class="carousel" data-fw-controls="false" data-fw-dots="true" style="height: 150px;">
+      <div class="carousel-container" data-fw-target="carousel" data-fw-toggle="carouselSecondary">
+        <div class="carousel-item active">
+          <div class="bg-blue-4 d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">1</div>
+        </div>
+        <div class="carousel-item">
+          <div class="bg-green-4 d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">2</div>
+        </div>
+        <div class="carousel-item">
+          <div class="bg-red-4 d-flex justify-ct-center align-its-center py-30 expand-600 font-size-10">3</div>
         </div>
       </div>
     
       <div class="carousel-dots">
-        <div class="carousel-dot"></div>
-        <div class="carousel-dot"></div>
-        <div class="carousel-dot"></div>
+        <div class="carousel-dot color-white"></div>
+        <div class="carousel-dot color-white"></div>
+        <div class="carousel-dot color-white"></div>
       </div>
-    </div>
+    </section>
   </section>
-
-  </section>
-
 
   <script src="../../../js/flowcss.js"></script>
 </body>
