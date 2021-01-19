@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $gray-2;
+  background-color: $carousel_bg_main;
   border-radius: $carousel_border_radius;
 }
 
@@ -16,7 +16,6 @@
 }
 
 .carousel-item {
-  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,7 +26,8 @@
   min-width: 100%;
   min-height: 100%;
 
-  clip-path: circle(0% at 0% 50%); 
+  clip-path: circle(30% at 0 50%); 
+  z-index: $carousel_item_z_index;
   
   > * {
     height: 100%;
@@ -40,17 +40,18 @@
   }
 
   &.active {
+    z-index: $carousel_item_z_index_active;
     clip-path: circle(150% at 0 50%);
-    transition: clip-path 0.9s linear;
+    transition: clip-path $carousel_transition linear;
   }
 }
 
 .carousel-dots {
-  z-index: 2;
+  z-index: $carousel_dots_z_index;
   position: absolute;
-  bottom: 10px;
+  bottom: $carousel_dots_bottom;
   width: auto;
-  padding: 10px;
+  padding: $carousel_dots_padding;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -59,34 +60,35 @@
 
 .carousel-dot {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  border: 3px solid $gray-4;
+  width: $carousel_dot_width;
+  height: $carousel_dot_height;
+  border: $carousel_dot_border_width solid $carousel_dot_border_color;
   background-color: transparent;
+  color: $carousel_dot_color;
 
   & + & {
-    margin-left: 20px;
+    margin-left: $carousel_dot_margin_left;
   }
 
   &.active {
-    border-color: $gray-1;
+    border-color: currentColor;
   }
 }
 
 .carousel-control {
   position: absolute;
-  z-index: 2;
+  z-index: $carousel_control_z_index;
   top: calc(50% - 30px);
-  width: 50px;
-  height: 60px;
+  width: $carousel_control_width;
+  height: $carousel_control_height;
   border: none;
   outline: none;
   background-color: transparent;
   
   &,
   > * {
-    font-size: 35px;
-    color: $gray-4;
+    font-size: $carousel_control_font_size;
+    color: $carousel_control_color;
   }
 
   &.active,
@@ -95,7 +97,7 @@
     background-color: transparent;
     &,
     > * {
-      color: $gray-1;
+      color: $carousel_control_color_active;
     }
   }
 }
