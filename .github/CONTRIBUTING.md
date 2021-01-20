@@ -7,6 +7,7 @@ And if you don't agree or want to alert us to something that caught your attenti
 ## Topics
 
 - [Pull Request](#pull-request)
+- [Code style guide](#style-guide)
 
 <a id="pull-request"></a>
 ## Pull requests
@@ -55,5 +56,29 @@ git push origin <topic-branch-name>
 ```
 
 - 7. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/) with a clear title and description against the main branch.
+
+
+<a id="style-guide"></a>
+## Code style guide
+
+__HTML__
+
+* Use 4 indentation tabs.
+* All test html must be written inside tags with the class "container".
+
+__SCSS__
+
+* Use 2 indentation tabs.
+* variables and functions with multiples must use underscores as a word divisor.
+* comments only on more complex parts of the code that need a pre explanation.
+
+__JavaScript__
+
+> We generally follow the javascript [style guide](https://github.com/airbnb/javascript) created by AirBnb.
+
+* Use 2 indentation tabs.
+* comments only on more complex parts of the code that need a pre explanation.
+* function names must be written in the "lowerCamelCase" format.
+* Class names must be written in the "UpperCamelCase" format.
 
 __IMPORTANT__: By submitting a patch, you agree to allow the project owners to license your work under the terms of the [MIT](https://github.com/fortrax-br/flow-css/blob/master/LICENSE.md) License (if it includes code changes) and under the terms of the [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/) (if it includes documentation changes).
