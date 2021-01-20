@@ -6,7 +6,7 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=f1f1f1&labelColor=16DD8E">
 </p>
 
-<img alt="FlowCss" src="https://tlgur.com/d/8loNR0l4">
+<img alt="FlowCss" src="https://tlgur.com/d/g05Ee3d4">
 
 > FlowCss is a framework under development, which seeks to facilitate front-end 
 > developers when creating a beautiful website, in a short time.
