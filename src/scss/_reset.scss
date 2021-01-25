@@ -93,9 +93,6 @@ input,
 select,
 textarea {
   @extend %font-form;
-  border: none;
-  border: 1px solid $gray;
-
   + label,
   + input[type="checkbox"],
   + input[type="radio"] {
@@ -150,12 +147,7 @@ button {
   display: inline;
   margin-bottom: $rem;
   margin-right: .7 * $rem;
-  padding: 0.6 * $rem;
-
-  &:hover {
-    background: darken($white, 15);
-    color: $dark;
-  }
+  padding: size(10, true);
 
   &[disabled] {
     background: darken($white, 10);
@@ -168,11 +160,7 @@ input[type="submit"],
 button[type="submit"] {
   background: $blue;
   color: $white;
-
-  &:hover {
-    background: darken($blue, 11);
-    color: darken($white, 23);
-  }
+  padding: size(10, true);
 }
 
 input[type="button"],
@@ -217,7 +205,6 @@ input[type="file"],
 input[type="datetime-local"],
 select,
 textarea {
-  border: 1px solid $gray;
   padding: .6 * $rem .5 * $rem;
 }
 
