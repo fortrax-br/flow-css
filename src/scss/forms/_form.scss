@@ -1,0 +1,66 @@
+.form {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: $form_padding;
+  border-radius: $form_border_radius;
+  background-color: $form_bg;
+  border: 1px solid $form_border_color;
+}
+
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: $form_wrapper_padding;
+
+  & + & {
+    padding-top: $form_wrapper_padding;
+  }
+}
+
+.form-inline {
+  > .form-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    > .form-label {
+      margin-right: $form_label_margin_right;
+    }
+  }
+}
+
+.form-input {
+  width: 100%;
+  padding: $form_input_padding;
+  border-radius: $form_border_radius;
+  border: 1px solid $form_border_color;
+  margin: $form_input_margin;
+  font-size: $form_input_font_size;
+  font-weight: $form_input_font_weight;
+  color: $form_input_color;
+  outline: none;
+  transition: border $form_input_transition;
+
+  &:focus {
+    border-color: $form_input_focus_border_color;
+    border-width: $form_input_focus_border_width;
+  }
+}
+
+.form-label {
+  margin: 0;
+  font-size: $form_label_font_size;
+  color: $form_label_color;
+  line-height: 1;
+  font-weight: $form_label_font_weight;
+}
+
+.form-button {
+  margin-top: $spacer;
+  margin-bottom: 0;
+}
