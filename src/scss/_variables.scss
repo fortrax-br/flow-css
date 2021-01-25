@@ -590,7 +590,7 @@ $roadmap_bg: $blue-4 !default;
 
 // accordion 
 $accordion_border_width: size(1, true) !default;
-$accordion_padding: size(10, true) !default;
+$accordion_padding: $spacer !default;
 $accordion_margin_bottom: size(10, true) !default;
 $accordion_border_radius: size(5, true) !default;
 $accordion_border_color: $b-color !default;
@@ -633,6 +633,26 @@ $carousel_control_height: size(60, true);
 $carousel_control_font_size: size(35, true);
 $carousel_control_color: $gray-3;
 $carousel_control_color_active: $gray-1;
+
+// forms 
+$form_padding: $spacer;
+$form_border_radius: $border_radius_generic;
+$form_bg: $white;
+$form_border_color: $b-color;
+$form_wrapper_padding: size(10, true);
+$form_input_padding: size(8, true) size(15, true);
+$form_input_margin: size(10, true) 0 0 0;
+$form_input_font_size: size(18, true);
+$form_input_font_weight: $font_weight_normal;
+$form_input_color: $gray-3;
+$form_input_transition: .3s ease-in-out;
+$form_input_focus_border_color: $blue-4;
+$form_input_focus_border_width: 3px;
+
+$form_label_margin_right: size(10, true);
+$form_label_font_size: size(18, true);
+$form_label_color: $gray-4;
+$form_label_font_weight: font_weight_bold;
 
 // z-index 
 $z_index_1: 1001 !default;

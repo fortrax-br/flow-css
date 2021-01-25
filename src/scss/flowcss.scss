@@ -3,21 +3,21 @@
 @import 'variables';
 @import 'mixins';
 
-// import styles of elements
 @import 'root';
 @import 'reset';
-@import 'typography';
-@import 'buttons';
+
 
 // utilities 
 @import 'utilities';
 @import 'gradients';
+@import 'typography';
 
 // grid system
 @import 'containers';
 @import 'grid';
 
 // components 
+@import 'buttons';
 @import 'cards';
 @import 'spinners';
 @import 'tooltips';
@@ -30,6 +30,9 @@
 @import 'accordion';
 @import 'badge';
 @import 'carousel';
+
+// layouts - forms
+@import './forms/form.scss';
 
 // tests 
 .flex div {
