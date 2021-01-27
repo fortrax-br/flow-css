@@ -1,0 +1,16 @@
+.form-select {
+  background-color: $white;
+  padding: $spacer 10px;
+  border-radius: $border_radius_generic;
+  border: 1px solid $b-color;
+  font-size: 18px;
+  font-weight: 500;
+  color: $gray-4;
+  text-align: left;
+  outline: none;
+
+  &:focus {
+    border-width: 3px;
+    border-color: $blue-4;
+  }
+}

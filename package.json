@@ -1,7 +1,7 @@
 {
   "name": "Flow-CSS",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "flowcss.css",
   "author": "Fortrax",
   "license": "MIT",
   "keywords": [
@@ -20,15 +20,15 @@
     "css-compile-grid": "npx sass src/scss/flowcss-grid.scss:dist/css/flowcss-grid.css",
     "css-compile-utilities": "npx sass src/scss/flowcss-utilities.scss:dist/css/flowcss-utilities.css",
     "css-build": "npm-run-all --parallel css-build-*",
-    "css-build-main": "postcss --use autoprefixer cssnano -o dist/css/flowcss.min.css dist/css/flowcss.css",
-    "css-build-grid": "postcss --use autoprefixer cssnano -o dist/css/flowcss-grid.min.css dist/css/flowcss-grid.css",
-    "css-build-utilities": "postcss --use autoprefixer cssnano -o dist/css/flowcss-utilities.min.css dist/css/flowcss-utilities.css",
+    "css-build-main": "npx postcss --use autoprefixer cssnano -o dist/css/flowcss.min.css dist/css/flowcss.css",
+    "css-build-grid": "npx postcss --use autoprefixer cssnano -o dist/css/flowcss-grid.min.css dist/css/flowcss-grid.css",
+    "css-build-utilities": "npx postcss --use autoprefixer cssnano -o dist/css/flowcss-utilities.min.css dist/css/flowcss-utilities.css",
     "js-watch": "nodemon --watch src/js/src/ --ext js --exec \"npm-run-all js-compile\"",
     "js-watch-standalone": "nodemon --watch src/js/src/ --ext js --exec \"npm-run-all js-compile-standalone\"",
     "js-compile": "npm-run-all --parallel js-compile-*",
-    "js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
-    "js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.js --sourcemap",
-    "js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
+    "js-compile-standalone": "npx rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
+    "js-compile-standalone-esm": "npx rollup --environment ESM:true,BUNDLE:false --config build/rollup.config.js --sourcemap",
+    "js-compile-bundle": "npx rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
     "js-test-karma": "npx karma start src/js/tests/karma.conf.js"
   },
   "devDependencies": {
