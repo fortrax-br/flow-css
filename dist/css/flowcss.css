@@ -287,18 +287,6 @@ button[type=button]:hover {
   color: #c4c4c4;
 }
 
-input,
-select,
-label {
-  margin-right: 0.7rem;
-}
-
-input,
-select,
-textarea {
-  margin-bottom: 1rem;
-}
-
 input[type=text],
 input[type=password],
 input[type=email],
@@ -14289,7 +14277,6 @@ ul.pagination {
 .accordion-show {
   max-height: 100%;
   padding: 0.875rem;
-  transition: all 0.3s linear;
 }
 
 .accordion-clicked {
@@ -14521,12 +14508,28 @@ ul.pagination {
   font-size: 1.125rem;
   color: #656565;
   line-height: 1;
-  font-weight: font_weight_bold;
+  font-weight: 500;
 }
 
 .form-button {
   margin-top: 0.875rem;
   margin-bottom: 0;
+}
+
+.form-select {
+  background-color: #fff;
+  padding: 0.875rem 0.625rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #656565;
+  text-align: left;
+  outline: none;
+}
+.form-select:focus {
+  border-width: 3px;
+  border-color: #489bea;
 }
 
 .flex div {

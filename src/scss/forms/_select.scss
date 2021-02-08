@@ -1,0 +1,16 @@
+.form-select {
+  background-color: $form_select_bg;
+  padding: $form_select_padding;
+  border-radius: $form_border_radius;
+  border: $form_select_border_width solid $form_select_border_color;
+  font-size: $form_select_font_size;
+  font-weight: $form_select_font_weight;
+  color: $form_select_color;
+  text-align: left;
+  outline: none;
+
+  &:focus {
+    border-width: $form_select_border_width_focus;
+    border-color: $form_select_border_color_focus;
+  }
+}

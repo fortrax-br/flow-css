@@ -124,7 +124,7 @@ var Accordion = /*#__PURE__*/function (_ExtendComponent) {
   _proto._takeTheElementsThatEachButtonRepresents = function _takeTheElementsThatEachButtonRepresents() {
     var buttons = document.querySelectorAll(ACCORDION_BUTTON);
     var buttonsAndElements = Array.prototype.map.call(buttons, function (button) {
-      var dataButtonTarget = button.dataset.flowTarget;
+      var dataButtonTarget = button.dataset.fwTarget;
       var element = document.querySelector(dataButtonTarget);
       return {
         button: button,

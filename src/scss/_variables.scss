@@ -652,7 +652,17 @@ $form_input_focus_border_width: 3px;
 $form_label_margin_right: size(10, true);
 $form_label_font_size: size(18, true);
 $form_label_color: $gray-4;
-$form_label_font_weight: font_weight_bold;
+$form_label_font_weight: $font_weight_regular;
+
+$form_select_font_size:size(18, true);
+$form_select_padding: $spacer size(10, true);
+$form_select_font_weight: $font_weight_regular;
+$form_select_color: $gray-4;
+$form_select_border_color: $b-color;
+$form_select_border_width: 1px;
+$form_select_border_width_focus: 3px;
+$form_select_border_color_focus: $blue-4;
+$form_select_bg: $white;
 
 // z-index 
 $z_index_1: 1001 !default;
