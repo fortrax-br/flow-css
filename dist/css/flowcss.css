@@ -14277,7 +14277,6 @@ ul.pagination {
 .accordion-show {
   max-height: 100%;
   padding: 0.875rem;
-  transition: all 0.3s linear;
 }
 
 .accordion-clicked {
@@ -14519,10 +14518,10 @@ ul.pagination {
 
 .form-select {
   background-color: #fff;
-  padding: 0.875rem 10px;
+  padding: 0.875rem 0.625rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #656565;
   text-align: left;
