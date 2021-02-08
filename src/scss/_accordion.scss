@@ -83,7 +83,6 @@
 .accordion-show {
   max-height: 100%;
   padding: $accordion_padding;
-  transition: all $accordion_transition_duration linear;
 }
 
 .accordion-clicked {
